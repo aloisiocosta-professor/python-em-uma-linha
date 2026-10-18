@@ -24,3 +24,15 @@ Em 18/10/2026, o commit de conteúdo `2a764c0c5409795d0bbfb9e1bbfcb6c7273b7b5a` 
 - Validação local: 51 exemplos de uma linha, 55 páginas, 760 links locais; cobertura editorial e testes de interação descritos em revisao-feynman.md.
 
 A página do método está disponível em https://aloisiocosta-professor.github.io/python-em-uma-linha/metodo-feynman.html. Os commits posteriores deste registro apenas documentam a publicação observada.
+
+## Versão 3 — percurso do absoluto zero
+
+Conteúdo verificado no commit `2d65bc4171c55da17dba24222a44a29f8da419d0`: 76 aulas em nove trilhas, vocabulário e pré-requisitos locais, orientação inicial, ponte matemática e página de evidências.
+
+- Verificação remota: https://github.com/aloisiocosta-professor/python-em-uma-linha/actions/runs/39177574158 — sucesso.
+- Publicação: https://github.com/aloisiocosta-professor/python-em-uma-linha/actions/runs/39177573989 — sucesso.
+- HTTP 200 e conteúdo conferidos em comece-aqui.html e aula-p06.html.
+- Verificação local: 76 exemplos de uma linha, 84 páginas e 1.758 links; sequência e pré-requisitos declarados conferidos em curriculum-results.json.
+- Testes de leitura e interação no navegador registrados em browser-results.json; limites pedagógicos e leitura das fontes em zero-absoluto.md.
+
+O registro posterior a esse commit documenta o estado observado; a disponibilidade futura depende do host.
