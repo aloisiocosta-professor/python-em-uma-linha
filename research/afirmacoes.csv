@@ -1,0 +1,8 @@
+id,afirmacao,evidencia,limite
+H1,os exemplos publicados obedecem uma linha fisica e produzem a saida registrada,test-results.json,dominio finito e ambiente registrado
+H2,o formato melhora aprendizagem,nenhum estudo realizado,hipotese nao testada
+C1,arrays permitem compor operacoes sobre dados multidimensionais,N1,afirmacao tecnica sem superioridade pedagogica
+C2,estimadores e pipelines fornecem composicao consistente,S1,arquitetura historica e APIs atuais verificadas separadamente
+C3,preprocessamento deve ser ajustado somente com dados de treino,documentacao common_pitfalls,exemplo sintetico nao estima generalizacao
+C4,uma linha fisica admite programa com quebras logicas escapadas,referencia Python e teste de arquivos,exec preserva blocos internos e nao cria isolamento
+C5,dominio extremo de toda computacao foi adquirido,nenhuma,afirmacao nao feita

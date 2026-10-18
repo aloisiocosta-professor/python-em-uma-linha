@@ -1,0 +1,1 @@
+from itertools import product;from collections import Counter;casos=list(product(range(3),repeat=4));print(all(Counter(sorted(x))==Counter(x) and all(a<=b for a,b in zip(sorted(x),sorted(x)[1:])) for x in casos))

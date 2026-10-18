@@ -1,0 +1,1 @@
+exec("import sqlite3\nfrom contextlib import closing\nwith closing(sqlite3.connect(':memory:')) as c:\n c.execute('create table t(x integer)');c.execute('insert into t values (?)',(7,));print(c.execute('select sum(x) from t').fetchone()[0])")

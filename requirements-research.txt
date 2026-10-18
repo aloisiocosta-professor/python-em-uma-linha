@@ -1,0 +1,2 @@
+pypdf==6.21.1
+beautifulsoup4==4.15.0

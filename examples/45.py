@@ -1,0 +1,1 @@
+exec("import ast\ndef valor(n):\n if isinstance(n,ast.Constant) and type(n.value) is int:return n.value\n if isinstance(n,ast.BinOp) and isinstance(n.op,ast.Add):return valor(n.left)+valor(n.right)\n raise ValueError('expressão fora da linguagem')\nprint(valor(ast.parse('2+3+4',mode='eval').body))")

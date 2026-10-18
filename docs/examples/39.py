@@ -1,0 +1,1 @@
+from sklearn.pipeline import make_pipeline;from sklearn.preprocessing import StandardScaler;from sklearn.linear_model import LogisticRegression;X=[[0],[1],[2],[8],[9],[10]];y=[0,0,0,1,1,1];m=make_pipeline(StandardScaler(),LogisticRegression()).fit(X,y);print(m.predict([[1.5],[8.5]]).tolist())

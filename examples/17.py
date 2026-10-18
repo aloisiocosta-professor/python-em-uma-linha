@@ -1,0 +1,1 @@
+exec("import heapq\ng={0:[(1,4),(2,1)],1:[],2:[(1,2)]};d={0:0};q=[(0,0)]\nwhile q:\n du,u=heapq.heappop(q)\n if du!=d[u]:continue\n for v,w in g[u]:\n  nd=du+w\n  if nd<d.get(v,float('inf')):d[v]=nd;heapq.heappush(q,(nd,v))\nprint(d[1])")

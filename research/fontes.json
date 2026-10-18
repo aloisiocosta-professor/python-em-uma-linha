@@ -1,0 +1,33 @@
+{
+  "method": "Identificação e hashes dos arquivos efetivamente consultados; a íntegra não é redistribuída no repositório.",
+  "sources": [
+    {
+      "id": "N1",
+      "title": "Array Programming with NumPy",
+      "version": "arXiv:2006.10256v1",
+      "url": "https://arxiv.org/html/2006.10256v1",
+      "file": "numpy.html",
+      "kind": "author_manuscript",
+      "publishedDOI": "10.1038/s41586-020-2649-2",
+      "bytes": 176563,
+      "sha256": "03313e0138b4d79eaaa3c342195461caa1dac993ed7cbace767e7bef3b877a41",
+      "accessedOn": "2026-10-18",
+      "localCacheIgnored": true,
+      "assessment": "incluir somente para afirmações técnicas delimitadas em bibliografia.md"
+    },
+    {
+      "id": "S1",
+      "title": "Scikit-learn: Machine Learning in Python",
+      "version": "JMLR 12 (2011), 2825–2830",
+      "url": "https://www.jmlr.org/papers/volume12/pedregosa11a/pedregosa11a.pdf",
+      "file": "scikit.pdf",
+      "kind": "published_article",
+      "pages": 6,
+      "bytes": 42310,
+      "sha256": "1c338a6b3c6c1dcafda3990a8098b8b50dd6c77616361396fb75f6822c6e0778",
+      "accessedOn": "2026-10-18",
+      "localCacheIgnored": true,
+      "assessment": "incluir somente para afirmações técnicas delimitadas em bibliografia.md"
+    }
+  ]
+}

@@ -1,0 +1,1 @@
+exec("pilha=[];programa=[('PUSH',2),('PUSH',3),('ADD',None)]\nfor op,arg in programa:\n if op=='PUSH':pilha.append(arg)\n elif op=='ADD':b=pilha.pop();a=pilha.pop();pilha.append(a+b)\n else:raise ValueError(op)\nprint(pilha)")

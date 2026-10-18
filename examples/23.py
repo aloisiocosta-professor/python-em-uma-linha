@@ -1,0 +1,1 @@
+exec("from tempfile import TemporaryDirectory\nfrom pathlib import Path\nwith TemporaryDirectory() as d:\n p=Path(d)/'dados.txt';p.write_text('ciência',encoding='utf-8');print(p.read_text(encoding='utf-8'))")
