@@ -23,3 +23,7 @@ Use os comandos do README. `node tools/acquire.mjs` recupera os dois artefatos p
 A regra foi aplicada também aos arquivos .py de download, não apenas ao texto exibido. Os scripts de construção e verificação são JavaScript e não precisam dessa restrição. O código não foi comprimido em base64: a representação mantém a lógica inspecionável.
 
 O curso contém introduções a tópicos avançados; uma formação de domínio extremo exige continuidade, leitura adicional e projetos extensos. A bibliografia aceita não valida automaticamente cada afirmação do currículo. H2 permanece aberta. Não se afirmou revisão sistemática, ausência global de retratações, replicação dos benchmarks originais ou aprovação por todos os testes possíveis da metodologia científica.
+
+## Continuação — refatoração pelo ciclo de Feynman
+
+A versão 2 substitui o caminho de ensino das 51 aulas e dos quatro projetos pelo protocolo-feynman.md. A solicitação, a referência institucional lida, as decisões e a validação estão em revisao-feynman.md. Os registros originais acima descrevem a primeira versão e foram preservados como histórico. A página metodo-feynman.html explica o ciclo diretamente ao estudante.

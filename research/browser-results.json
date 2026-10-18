@@ -1,5 +1,5 @@
 {
-  "recordedAt": "2026-10-18T22:28:35.392Z",
+  "recordedAt": "2026-10-18T23:20:51.530Z",
   "browser": {
     "protocolVersion": "1.3",
     "product": "Chrome/153.0.8010.36",
@@ -24,7 +24,15 @@
         "lines": 1,
         "details": false
       },
-      "disclosure": "pass"
+      "disclosure": "pass",
+      "teaching": {
+        "hidden": true,
+        "focus": "first-explanation",
+        "expanded": "false"
+      },
+      "journal": "save/restore/isolation/export/delete/storage-denied: pass",
+      "reviewReturn": "pass",
+      "methodLayout": "pass"
     },
     {
       "width": 320,
@@ -42,8 +50,21 @@
         "lines": 1,
         "details": false
       },
-      "disclosure": "pass"
+      "disclosure": "pass",
+      "teaching": {
+        "hidden": true,
+        "focus": "first-explanation",
+        "expanded": "false"
+      },
+      "journal": "save/restore/isolation/export/delete/storage-denied: pass",
+      "reviewReturn": "pass",
+      "methodLayout": "pass"
     }
   ],
-  "limits": "Sem ensaio com leitor de tela ou usuários; não é auditoria WCAG completa."
+  "noJavaScript": {
+    "material": true,
+    "fields": 3,
+    "buttonsHidden": true
+  },
+  "limits": "Sem ensaio com leitor de tela ou usuários; não é auditoria WCAG completa. Os testes de formulário usam perfil temporário local."
 }

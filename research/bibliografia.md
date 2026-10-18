@@ -27,3 +27,7 @@ Questão: como fornecer algoritmos de aprendizado com interface consistente? Des
 - scikit-learn, armadilhas e vazamento: https://scikit-learn.org/stable/common_pitfalls.html
 
 Consulta técnica dirigida às seções pertinentes; os manuais inteiros não foram lidos. Documentação não é classificada como pesquisa empírica. As derivações e exemplos pequenos do curso são autorais; as áreas de sistemas distribuídos e verificação formal ainda não possuem bibliografia científica integralmente examinada nesta seleção.
+
+## Orientação pedagógica institucional — versão 2
+
+CALIFORNIA INSTITUTE OF TECHNOLOGY. Center for Teaching, Learning, & Outreach. *The Power of Teaching*. Sem data de publicação informada. https://ctlo.caltech.edu/aboutctlo/whoweserve/undergraduates/learning-resources/learning/power-of-teaching. Acesso em 18/10/2026. Página lida integralmente. Classificação: orientação institucional para estudo por explicação, não artigo experimental. Uso: desenho do ciclo editorial descrito em protocolo-feynman.md. Não foi usada para afirmar eficácia do curso ou superioridade do formato de uma linha.

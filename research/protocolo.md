@@ -29,3 +29,7 @@ Uma fonte que não passa fica fora da bibliografia aceita. O registro de exclus�
 Cada arquivo Python deve ter uma linha física não vazia, compilar e executar isoladamente em até 30 segundos. Comparar a saída com um oráculo registrado. Para algoritmos, testar casos adicionais e invariantes. Para cálculos aproximados, usar tolerância e residual. Para aprendizado de máquina, separar treino e teste e impedir ajuste do pré-processamento com dados de teste. Registrar versões efetivamente instaladas.
 
 H2 exigiria estudo próprio: consentimento dos participantes, tarefas equivalentes com formatos compacto e convencional, ordem contrabalançada, teste de conhecimento anterior, desfecho primário de acertos em problemas novos, retenção posterior, tamanho de amostra planejado, intervalos de confiança e divulgação de resultados negativos. Nenhum participante foi recrutado e nenhum dado pedagógico foi coletado.
+
+## Emenda editorial de 18/10/2026 — versão 2
+
+Por solicitação do proprietário, o desenho pedagógico passa a seguir research/protocolo-feynman.md em todas as aulas e projetos. H1 e H2 mantêm seus significados e limites; a adoção do ciclo de Feynman não equivale a testar H2. A orientação institucional do Caltech foi lida integralmente e é classificada separadamente dos artigos científicos. As decisões e verificações da refatoração estão em revisao-feynman.md e nos relatórios correspondentes.

@@ -1,0 +1,467 @@
+{
+  "recordedAt": "2026-10-18T23:21:23.581Z",
+  "protocol": "2.0",
+  "lessons": [
+    {
+      "id": "01",
+      "question": "Como faço o computador mostrar uma mensagem?",
+      "uniqueDiagnostic": true,
+      "boundedAnalogy": true,
+      "workedSteps": 3,
+      "firstGapRevisionFields": true,
+      "transferExercise": true
+    },
+    {
+      "id": "02",
+      "question": "Como repartir sete itens em grupos de três e descobrir a sobra?",
+      "uniqueDiagnostic": true,
+      "boundedAnalogy": true,
+      "workedSteps": 3,
+      "firstGapRevisionFields": true,
+      "transferExercise": true
+    },
+    {
+      "id": "03",
+      "question": "Por que o texto 42 precisa virar número antes de uma soma?",
+      "uniqueDiagnostic": true,
+      "boundedAnalogy": true,
+      "workedSteps": 3,
+      "firstGapRevisionFields": true,
+      "transferExercise": true
+    },
+    {
+      "id": "04",
+      "question": "Como escolher uma mensagem com base em uma condição?",
+      "uniqueDiagnostic": true,
+      "boundedAnalogy": true,
+      "workedSteps": 3,
+      "firstGapRevisionFields": true,
+      "transferExercise": true
+    },
+    {
+      "id": "05",
+      "question": "Como escolher letras por posição sem reescrever a palavra?",
+      "uniqueDiagnostic": true,
+      "boundedAnalogy": true,
+      "workedSteps": 3,
+      "firstGapRevisionFields": true,
+      "transferExercise": true
+    },
+    {
+      "id": "06",
+      "question": "Como selecionar os números pares e transformar cada um em seu quadrado?",
+      "uniqueDiagnostic": true,
+      "boundedAnalogy": true,
+      "workedSteps": 3,
+      "firstGapRevisionFields": true,
+      "transferExercise": true
+    },
+    {
+      "id": "07",
+      "question": "Como escolher entre guardar uma ordem, uma associação e itens sem repetição?",
+      "uniqueDiagnostic": true,
+      "boundedAnalogy": true,
+      "workedSteps": 3,
+      "firstGapRevisionFields": true,
+      "transferExercise": true
+    },
+    {
+      "id": "08",
+      "question": "Por que trocar a ordem de duas funções muda a resposta?",
+      "uniqueDiagnostic": true,
+      "boundedAnalogy": true,
+      "workedSteps": 3,
+      "firstGapRevisionFields": true,
+      "transferExercise": true
+    },
+    {
+      "id": "09",
+      "question": "Por que a segunda leitura de um gerador pode estar vazia?",
+      "uniqueDiagnostic": true,
+      "boundedAnalogy": true,
+      "workedSteps": 3,
+      "firstGapRevisionFields": true,
+      "transferExercise": true
+    },
+    {
+      "id": "10",
+      "question": "Como um programa com blocos cabe em uma linha física?",
+      "uniqueDiagnostic": true,
+      "boundedAnalogy": true,
+      "workedSteps": 3,
+      "firstGapRevisionFields": true,
+      "transferExercise": true
+    },
+    {
+      "id": "11",
+      "question": "Como uma função resolve um problema pedindo ajuda a uma versão menor dele?",
+      "uniqueDiagnostic": true,
+      "boundedAnalogy": true,
+      "workedSteps": 3,
+      "firstGapRevisionFields": true,
+      "transferExercise": true
+    },
+    {
+      "id": "12",
+      "question": "Quem sai primeiro de uma fila e de uma pilha?",
+      "uniqueDiagnostic": true,
+      "boundedAnalogy": true,
+      "workedSteps": 3,
+      "firstGapRevisionFields": true,
+      "transferExercise": true
+    },
+    {
+      "id": "13",
+      "question": "Como saber se uma posição de inserção realmente contém o valor procurado?",
+      "uniqueDiagnostic": true,
+      "boundedAnalogy": true,
+      "workedSteps": 3,
+      "firstGapRevisionFields": true,
+      "transferExercise": true
+    },
+    {
+      "id": "14",
+      "question": "Como ordenar sem perder os valores repetidos?",
+      "uniqueDiagnostic": true,
+      "boundedAnalogy": true,
+      "workedSteps": 3,
+      "firstGapRevisionFields": true,
+      "transferExercise": true
+    },
+    {
+      "id": "15",
+      "question": "Como resumir uma sequência pela quantidade de cada item?",
+      "uniqueDiagnostic": true,
+      "boundedAnalogy": true,
+      "workedSteps": 3,
+      "firstGapRevisionFields": true,
+      "transferExercise": true
+    },
+    {
+      "id": "16",
+      "question": "Como descobrir o menor número de passos entre lugares conectados?",
+      "uniqueDiagnostic": true,
+      "boundedAnalogy": true,
+      "workedSteps": 3,
+      "firstGapRevisionFields": true,
+      "transferExercise": true
+    },
+    {
+      "id": "17",
+      "question": "Como achar o caminho de menor custo quando cada ligação tem um preço?",
+      "uniqueDiagnostic": true,
+      "boundedAnalogy": true,
+      "workedSteps": 3,
+      "firstGapRevisionFields": true,
+      "transferExercise": true
+    },
+    {
+      "id": "18",
+      "question": "Como evitar resolver a mesma pergunta várias vezes?",
+      "uniqueDiagnostic": true,
+      "boundedAnalogy": true,
+      "workedSteps": 3,
+      "firstGapRevisionFields": true,
+      "transferExercise": true
+    },
+    {
+      "id": "19",
+      "question": "Como saber se dois elementos pertencem ao mesmo grupo?",
+      "uniqueDiagnostic": true,
+      "boundedAnalogy": true,
+      "workedSteps": 3,
+      "firstGapRevisionFields": true,
+      "transferExercise": true
+    },
+    {
+      "id": "20",
+      "question": "Como descobrir se existe uma escolha de valores que satisfaz todas as regras?",
+      "uniqueDiagnostic": true,
+      "boundedAnalogy": true,
+      "workedSteps": 3,
+      "firstGapRevisionFields": true,
+      "transferExercise": true
+    },
+    {
+      "id": "21",
+      "question": "Como juntar dados de uma conta com as ações que os modificam?",
+      "uniqueDiagnostic": true,
+      "boundedAnalogy": true,
+      "workedSteps": 3,
+      "firstGapRevisionFields": true,
+      "transferExercise": true
+    },
+    {
+      "id": "22",
+      "question": "Como tratar uma entrada inválida sem confundi-la com um resultado?",
+      "uniqueDiagnostic": true,
+      "boundedAnalogy": true,
+      "workedSteps": 3,
+      "firstGapRevisionFields": true,
+      "transferExercise": true
+    },
+    {
+      "id": "23",
+      "question": "Como garantir que um recurso temporário seja encerrado depois do uso?",
+      "uniqueDiagnostic": true,
+      "boundedAnalogy": true,
+      "workedSteps": 3,
+      "firstGapRevisionFields": true,
+      "transferExercise": true
+    },
+    {
+      "id": "24",
+      "question": "Como enviar dados em texto e reconstruí-los depois?",
+      "uniqueDiagnostic": true,
+      "boundedAnalogy": true,
+      "workedSteps": 3,
+      "firstGapRevisionFields": true,
+      "transferExercise": true
+    },
+    {
+      "id": "25",
+      "question": "Como fornecer um valor a uma consulta sem misturá-lo ao comando SQL?",
+      "uniqueDiagnostic": true,
+      "boundedAnalogy": true,
+      "workedSteps": 3,
+      "firstGapRevisionFields": true,
+      "transferExercise": true
+    },
+    {
+      "id": "26",
+      "question": "Como testar uma regra sobre muitas entradas sem chamar isso de prova geral?",
+      "uniqueDiagnostic": true,
+      "boundedAnalogy": true,
+      "workedSteps": 3,
+      "firstGapRevisionFields": true,
+      "transferExercise": true
+    },
+    {
+      "id": "27",
+      "question": "Como distribuir tarefas e receber respostas na ordem das entradas?",
+      "uniqueDiagnostic": true,
+      "boundedAnalogy": true,
+      "workedSteps": 3,
+      "firstGapRevisionFields": true,
+      "transferExercise": true
+    },
+    {
+      "id": "28",
+      "question": "Como alternar tarefas enquanto elas aguardam alguma coisa?",
+      "uniqueDiagnostic": true,
+      "boundedAnalogy": true,
+      "workedSteps": 3,
+      "firstGapRevisionFields": true,
+      "transferExercise": true
+    },
+    {
+      "id": "29",
+      "question": "Como lembrar apenas o necessário para decidir se há uma quantidade par de uns?",
+      "uniqueDiagnostic": true,
+      "boundedAnalogy": true,
+      "workedSteps": 3,
+      "firstGapRevisionFields": true,
+      "transferExercise": true
+    },
+    {
+      "id": "30",
+      "question": "Como distinguir uma sequência causal de eventos que não sabem um do outro?",
+      "uniqueDiagnostic": true,
+      "boundedAnalogy": true,
+      "workedSteps": 3,
+      "firstGapRevisionFields": true,
+      "transferExercise": true
+    },
+    {
+      "id": "31",
+      "question": "Por que duas contas que parecem iguais podem falhar numa comparação exata?",
+      "uniqueDiagnostic": true,
+      "boundedAnalogy": true,
+      "workedSteps": 3,
+      "firstGapRevisionFields": true,
+      "transferExercise": true
+    },
+    {
+      "id": "32",
+      "question": "Como encontrar dois valores que satisfaçam duas contas ao mesmo tempo?",
+      "uniqueDiagnostic": true,
+      "boundedAnalogy": true,
+      "workedSteps": 3,
+      "firstGapRevisionFields": true,
+      "transferExercise": true
+    },
+    {
+      "id": "33",
+      "question": "Como retirar de cada coluna a média daquela coluna?",
+      "uniqueDiagnostic": true,
+      "boundedAnalogy": true,
+      "workedSteps": 3,
+      "firstGapRevisionFields": true,
+      "transferExercise": true
+    },
+    {
+      "id": "34",
+      "question": "Como usar sorteios para aproximar um valor esperado?",
+      "uniqueDiagnostic": true,
+      "boundedAnalogy": true,
+      "workedSteps": 3,
+      "firstGapRevisionFields": true,
+      "transferExercise": true
+    },
+    {
+      "id": "35",
+      "question": "Como cercar uma raiz e diminuir o intervalo até uma precisão escolhida?",
+      "uniqueDiagnostic": true,
+      "boundedAnalogy": true,
+      "workedSteps": 3,
+      "firstGapRevisionFields": true,
+      "transferExercise": true
+    },
+    {
+      "id": "36",
+      "question": "Como descrever uma mudança por sua taxa em vez de listar todos os valores?",
+      "uniqueDiagnostic": true,
+      "boundedAnalogy": true,
+      "workedSteps": 3,
+      "firstGapRevisionFields": true,
+      "transferExercise": true
+    },
+    {
+      "id": "37",
+      "question": "Como calcular uma regra de derivação antes de escolher um valor de x?",
+      "uniqueDiagnostic": true,
+      "boundedAnalogy": true,
+      "workedSteps": 3,
+      "firstGapRevisionFields": true,
+      "transferExercise": true
+    },
+    {
+      "id": "38",
+      "question": "Como transformar uma sequência em componentes e reconstruí-la depois?",
+      "uniqueDiagnostic": true,
+      "boundedAnalogy": true,
+      "workedSteps": 3,
+      "firstGapRevisionFields": true,
+      "transferExercise": true
+    },
+    {
+      "id": "39",
+      "question": "Como avaliar um modelo sem deixá-lo consultar os exemplos reservados à avaliação?",
+      "uniqueDiagnostic": true,
+      "boundedAnalogy": true,
+      "workedSteps": 3,
+      "firstGapRevisionFields": true,
+      "transferExercise": true
+    },
+    {
+      "id": "40",
+      "question": "Como uma função continua usando um valor recebido numa chamada anterior?",
+      "uniqueDiagnostic": true,
+      "boundedAnalogy": true,
+      "workedSteps": 3,
+      "firstGapRevisionFields": true,
+      "transferExercise": true
+    },
+    {
+      "id": "41",
+      "question": "Como acrescentar um comportamento a uma função sem reescrever sua conta?",
+      "uniqueDiagnostic": true,
+      "boundedAnalogy": true,
+      "workedSteps": 3,
+      "firstGapRevisionFields": true,
+      "transferExercise": true
+    },
+    {
+      "id": "42",
+      "question": "Como ensinar o operador + a somar um objeto criado por nós?",
+      "uniqueDiagnostic": true,
+      "boundedAnalogy": true,
+      "workedSteps": 3,
+      "firstGapRevisionFields": true,
+      "transferExercise": true
+    },
+    {
+      "id": "43",
+      "question": "Como construir uma classe usando dados em vez da declaração class?",
+      "uniqueDiagnostic": true,
+      "boundedAnalogy": true,
+      "workedSteps": 3,
+      "firstGapRevisionFields": true,
+      "transferExercise": true
+    },
+    {
+      "id": "44",
+      "question": "Como o computador representa a estrutura de uma expressão antes de executá-la?",
+      "uniqueDiagnostic": true,
+      "boundedAnalogy": true,
+      "workedSteps": 3,
+      "firstGapRevisionFields": true,
+      "transferExercise": true
+    },
+    {
+      "id": "45",
+      "question": "Como executar apenas uma linguagem pequena que nós definimos?",
+      "uniqueDiagnostic": true,
+      "boundedAnalogy": true,
+      "workedSteps": 3,
+      "firstGapRevisionFields": true,
+      "transferExercise": true
+    },
+    {
+      "id": "46",
+      "question": "Como uma máquina calcula usando só instruções e uma pilha?",
+      "uniqueDiagnostic": true,
+      "boundedAnalogy": true,
+      "workedSteps": 3,
+      "firstGapRevisionFields": true,
+      "transferExercise": true
+    },
+    {
+      "id": "47",
+      "question": "Como calcular um valor e sua derivada enquanto fazemos as mesmas multiplicações?",
+      "uniqueDiagnostic": true,
+      "boundedAnalogy": true,
+      "workedSteps": 3,
+      "firstGapRevisionFields": true,
+      "transferExercise": true
+    },
+    {
+      "id": "48",
+      "question": "Como melhorar uma aproximação repetindo uma regra?",
+      "uniqueDiagnostic": true,
+      "boundedAnalogy": true,
+      "workedSteps": 3,
+      "firstGapRevisionFields": true,
+      "transferExercise": true
+    },
+    {
+      "id": "49",
+      "question": "Como juntar contagens de réplicas sem contar a mesma atualização duas vezes?",
+      "uniqueDiagnostic": true,
+      "boundedAnalogy": true,
+      "workedSteps": 3,
+      "firstGapRevisionFields": true,
+      "transferExercise": true
+    },
+    {
+      "id": "50",
+      "question": "Como encontrar uma execução que quebra uma regra de segurança?",
+      "uniqueDiagnostic": true,
+      "boundedAnalogy": true,
+      "workedSteps": 3,
+      "firstGapRevisionFields": true,
+      "transferExercise": true
+    },
+    {
+      "id": "51",
+      "question": "O que precisamos registrar para outra pessoa conferir um resultado?",
+      "uniqueDiagnostic": true,
+      "boundedAnalogy": true,
+      "workedSteps": 3,
+      "firstGapRevisionFields": true,
+      "transferExercise": true
+    }
+  ],
+  "total": 51,
+  "scope": "Cobertura editorial e presença do ciclo na página; não avalia a qualidade das explicações nem a aprendizagem. Ver browser-results.json para testes de interação."
+}

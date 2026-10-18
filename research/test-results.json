@@ -1,5 +1,5 @@
 {
-  "recordedAt": "2026-10-18T22:29:15.197Z",
+  "recordedAt": "2026-10-18T23:20:38.797Z",
   "python": "3.14.8 (main, Oct 10 2026, 14:55:18) [GCC 16.1.1 20260430]",
   "examples": [
     {
@@ -309,12 +309,13 @@
       "expectedOutput": "pass"
     }
   ],
+  "feynmanLessons": 51,
   "additionalChecks": {
     "quicksort": "1093 entradas finitas comparadas com sorted",
     "bfs": "mapa completo de distâncias do exemplo",
     "join": "comutatividade, associatividade e idempotência em 729 triplas"
   },
-  "htmlPages": 54,
-  "localLinks": 631,
+  "htmlPages": 55,
+  "localLinks": 760,
   "browserQA": "Ver registro separado; este verificador não simula navegador."
 }

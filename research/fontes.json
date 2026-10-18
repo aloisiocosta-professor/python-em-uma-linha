@@ -28,6 +28,19 @@
       "accessedOn": "2026-10-18",
       "localCacheIgnored": true,
       "assessment": "incluir somente para afirmações técnicas delimitadas em bibliografia.md"
+    },
+    {
+      "id": "P1",
+      "title": "The Power of Teaching",
+      "version": "Página institucional consultada em 18/10/2026; sem data de publicação informada",
+      "url": "https://ctlo.caltech.edu/aboutctlo/whoweserve/undergraduates/learning-resources/learning/power-of-teaching",
+      "file": "caltech-teaching.html",
+      "kind": "institutional_pedagogical_guidance",
+      "bytes": 200477,
+      "sha256": "2c43eb9baab6c81d0eb101a3c9ba2427a1cc81b791c9fd635d3833400a533864",
+      "accessedOn": "2026-10-18",
+      "localCacheIgnored": true,
+      "assessment": "Referência de orientação pedagógica; separada dos artigos científicos; sem inferência de eficácia deste curso"
     }
   ]
 }

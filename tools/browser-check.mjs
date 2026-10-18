@@ -19,6 +19,8 @@ try{
  const evaluate=async expression=>{const result=await send('Runtime.evaluate',{expression,returnByValue:true,awaitPromise:true});if(result.exceptionDetails)throw Error(JSON.stringify(result.exceptionDetails));return result.result.value;};
  const navigate=async page=>{await send('Page.navigate',{url:'http://127.0.0.1:8766/'+page});for(let i=0;i<40;i++){await pause(100);if(await evaluate(`document.readyState==='complete'&&location.pathname.endsWith(${JSON.stringify(page)})`))return;}throw Error('Navegação expirou');};
  const checks=[];
+ const downloads=fs.mkdtempSync('/tmp/python-wiki-downloads-');
+ await send('Browser.setDownloadBehavior',{behavior:'allow',downloadPath:downloads});
  for(const width of [1280,320]){
   await send('Emulation.setDeviceMetricsOverride',{width,height:900,deviceScaleFactor:1,mobile:width<600});
   await navigate('index.html');
@@ -35,9 +37,40 @@ try{
   if(lesson.scroll>width||lesson.lines!==1||lesson.details)throw Error('Aula inválida '+JSON.stringify(lesson));
   await evaluate(`document.querySelector('summary').click()`);
   if(!await evaluate(`document.querySelector('details').open`))throw Error('Resposta não abriu');
+  await evaluate(`document.querySelector('#toggle-study').focus()`);
+  await send('Page.bringToFront');
+  await send('Input.dispatchKeyEvent',{type:'keyDown',key:'Enter',code:'Enter',text:'\r',unmodifiedText:'\r',windowsVirtualKeyCode:13,nativeVirtualKeyCode:13});
+  await send('Input.dispatchKeyEvent',{type:'keyUp',key:'Enter',code:'Enter',windowsVirtualKeyCode:13});
+  await pause(100);
+  const teaching=await evaluate(`({hidden:[...document.querySelectorAll('[data-study]')].every(x=>x.hidden),focus:document.activeElement.id,expanded:document.querySelector('#toggle-study').getAttribute('aria-expanded')})`);
+  if(!teaching.hidden||teaching.focus!=='first-explanation'||teaching.expanded!=='false')throw Error('Modo ensinar por teclado falhou: '+JSON.stringify(teaching));
+  await evaluate(`document.querySelector('#first-explanation').value='Visito os lugares por camadas.';document.querySelector('#knowledge-gap').value='Por que marcar ao inserir?';document.querySelector('#revised-explanation').value='Marco antes de inserir para evitar descoberta repetida.';document.querySelector('[name="mechanism"]').checked=true;document.querySelector('#journal').requestSubmit()`);
+  if(!await evaluate(`document.querySelector('#status').textContent.includes('salvas')`))throw Error('Salvar falhou');
+  await navigate('aula-17.html');
+  if(await evaluate(`document.querySelector('#first-explanation').value`)!=='')throw Error('Diário vazou para outra aula');
+  await navigate('aula-16.html');
+  if(!await evaluate(`document.querySelector('#first-explanation').value==='Visito os lugares por camadas.'&&document.querySelector('[name="mechanism"]').checked`))throw Error('Restaurar diário falhou');
+  await evaluate(`document.querySelector('#download-journal').click()`);
+  let exported;for(let i=0;i<40;i++){await pause(100);const file=path.join(downloads,'aula-16-feynman.txt');if(fs.existsSync(file)){exported=fs.readFileSync(file,'utf8');break;}}
+  if(!exported?.includes('Marco antes de inserir')||!exported.includes('PRIMEIRA EXPLICAÇÃO'))throw Error('Exportação incompleta');
+  await evaluate(`window.originalSetItem=Storage.prototype.setItem;Storage.prototype.setItem=function(){throw new DOMException('Negado','SecurityError')};document.querySelector('#journal').requestSubmit()`);
+  if(!await evaluate(`document.querySelector('#status').textContent.includes('não permitiu salvar')`))throw Error('Falha de armazenamento sem alternativa');
+  await evaluate(`Storage.prototype.setItem=window.originalSetItem;document.querySelector('#clear-journal').click()`);
+  await navigate('aula-16.html');
+  if(await evaluate(`document.querySelector('#first-explanation').value`)!=='')throw Error('Apagar diário falhou');
+  await evaluate(`document.querySelector('#toggle-study').click();document.querySelector('#toggle-study').click()`);
+  if(!await evaluate(`!document.querySelector('#material').hidden&&document.activeElement.id==='modelo'`))throw Error('Retorno à revisão falhou');
+  await navigate('metodo-feynman.html');
+  if(await evaluate(`document.documentElement.scrollWidth`)>width)throw Error('Página do método transborda');
+  await navigate('aula-16.html');
+  await evaluate('window.scrollTo(0,0)');
   const shot=await send('Page.captureScreenshot',{format:'png'});fs.writeFileSync('/tmp/python-wiki-'+width+'.png',Buffer.from(shot.data,'base64'));
-  checks.push({width,home:layout,search,lesson,disclosure:'pass'});
+  checks.push({width,home:layout,search,lesson,disclosure:'pass',teaching,journal:'save/restore/isolation/export/delete/storage-denied: pass',reviewReturn:'pass',methodLayout:'pass'});
  }
- fs.writeFileSync(path.join(root,'research/browser-results.json'),JSON.stringify({recordedAt:new Date().toISOString(),browser:await send('Browser.getVersion'),checks,limits:'Sem ensaio com leitor de tela ou usuários; não é auditoria WCAG completa.'},null,2)+'\n');
- console.log('Chromium: layout 1280/320, busca com e sem resultado, código em uma linha e resposta expansível passaram.');
+ await send('Emulation.setScriptExecutionDisabled',{value:true});
+ await navigate('aula-16.html');
+ const noJavaScript=await evaluate(`({material:!document.querySelector('#material').hidden,fields:document.querySelectorAll('textarea').length,buttonsHidden:document.querySelector('#toggle-study').hidden&&document.querySelector('#journal-actions').hidden})`);
+ if(!noJavaScript.material||noJavaScript.fields!==3||!noJavaScript.buttonsHidden)throw Error('Alternativa sem JS falhou');
+ fs.writeFileSync(path.join(root,'research/browser-results.json'),JSON.stringify({recordedAt:new Date().toISOString(),browser:await send('Browser.getVersion'),checks,noJavaScript,limits:'Sem ensaio com leitor de tela ou usuários; não é auditoria WCAG completa. Os testes de formulário usam perfil temporário local.'},null,2)+'\n');
+ console.log('Chromium: desktop/celular, busca, ensino sem consulta por teclado, retorno, diário por aula, exportação, falha de armazenamento e alternativa sem JS passaram.');
 }finally{ws?.close();chrome.kill('SIGTERM');server.close();}
