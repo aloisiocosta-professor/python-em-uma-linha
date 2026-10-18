@@ -12,3 +12,15 @@ Em 18/10/2026, o repositório público foi criado e recebeu a branch main. GitHu
 - Chromium local: layout em larguras 1280 e 320; busca com resultado e sem resultado; uma linha no código exibido; expansão da resposta.
 
 Este registro documenta o estado observado, não garante disponibilidade futura do host. Alterações posteriores devem repetir as verificações pertinentes.
+
+## Versão 2 — refatoração Feynman verificada
+
+Em 18/10/2026, o commit de conteúdo `2a764c0c5409795d0bbfb9e1bbfcb6c7273b7b5a` foi publicado. As 51 aulas, os quatro projetos e a orientação de estudo passaram a seguir protocolo-feynman.md.
+
+- Verificação remota concluída com sucesso: https://github.com/aloisiocosta-professor/python-em-uma-linha/actions/runs/39176187095.
+- Publicação de Pages concluída com sucesso: https://github.com/aloisiocosta-professor/python-em-uma-linha/actions/runs/39176186642.
+- API de Pages: built, sem mensagem de erro, para o mesmo commit.
+- HTTP 200 e conteúdo versão 2 conferidos em metodo-feynman.html e aula-51.html, incluindo o campo de explicação revisada.
+- Validação local: 51 exemplos de uma linha, 55 páginas, 760 links locais; cobertura editorial e testes de interação descritos em revisao-feynman.md.
+
+A página do método está disponível em https://aloisiocosta-professor.github.io/python-em-uma-linha/metodo-feynman.html. Os commits posteriores deste registro apenas documentam a publicação observada.

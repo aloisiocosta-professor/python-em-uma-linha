@@ -26,4 +26,4 @@ O relatório feynman-results.json verifica cobertura editorial das 51 aulas; nã
 
 browser-results.json registra testes em Chromium a 1280 e 320 pixels: modo ensinar acionado por teclado e foco no campo correto, ocultação e retorno às explicações, salvamento e recuperação do diário, separação entre aulas, download, remoção, alternativa quando o armazenamento é negado, busca e leitura sem JavaScript. O primeiro teste de teclado usou uma sequência CDP incompleta; o acionamento foi corrigido para enviar Enter com o texto correspondente e trazer a página ao foco, sem mudar o controle nativo do produto. A execução final passou. As capturas foram inspecionadas visualmente. Nenhum estudo com estudantes ou teste com leitor de tela foi realizado.
 
-A publicação será registrada depois que o conteúdo e as verificações forem concluídos. O histórico anterior é preservado para comparar a versão inicial com a refatoração.
+Publicação confirmada por GitHub Pages e por HTTP 200, com verificações remotas concluídas com sucesso. Os identificadores e links estão em publicacao.md. O histórico anterior é preservado para comparar a versão inicial com a refatoração.
