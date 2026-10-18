@@ -1,7 +1,79 @@
 {
-  "recordedAt": "2026-10-18T23:20:38.797Z",
+  "recordedAt": "2026-10-18T23:40:44.455Z",
   "python": "3.14.8 (main, Oct 10 2026, 14:55:18) [GCC 16.1.1 20260430]",
   "examples": [
+    {
+      "id": "z01",
+      "physicalLines": 1,
+      "compileAndRun": "pass",
+      "expectedOutput": "pass"
+    },
+    {
+      "id": "z02",
+      "physicalLines": 1,
+      "compileAndRun": "pass",
+      "expectedOutput": "pass"
+    },
+    {
+      "id": "z03",
+      "physicalLines": 1,
+      "compileAndRun": "pass",
+      "expectedOutput": "pass"
+    },
+    {
+      "id": "z04",
+      "physicalLines": 1,
+      "compileAndRun": "pass",
+      "expectedOutput": "pass"
+    },
+    {
+      "id": "z05",
+      "physicalLines": 1,
+      "compileAndRun": "pass",
+      "expectedOutput": "pass"
+    },
+    {
+      "id": "z06",
+      "physicalLines": 1,
+      "compileAndRun": "pass",
+      "expectedOutput": "pass"
+    },
+    {
+      "id": "z07",
+      "physicalLines": 1,
+      "compileAndRun": "pass",
+      "expectedOutput": "pass"
+    },
+    {
+      "id": "z08",
+      "physicalLines": 1,
+      "compileAndRun": "pass",
+      "expectedOutput": "pass"
+    },
+    {
+      "id": "z09",
+      "physicalLines": 1,
+      "compileAndRun": "pass",
+      "expectedOutput": "pass"
+    },
+    {
+      "id": "z10",
+      "physicalLines": 1,
+      "compileAndRun": "pass",
+      "expectedOutput": "pass"
+    },
+    {
+      "id": "z11",
+      "physicalLines": 1,
+      "compileAndRun": "pass",
+      "expectedOutput": "pass"
+    },
+    {
+      "id": "z12",
+      "physicalLines": 1,
+      "compileAndRun": "pass",
+      "expectedOutput": "pass"
+    },
     {
       "id": "01",
       "physicalLines": 1,
@@ -51,13 +123,43 @@
       "expectedOutput": "pass"
     },
     {
-      "id": "09",
+      "id": "10",
       "physicalLines": 1,
       "compileAndRun": "pass",
       "expectedOutput": "pass"
     },
     {
-      "id": "10",
+      "id": "b01",
+      "physicalLines": 1,
+      "compileAndRun": "pass",
+      "expectedOutput": "pass"
+    },
+    {
+      "id": "b02",
+      "physicalLines": 1,
+      "compileAndRun": "pass",
+      "expectedOutput": "pass"
+    },
+    {
+      "id": "b03",
+      "physicalLines": 1,
+      "compileAndRun": "pass",
+      "expectedOutput": "pass"
+    },
+    {
+      "id": "b04",
+      "physicalLines": 1,
+      "compileAndRun": "pass",
+      "expectedOutput": "pass"
+    },
+    {
+      "id": "b05",
+      "physicalLines": 1,
+      "compileAndRun": "pass",
+      "expectedOutput": "pass"
+    },
+    {
+      "id": "09",
       "physicalLines": 1,
       "compileAndRun": "pass",
       "expectedOutput": "pass"
@@ -154,6 +256,54 @@
     },
     {
       "id": "26",
+      "physicalLines": 1,
+      "compileAndRun": "pass",
+      "expectedOutput": "pass"
+    },
+    {
+      "id": "p01",
+      "physicalLines": 1,
+      "compileAndRun": "pass",
+      "expectedOutput": "pass"
+    },
+    {
+      "id": "p02",
+      "physicalLines": 1,
+      "compileAndRun": "pass",
+      "expectedOutput": "pass"
+    },
+    {
+      "id": "p03",
+      "physicalLines": 1,
+      "compileAndRun": "pass",
+      "expectedOutput": "pass"
+    },
+    {
+      "id": "p04",
+      "physicalLines": 1,
+      "compileAndRun": "pass",
+      "expectedOutput": "pass"
+    },
+    {
+      "id": "p05",
+      "physicalLines": 1,
+      "compileAndRun": "pass",
+      "expectedOutput": "pass"
+    },
+    {
+      "id": "p06",
+      "physicalLines": 1,
+      "compileAndRun": "pass",
+      "expectedOutput": "pass"
+    },
+    {
+      "id": "p07",
+      "physicalLines": 1,
+      "compileAndRun": "pass",
+      "expectedOutput": "pass"
+    },
+    {
+      "id": "p08",
       "physicalLines": 1,
       "compileAndRun": "pass",
       "expectedOutput": "pass"
@@ -309,13 +459,13 @@
       "expectedOutput": "pass"
     }
   ],
-  "feynmanLessons": 51,
+  "feynmanLessons": 76,
   "additionalChecks": {
     "quicksort": "1093 entradas finitas comparadas com sorted",
     "bfs": "mapa completo de distâncias do exemplo",
     "join": "comutatividade, associatividade e idempotência em 729 triplas"
   },
-  "htmlPages": 55,
-  "localLinks": 760,
+  "htmlPages": 84,
+  "localLinks": 1758,
   "browserQA": "Ver registro separado; este verificador não simula navegador."
 }

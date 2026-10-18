@@ -23,3 +23,7 @@ Consulta dirigida de gramática, funções e APIs, sem alegação de leitura int
 ## Limitações comuns
 
 Não houve investigação exaustiva de retratações, revisão por pares própria, auditoria dos dados brutos dos autores nem replicação integral. A leitura dos dois textos completos sustenta apenas a decisão de pertinência descrita em bibliografia.md. As demais áreas do curso têm exemplos autorais e lacunas bibliográficas declaradas, não uma falsa cobertura integral por estes dois artigos.
+
+## Rodada 3
+
+C1, P2 e L1 têm o registro de leitura em zero-absoluto.md. As figuras de L1 foram abertas a partir dos arquivos públicos da editora; o texto integral foi lido pelo leitor web. O arquivo inicialmente sugerido para Koh et al. não correspondia ao artigo pretendido, foi rejeitado e não fundamenta nenhuma afirmação. As fontes aceitas e seu modo de acesso constam de fontes.json.

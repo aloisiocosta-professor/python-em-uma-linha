@@ -14,7 +14,7 @@ export function verifyFeynman(root,lessons){
   if(/<details[^>]*\bopen(?:\s|>)/.test(html))throw Error('Resposta revelada antes da tentativa: '+l.id);
   reports.push({id:l.id,question:f.question,uniqueDiagnostic:true,boundedAnalogy:true,workedSteps:f.steps.length,firstGapRevisionFields:true,transferExercise:true});
  }
- const report={recordedAt:new Date().toISOString(),protocol:'2.0',lessons:reports,total:reports.length,scope:'Cobertura editorial e presença do ciclo na página; não avalia a qualidade das explicações nem a aprendizagem. Ver browser-results.json para testes de interação.'};
+ const report={recordedAt:new Date().toISOString(),protocol:'3.0',lessons:reports,total:reports.length,scope:'Cobertura editorial e presença do ciclo na página; não avalia a qualidade das explicações nem a aprendizagem. Ver browser-results.json para testes de interação.'};
  fs.writeFileSync(path.join(root,'research/feynman-results.json'),JSON.stringify(report,null,2)+'\n');
  return report.total;
 }

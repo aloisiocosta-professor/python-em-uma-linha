@@ -41,6 +41,49 @@
       "accessedOn": "2026-10-18",
       "localCacheIgnored": true,
       "assessment": "Referência de orientação pedagógica; separada dos artigos científicos; sem inferência de eficácia deste curso"
+    },
+    {
+      "id": "C1",
+      "title": "Computational Thinking",
+      "version": "Manuscrito de 25/11/2005, quatro páginas",
+      "url": "https://www.cs.cmu.edu/afs/cs/usr/wing/www/ct-paper.pdf",
+      "file": "wing-2005.pdf",
+      "kind": "conceptual_essay",
+      "bytes": 50688,
+      "sha256": "5bd6be319dfddc74231d31860991e6dee39a0aa93f06e4dadf81e9870856dbf4",
+      "accessedOn": "2026-10-18",
+      "localCacheIgnored": true,
+      "assessment": "Fundamentação conceitual; não é experimento nem a versão do periódico de 2006"
+    },
+    {
+      "id": "P2",
+      "title": "Learning Principles",
+      "version": "Página institucional consultada em 18/10/2026",
+      "url": "https://www.cmu.edu/teaching/principles/learning.html",
+      "file": "cmu-learning.html",
+      "kind": "institutional_learning_guidance",
+      "bytes": 37587,
+      "sha256": "5c0a3e0a83001939292cf42037de93a7d31c6483203ccd8c2cd7bac041417e91",
+      "accessedOn": "2026-10-18",
+      "localCacheIgnored": true,
+      "assessment": "Orientação institucional para conhecimentos prévios e prática; decisão editorial descrita em zero-absoluto.md"
+    },
+    {
+      "id": "L1",
+      "title": "Expecting to teach enhances learning and organization of knowledge in free recall of text passages",
+      "version": "Memory & Cognition 42, 1038–1048 (2014)",
+      "url": "https://sites.williams.edu/nk2/files/2011/08/Nestojko.Bui_.Kornell.Bjork_.2014.pdf",
+      "doi": "10.3758/s13421-014-0416-z",
+      "kind": "related_pedagogical_experiment",
+      "externalReadOnly": true,
+      "pages": 11,
+      "readVia": "Leitor web, texto integral em trechos sobrepostos; PDF não disponível para download local por curl (403).",
+      "figures": [
+        "https://media.springernature.com/full/springer-static/image/art%3A10.3758%2Fs13421-014-0416-z/MediaObjects/13421_2014_416_Fig1_HTML.gif",
+        "https://media.springernature.com/full/springer-static/image/art%3A10.3758%2Fs13421-014-0416-z/MediaObjects/13421_2014_416_Fig2_HTML.gif"
+      ],
+      "accessedOn": "2026-10-18",
+      "assessment": "Inclusão delimitada à preparação para ensinar; ver zero-absoluto.md; sem hash de PDF local ausente"
     }
   ]
 }

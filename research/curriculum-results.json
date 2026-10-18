@@ -1,0 +1,752 @@
+{
+  "recordedAt": "2026-10-18T23:40:09.613Z",
+  "total": 76,
+  "tracks": 9,
+  "firstLesson": "z01",
+  "oldURLsPreserved": true,
+  "lessons": [
+    {
+      "id": "z01",
+      "position": 1,
+      "prerequisites": [],
+      "definedTerms": 3,
+      "thinkingSkill": "Separar a pergunta da regra que a resolve."
+    },
+    {
+      "id": "z02",
+      "position": 2,
+      "prerequisites": [
+        "z01"
+      ],
+      "definedTerms": 3,
+      "thinkingSkill": "Escolher o significado dos dados."
+    },
+    {
+      "id": "z03",
+      "position": 3,
+      "prerequisites": [
+        "z02"
+      ],
+      "definedTerms": 3,
+      "thinkingSkill": "Escrever instruções e declarar condições."
+    },
+    {
+      "id": "z04",
+      "position": 4,
+      "prerequisites": [
+        "z03"
+      ],
+      "definedTerms": 3,
+      "thinkingSkill": "Especificar entrada, regra e saída."
+    },
+    {
+      "id": "z05",
+      "position": 5,
+      "prerequisites": [
+        "z04"
+      ],
+      "definedTerms": 2,
+      "thinkingSkill": "Decompor e recombinar soluções."
+    },
+    {
+      "id": "z06",
+      "position": 6,
+      "prerequisites": [
+        "z05"
+      ],
+      "definedTerms": 2,
+      "thinkingSkill": "Distinguir uma hipótese de uma garantia."
+    },
+    {
+      "id": "z07",
+      "position": 7,
+      "prerequisites": [
+        "z06"
+      ],
+      "definedTerms": 2,
+      "thinkingSkill": "Escolher detalhes e explicitar o que foi omitido."
+    },
+    {
+      "id": "z08",
+      "position": 8,
+      "prerequisites": [
+        "z07"
+      ],
+      "definedTerms": 3,
+      "thinkingSkill": "Justificar decisões por condições."
+    },
+    {
+      "id": "z09",
+      "position": 9,
+      "prerequisites": [
+        "z08"
+      ],
+      "definedTerms": 3,
+      "thinkingSkill": "Combinar regras e procurar contraexemplos."
+    },
+    {
+      "id": "z10",
+      "position": 10,
+      "prerequisites": [
+        "z09"
+      ],
+      "definedTerms": 3,
+      "thinkingSkill": "Rastrear mudanças em vez de adivinhar o resultado."
+    },
+    {
+      "id": "z11",
+      "position": 11,
+      "prerequisites": [
+        "z10"
+      ],
+      "definedTerms": 3,
+      "thinkingSkill": "Usar resultados para revisar uma hipótese."
+    },
+    {
+      "id": "z12",
+      "position": 12,
+      "prerequisites": [
+        "z11"
+      ],
+      "definedTerms": 4,
+      "thinkingSkill": "Distinguir escrever, salvar e executar."
+    },
+    {
+      "id": "01",
+      "position": 13,
+      "prerequisites": [
+        "z12"
+      ],
+      "definedTerms": 2,
+      "thinkingSkill": "Distinguir uma instrução da mensagem produzida."
+    },
+    {
+      "id": "02",
+      "position": 14,
+      "prerequisites": [
+        "01",
+        "z10"
+      ],
+      "definedTerms": 3,
+      "thinkingSkill": "Acompanhar o valor de cada expressão."
+    },
+    {
+      "id": "03",
+      "position": 15,
+      "prerequisites": [
+        "02"
+      ],
+      "definedTerms": 3,
+      "thinkingSkill": "Separar representação textual de valor numérico."
+    },
+    {
+      "id": "04",
+      "position": 16,
+      "prerequisites": [
+        "03",
+        "z09"
+      ],
+      "definedTerms": 2,
+      "thinkingSkill": "Justificar qual alternativa é escolhida."
+    },
+    {
+      "id": "05",
+      "position": 17,
+      "prerequisites": [
+        "03"
+      ],
+      "definedTerms": 2,
+      "thinkingSkill": "Selecionar posições e explicar os limites."
+    },
+    {
+      "id": "06",
+      "position": 18,
+      "prerequisites": [
+        "04",
+        "05"
+      ],
+      "definedTerms": 3,
+      "thinkingSkill": "Separar seleção de transformação."
+    },
+    {
+      "id": "07",
+      "position": 19,
+      "prerequisites": [
+        "06"
+      ],
+      "definedTerms": 4,
+      "thinkingSkill": "Escolher uma estrutura conforme a pergunta."
+    },
+    {
+      "id": "08",
+      "position": 20,
+      "prerequisites": [
+        "07"
+      ],
+      "definedTerms": 3,
+      "thinkingSkill": "Compor duas regras e acompanhar a ordem."
+    },
+    {
+      "id": "10",
+      "position": 21,
+      "prerequisites": [
+        "08"
+      ],
+      "definedTerms": 5,
+      "thinkingSkill": "Distinguir representação e programa executado."
+    },
+    {
+      "id": "b01",
+      "position": 22,
+      "prerequisites": [
+        "06",
+        "10"
+      ],
+      "definedTerms": 3,
+      "thinkingSkill": "Reconhecer uma ação repetida e rastrear suas passagens."
+    },
+    {
+      "id": "b02",
+      "position": 23,
+      "prerequisites": [
+        "b01",
+        "04"
+      ],
+      "definedTerms": 2,
+      "thinkingSkill": "Explicar por que uma repetição termina."
+    },
+    {
+      "id": "b03",
+      "position": 24,
+      "prerequisites": [
+        "08",
+        "10"
+      ],
+      "definedTerms": 3,
+      "thinkingSkill": "Separar regra, argumentos e resultado."
+    },
+    {
+      "id": "b04",
+      "position": 25,
+      "prerequisites": [
+        "b03"
+      ],
+      "definedTerms": 3,
+      "thinkingSkill": "Procurar contraexemplos e declarar o domínio."
+    },
+    {
+      "id": "b05",
+      "position": 26,
+      "prerequisites": [
+        "b04"
+      ],
+      "definedTerms": 3,
+      "thinkingSkill": "Usar uma interface e conferir seu contrato."
+    },
+    {
+      "id": "09",
+      "position": 27,
+      "prerequisites": [
+        "08",
+        "06"
+      ],
+      "definedTerms": 2,
+      "thinkingSkill": "Acompanhar consumo e estado de uma fonte."
+    },
+    {
+      "id": "11",
+      "position": 28,
+      "prerequisites": [
+        "b03",
+        "b02"
+      ],
+      "definedTerms": 3,
+      "thinkingSkill": "Decompor em chamadas menores e justificar a parada."
+    },
+    {
+      "id": "12",
+      "position": 29,
+      "prerequisites": [
+        "07",
+        "b01"
+      ],
+      "definedTerms": 3,
+      "thinkingSkill": "Escolher a ordem correta de entrada e retirada."
+    },
+    {
+      "id": "13",
+      "position": 30,
+      "prerequisites": [
+        "05",
+        "b02",
+        "b04"
+      ],
+      "definedTerms": 2,
+      "thinkingSkill": "Usar uma pré-condição e verificar a presença."
+    },
+    {
+      "id": "14",
+      "position": 31,
+      "prerequisites": [
+        "11",
+        "06"
+      ],
+      "definedTerms": 2,
+      "thinkingSkill": "Dividir, combinar e preservar ocorrências."
+    },
+    {
+      "id": "15",
+      "position": 32,
+      "prerequisites": [
+        "07",
+        "b05"
+      ],
+      "definedTerms": 2,
+      "thinkingSkill": "Resumir ocorrências sem confundir quantidade com posição."
+    },
+    {
+      "id": "16",
+      "position": 33,
+      "prerequisites": [
+        "12",
+        "07",
+        "b02"
+      ],
+      "definedTerms": 3,
+      "thinkingSkill": "Explorar relações por camadas."
+    },
+    {
+      "id": "17",
+      "position": 34,
+      "prerequisites": [
+        "16",
+        "13"
+      ],
+      "definedTerms": 3,
+      "thinkingSkill": "Melhorar respostas provisórias sem perder as hipóteses."
+    },
+    {
+      "id": "18",
+      "position": 35,
+      "prerequisites": [
+        "11",
+        "08",
+        "b05"
+      ],
+      "definedTerms": 2,
+      "thinkingSkill": "Reconhecer subproblemas repetidos."
+    },
+    {
+      "id": "19",
+      "position": 36,
+      "prerequisites": [
+        "07",
+        "b02"
+      ],
+      "definedTerms": 3,
+      "thinkingSkill": "Representar grupos por raízes e seguir relações."
+    },
+    {
+      "id": "20",
+      "position": 37,
+      "prerequisites": [
+        "z09",
+        "06",
+        "b05"
+      ],
+      "definedTerms": 2,
+      "thinkingSkill": "Procurar uma escolha que satisfaça todas as regras."
+    },
+    {
+      "id": "21",
+      "position": 38,
+      "prerequisites": [
+        "b03",
+        "07"
+      ],
+      "definedTerms": 3,
+      "thinkingSkill": "Relacionar uma ação com o estado que ela altera."
+    },
+    {
+      "id": "22",
+      "position": 39,
+      "prerequisites": [
+        "b03",
+        "03"
+      ],
+      "definedTerms": 2,
+      "thinkingSkill": "Separar caminho de sucesso e caminho de falha."
+    },
+    {
+      "id": "23",
+      "position": 40,
+      "prerequisites": [
+        "b05",
+        "22"
+      ],
+      "definedTerms": 3,
+      "thinkingSkill": "Planejar abertura, uso e encerramento de recursos."
+    },
+    {
+      "id": "24",
+      "position": 41,
+      "prerequisites": [
+        "07",
+        "b05"
+      ],
+      "definedTerms": 2,
+      "thinkingSkill": "Separar dados do modo de transportá-los."
+    },
+    {
+      "id": "25",
+      "position": 42,
+      "prerequisites": [
+        "07",
+        "b03",
+        "22"
+      ],
+      "definedTerms": 3,
+      "thinkingSkill": "Separar comando de valores e definir consultas."
+    },
+    {
+      "id": "26",
+      "position": 43,
+      "prerequisites": [
+        "b04",
+        "07"
+      ],
+      "definedTerms": 2,
+      "thinkingSkill": "Transformar uma regra em verificações."
+    },
+    {
+      "id": "p01",
+      "position": 44,
+      "prerequisites": [
+        "b05",
+        "26"
+      ],
+      "definedTerms": 3,
+      "thinkingSkill": "Comparar soluções pelo mecanismo e pelo contrato."
+    },
+    {
+      "id": "p02",
+      "position": 45,
+      "prerequisites": [
+        "p01"
+      ],
+      "definedTerms": 2,
+      "thinkingSkill": "Isolar decisões de efeitos externos."
+    },
+    {
+      "id": "p03",
+      "position": 46,
+      "prerequisites": [
+        "21",
+        "p02"
+      ],
+      "definedTerms": 3,
+      "thinkingSkill": "Relacionar estado, identidade e responsabilidade."
+    },
+    {
+      "id": "p04",
+      "position": 47,
+      "prerequisites": [
+        "p03"
+      ],
+      "definedTerms": 2,
+      "thinkingSkill": "Separar motivos diferentes para uma mudança."
+    },
+    {
+      "id": "p05",
+      "position": 48,
+      "prerequisites": [
+        "p04"
+      ],
+      "definedTerms": 2,
+      "thinkingSkill": "Declarar contratos entre componentes."
+    },
+    {
+      "id": "p06",
+      "position": 49,
+      "prerequisites": [
+        "p05"
+      ],
+      "definedTerms": 3,
+      "thinkingSkill": "Desenhar o fluxo e localizar o impacto de uma mudança."
+    },
+    {
+      "id": "p07",
+      "position": 50,
+      "prerequisites": [
+        "p06",
+        "25"
+      ],
+      "definedTerms": 2,
+      "thinkingSkill": "Controlar dependências e declarar limites do teste."
+    },
+    {
+      "id": "p08",
+      "position": 51,
+      "prerequisites": [
+        "p07",
+        "26"
+      ],
+      "definedTerms": 3,
+      "thinkingSkill": "Usar contratos e testes para orientar o projeto."
+    },
+    {
+      "id": "27",
+      "position": 52,
+      "prerequisites": [
+        "p05",
+        "22",
+        "12"
+      ],
+      "definedTerms": 3,
+      "thinkingSkill": "Separar ordem de entrada e ordem de conclusão."
+    },
+    {
+      "id": "28",
+      "position": 53,
+      "prerequisites": [
+        "b03",
+        "b02",
+        "27"
+      ],
+      "definedTerms": 3,
+      "thinkingSkill": "Identificar onde uma tarefa pode ceder o controle."
+    },
+    {
+      "id": "29",
+      "position": 54,
+      "prerequisites": [
+        "z09",
+        "b02",
+        "07"
+      ],
+      "definedTerms": 2,
+      "thinkingSkill": "Guardar só o estado necessário para uma decisão."
+    },
+    {
+      "id": "30",
+      "position": 55,
+      "prerequisites": [
+        "07",
+        "20"
+      ],
+      "definedTerms": 3,
+      "thinkingSkill": "Comparar conhecimentos parciais sem impor uma ordem falsa."
+    },
+    {
+      "id": "31",
+      "position": 56,
+      "prerequisites": [
+        "02",
+        "b04",
+        "b05"
+      ],
+      "definedTerms": 3,
+      "thinkingSkill": "Distinguir aproximação, igualdade e significado."
+    },
+    {
+      "id": "32",
+      "position": 57,
+      "prerequisites": [
+        "31",
+        "07"
+      ],
+      "definedTerms": 3,
+      "thinkingSkill": "Verificar uma solução substituindo-a nas equações."
+    },
+    {
+      "id": "33",
+      "position": 58,
+      "prerequisites": [
+        "32",
+        "06"
+      ],
+      "definedTerms": 3,
+      "thinkingSkill": "Acompanhar formas e eixos de uma tabela."
+    },
+    {
+      "id": "34",
+      "position": 59,
+      "prerequisites": [
+        "31",
+        "33"
+      ],
+      "definedTerms": 3,
+      "thinkingSkill": "Separar repetibilidade e incerteza amostral."
+    },
+    {
+      "id": "35",
+      "position": 60,
+      "prerequisites": [
+        "31",
+        "b02"
+      ],
+      "definedTerms": 3,
+      "thinkingSkill": "Manter uma garantia durante o refinamento."
+    },
+    {
+      "id": "36",
+      "position": 61,
+      "prerequisites": [
+        "35"
+      ],
+      "definedTerms": 3,
+      "thinkingSkill": "Separar modelo, condição inicial e método numérico."
+    },
+    {
+      "id": "37",
+      "position": 62,
+      "prerequisites": [
+        "36"
+      ],
+      "definedTerms": 2,
+      "thinkingSkill": "Distinguir transformar uma regra de avaliar um número."
+    },
+    {
+      "id": "38",
+      "position": 63,
+      "prerequisites": [
+        "33",
+        "31"
+      ],
+      "definedTerms": 3,
+      "thinkingSkill": "Representar dados de outra forma e conferir a reconstrução."
+    },
+    {
+      "id": "39",
+      "position": 64,
+      "prerequisites": [
+        "34",
+        "p06"
+      ],
+      "definedTerms": 4,
+      "thinkingSkill": "Separar informação usada para aprender da reservada à avaliação."
+    },
+    {
+      "id": "40",
+      "position": 65,
+      "prerequisites": [
+        "08",
+        "b03"
+      ],
+      "definedTerms": 2,
+      "thinkingSkill": "Acompanhar de onde vêm os nomes usados por uma função."
+    },
+    {
+      "id": "41",
+      "position": 66,
+      "prerequisites": [
+        "40",
+        "18"
+      ],
+      "definedTerms": 2,
+      "thinkingSkill": "Separar a operação original da operação que a envolve."
+    },
+    {
+      "id": "42",
+      "position": 67,
+      "prerequisites": [
+        "21",
+        "p03"
+      ],
+      "definedTerms": 2,
+      "thinkingSkill": "Definir o significado de uma operação para um tipo."
+    },
+    {
+      "id": "43",
+      "position": 68,
+      "prerequisites": [
+        "42"
+      ],
+      "definedTerms": 2,
+      "thinkingSkill": "Separar a criação de classes da criação de instâncias."
+    },
+    {
+      "id": "44",
+      "position": 69,
+      "prerequisites": [
+        "p05",
+        "07"
+      ],
+      "definedTerms": 3,
+      "thinkingSkill": "Representar a estrutura de uma expressão."
+    },
+    {
+      "id": "45",
+      "position": 70,
+      "prerequisites": [
+        "44",
+        "11",
+        "22"
+      ],
+      "definedTerms": 3,
+      "thinkingSkill": "Separar reconhecer uma escrita de autorizar seu significado."
+    },
+    {
+      "id": "46",
+      "position": 71,
+      "prerequisites": [
+        "45",
+        "12"
+      ],
+      "definedTerms": 3,
+      "thinkingSkill": "Definir operações por suas mudanças de estado."
+    },
+    {
+      "id": "47",
+      "position": 72,
+      "prerequisites": [
+        "37",
+        "42"
+      ],
+      "definedTerms": 2,
+      "thinkingSkill": "Propagar valor e derivada com uma regra local."
+    },
+    {
+      "id": "48",
+      "position": 73,
+      "prerequisites": [
+        "35",
+        "08"
+      ],
+      "definedTerms": 2,
+      "thinkingSkill": "Identificar candidatos a solução e separar convergência."
+    },
+    {
+      "id": "49",
+      "position": 74,
+      "prerequisites": [
+        "30",
+        "p05"
+      ],
+      "definedTerms": 4,
+      "thinkingSkill": "Projetar uma combinação que resiste a repetições."
+    },
+    {
+      "id": "50",
+      "position": 75,
+      "prerequisites": [
+        "20",
+        "29"
+      ],
+      "definedTerms": 3,
+      "thinkingSkill": "Procurar uma violação acompanhando estados intermediários."
+    },
+    {
+      "id": "51",
+      "position": 76,
+      "prerequisites": [
+        "24",
+        "26",
+        "p08"
+      ],
+      "definedTerms": 3,
+      "thinkingSkill": "Distinguir identidade de artefatos e validade de afirmações."
+    }
+  ],
+  "limits": "Verifica ordem declarada e apoios presentes. Não prova que todo termo possível foi explicado nem mede aprendizagem."
+}

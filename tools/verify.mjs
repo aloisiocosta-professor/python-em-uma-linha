@@ -2,10 +2,12 @@ import fs from 'node:fs';
 import path from 'node:path';
 import {spawnSync} from 'node:child_process';
 import {verifyFeynman} from './verify-feynman.mjs';
+import {verifyCurriculum} from './verify-curriculum.mjs';
 const root=path.resolve(import.meta.dirname,'..');
 const py=process.env.PYTHON||path.join(root,'.venv/bin/python');
 const lessons=JSON.parse(fs.readFileSync(path.join(root,'lessons.json')));
 const feynmanLessons=verifyFeynman(root,lessons);
+const curriculumLessons=verifyCurriculum(root,lessons);
 const results=[];
 const run=(code)=>{const r=spawnSync(py,['-c',code],{cwd:root,encoding:'utf8',timeout:30000,env:{...process.env,OPENBLAS_NUM_THREADS:'1',OMP_NUM_THREADS:'1'}});if(r.error||r.status!==0)throw Error(r.error?.message||r.stderr||'Processo falhou');return r.stdout.trim();};
 for(const l of lessons){const file=path.join(root,'examples',l.id+'.py');const code=fs.readFileSync(file,'utf8');if(code.split(/\r\n|\n|\r/).filter((s,i,a)=>i<a.length-1||s!=='').length!==1)throw Error('Mais de uma linha: '+file);if(code.trim()!==l.code)throw Error('Exemplo divergente: '+l.id);if(fs.readFileSync(path.join(root,'docs/examples',l.id+'.py'),'utf8')!==code)throw Error('Download divergente: '+l.id);const output=run(code);if(output!==l.expected)throw Error(`${l.id}: esperado ${l.expected}; obtido ${output}`);results.push({id:l.id,physicalLines:1,compileAndRun:'pass',expectedOutput:'pass'});}

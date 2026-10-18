@@ -1,12 +1,16 @@
 # Python em uma linha física
 
-Wiki em português aplicada à ciência e engenharia da computação, com 51 aulas organizadas pelo ciclo de Feynman: explicar, identificar lacunas, investigar e explicar de novo. Cada arquivo `.py` contém exatamente uma linha física. Quando um bloco é necessário, o código autoral usa `exec` com `\n` escapado.
+Wiki em português aplicada à ciência e engenharia da computação, com 76 aulas organizadas pelo ciclo de Feynman: explicar, identificar lacunas, investigar e explicar de novo. Cada arquivo `.py` contém exatamente uma linha física. Quando um bloco é necessário, o código autoral usa `exec` com `\n` escapado.
 
 - Wiki: https://aloisiocosta-professor.github.io/python-em-uma-linha/
-- Comece: [aula 01](https://aloisiocosta-professor.github.io/python-em-uma-linha/aula-01.html)
+- Comece: [orientação para o absoluto zero](https://aloisiocosta-professor.github.io/python-em-uma-linha/comece-aqui.html) e [primeira etapa](https://aloisiocosta-professor.github.io/python-em-uma-linha/aula-z01.html)
 - Método: [protocolo](research/protocolo.md), [triagem](research/triagem.csv), [bibliografia aceita](research/bibliografia.md), [mapa de afirmações](research/afirmacoes.csv).
 
-## Estudar e reproduzir
+## Estudar
+
+Não é preciso saber programar ou preparar um repositório para iniciar. Leia [Comece aqui](https://aloisiocosta-professor.github.io/python-em-uma-linha/comece-aqui.html), siga as aulas na ordem e use o papel para prever as respostas. Pré-requisitos, vocabulário e habilidade de raciocínio aparecem em cada aula. As bibliotecas adicionais são necessárias apenas mais adiante, na trilha científica.
+
+## Reproduzir e manter a wiki
 
 Requisitos: Python 3.14 e Node.js >=22. Exemplos das primeiras trilhas usam somente a biblioteca padrão; a trilha científica usa as dependências fixadas.
 
@@ -30,13 +34,13 @@ GitHub Pages serve a pasta `/docs` da branch `main`. O workflow verifica exemplo
 
 ## Escopo e limites
 
-Esta é a versão 2 de um curso progressivo, do básico a introduções em tópicos de fronteira. Não equivale a uma formação completa em toda ciência e engenharia da computação. A bibliografia científica aceita contém apenas as fontes efetivamente examinadas, não cobre ainda todas as áreas. Não foi realizado estudo que demonstre superioridade pedagógica do formato. Os projetos incluem entregáveis e critérios de avaliação para aprofundamento autônomo.
+Esta é a versão 3 de um curso progressivo, do básico a introduções em tópicos de fronteira. Não equivale a uma formação completa em toda ciência e engenharia da computação. A bibliografia científica aceita contém apenas as fontes efetivamente examinadas, não cobre ainda todas as áreas. Não foi realizado estudo que demonstre superioridade pedagógica do formato. Os projetos incluem entregáveis e critérios de avaliação para aprofundamento autônomo.
 
 Conteúdo e código autorais disponibilizados sob MIT; artigos e documentação externos conservam seus próprios termos. Consulte [LICENSE](LICENSE).
 
-## Versão 2: estudar pelo ciclo de Feynman
+## Estudar pelo ciclo de Feynman
 
-As 51 aulas e os quatro projetos foram refatorados. Cada aula parte de uma pergunta concreta e de uma explicação simples, apresenta uma analogia com limite e acompanha os valores do código. Depois você esconde o material, ensina com suas palavras, registra uma lacuna, investiga e escreve uma segunda explicação. Um caso alterado testa se sua explicação se sustenta.
+As 76 aulas e os projetos foram refatorados. Cada aula parte de uma pergunta concreta e de uma explicação simples, apresenta uma analogia com limite e acompanha os valores do código. Depois você esconde o material, ensina com suas palavras, registra uma lacuna, investiga e escreve uma segunda explicação. Um caso alterado testa se sua explicação se sustenta.
 
 - [Como aplicar o ciclo na wiki](https://aloisiocosta-professor.github.io/python-em-uma-linha/metodo-feynman.html)
 - [Protocolo editorial obrigatório](research/protocolo-feynman.md)
@@ -47,3 +51,7 @@ A referência pedagógica é a orientação institucional [The Power of Teaching
 O diário opcional conserva primeira explicação, lacuna e revisão somente neste navegador, após clicar em **Salvar neste dispositivo**. É possível baixar os textos. A wiki não envia as anotações a servidores nem atribui nota por IA. O ciclo também pode ser realizado em um caderno.
 
 A fonte pedagógica específica está em `tools/feynman-content.mjs`; os componentes estão em `tools/feynman.mjs`. `lessons.json` e as páginas HTML são gerados: edite as fontes, não apenas os arquivos finais. Para alterações interativas, verifique também `node tools/browser-check.mjs` (Chromium local e Node >=22).
+
+## Versão 3: computação do absoluto zero
+
+A sequência começa com 12 aulas sem programação prévia, acrescenta cinco pontes de funções/repetição/testes e oito aulas de paradigmas, design e arquitetura. As 51 URLs anteriores permanecem estáveis. Glossário, ponte matemática e fontes pedagógicas têm páginas próprias. Veja [o registro da revisão](research/zero-absoluto.md).

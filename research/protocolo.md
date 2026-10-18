@@ -33,3 +33,7 @@ H2 exigiria estudo próprio: consentimento dos participantes, tarefas equivalent
 ## Emenda editorial de 18/10/2026 — versão 2
 
 Por solicitação do proprietário, o desenho pedagógico passa a seguir research/protocolo-feynman.md em todas as aulas e projetos. H1 e H2 mantêm seus significados e limites; a adoção do ciclo de Feynman não equivale a testar H2. A orientação institucional do Caltech foi lida integralmente e é classificada separadamente dos artigos científicos. As decisões e verificações da refatoração estão em revisao-feynman.md e nos relatórios correspondentes.
+
+## Emenda editorial — versão 3
+
+O público é explicitamente leigo, sem conhecimentos de computação. A aprendizagem começa por situações cotidianas e objetivos de raciocínio, usando Python como ferramenta para previsão e verificação. Pré-requisitos declarados, vocabulário local e pontes de conceitos são obrigatórios; a evidência pedagógica é classificada por seu alcance. Critérios, seleção e leitura: zero-absoluto.md. H2 continua não testada nesta wiki.

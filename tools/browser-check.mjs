@@ -3,6 +3,7 @@ import path from 'node:path';
 import http from 'node:http';
 import {spawn} from 'node:child_process';
 const root=path.resolve(import.meta.dirname,'..');
+const expectedLessonCount=JSON.parse(fs.readFileSync(path.join(root,'lessons.json'),'utf8')).length;
 const server=http.createServer((req,res)=>{const url=new URL(req.url,'http://localhost');const relative=url.pathname==='/'?'index.html':decodeURIComponent(url.pathname.slice(1));const file=path.resolve(root,'docs',relative);if(!file.startsWith(path.join(root,'docs')+path.sep)){res.writeHead(403);res.end();return;}try{const types={'.html':'text/html; charset=utf-8','.css':'text/css','.js':'text/javascript','.py':'text/plain'};res.setHeader('Content-Type',types[path.extname(file)]||'application/octet-stream');res.end(fs.readFileSync(file));}catch{res.writeHead(404);res.end();}});
 await new Promise(resolve=>server.listen(8766,'127.0.0.1',resolve));
 const profile=fs.mkdtempSync('/tmp/python-wiki-chrome-');
@@ -25,7 +26,15 @@ try{
   await send('Emulation.setDeviceMetricsOverride',{width,height:900,deviceScaleFactor:1,mobile:width<600});
   await navigate('index.html');
   const layout=await evaluate('({width:innerWidth,scroll:document.documentElement.scrollWidth,cards:document.querySelectorAll(".lesson-card").length})');
-  if(layout.scroll>width||layout.cards!==51)throw Error('Layout inválido '+JSON.stringify(layout));
+  if(layout.scroll>width||layout.cards!==expectedLessonCount)throw Error('Layout inválido '+JSON.stringify(layout));
+  if(await evaluate(`document.querySelector('.lesson-card a').getAttribute('href')`)!=='aula-z01.html')throw Error('Início do percurso fora de ordem');
+  for(const page of ['comece-aqui.html','glossario.html','ponte-matematica.html','evidencias.html','aula-z01.html','aula-p06.html']){
+   await navigate(page);
+   if(await evaluate(`document.documentElement.scrollWidth`)>width)throw Error('Página do iniciante transborda: '+page);
+   if(page.startsWith('aula-')&&!await evaluate(`document.querySelector('.lesson-terms')&&document.querySelector('.preparation')`))throw Error('Apoio do iniciante ausente: '+page);
+   if(page==='aula-z01.html'){const image=await send('Page.captureScreenshot',{format:'png'});fs.writeFileSync('/tmp/python-wiki-zero-'+width+'.png',Buffer.from(image.data,'base64'));}
+  }
+  await navigate('index.html');
   await evaluate(`document.querySelector('#busca').value='dijkstra';document.querySelector('#busca').dispatchEvent(new Event('input'))`);
   await pause(350);
   const search=await evaluate(`({count:document.querySelectorAll('.lesson-card:not([hidden])').length,text:document.querySelector('#resultados').textContent})`);
@@ -65,7 +74,7 @@ try{
   await navigate('aula-16.html');
   await evaluate('window.scrollTo(0,0)');
   const shot=await send('Page.captureScreenshot',{format:'png'});fs.writeFileSync('/tmp/python-wiki-'+width+'.png',Buffer.from(shot.data,'base64'));
-  checks.push({width,home:layout,search,lesson,disclosure:'pass',teaching,journal:'save/restore/isolation/export/delete/storage-denied: pass',reviewReturn:'pass',methodLayout:'pass'});
+  checks.push({width,home:layout,beginnerPages:'start/glossary/maths/evidence/zero/architecture: pass',search,lesson,disclosure:'pass',teaching,journal:'save/restore/isolation/export/delete/storage-denied: pass',reviewReturn:'pass',methodLayout:'pass'});
  }
  await send('Emulation.setScriptExecutionDisabled',{value:true});
  await navigate('aula-16.html');

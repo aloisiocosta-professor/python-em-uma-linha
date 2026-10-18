@@ -5,3 +5,7 @@ E1,descoberta,excluir,artigo SciPy identificado mas integra nao avaliada nesta r
 E2,descoberta,excluir,artigo SymPy identificado mas integra nao avaliada nesta rodada,https://doi.org/10.7717/peerj-cs.103
 E3,titulo_resumo,excluir,ambiente de blocos nao corresponde a restricao de uma linha fisica por arquivo,https://www.mdpi.com/2076-3417/13/19/10898
 E4,descoberta,excluir,tutoriais comerciais e discussoes nao sao evidencia cientifica primaria,sem_referencia_recomendada
+L1,integra,incluir_delimitado,preparacao para ensinar e nao validacao do ciclo inteiro,https://doi.org/10.3758/s13421-014-0416-z
+C1,integra,incluir_conceitual,manuscrito de 2005 e nao experimento de ensino,https://www.cs.cmu.edu/afs/cs/usr/wing/www/ct-paper.pdf
+P2,integra,incluir_institucional,orientacao sobre conhecimentos previos e habilidades componentes,https://www.cmu.edu/teaching/principles/learning.html
+E5,identidade,excluir,arquivo encontrado para Koh era uma dissertacao de outra autora,registro_em_zero_absoluto.md

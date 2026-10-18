@@ -1,7 +1,115 @@
 {
-  "recordedAt": "2026-10-18T23:21:23.581Z",
-  "protocol": "2.0",
+  "recordedAt": "2026-10-18T23:40:09.552Z",
+  "protocol": "3.0",
   "lessons": [
+    {
+      "id": "z01",
+      "question": "O que acontece entre fazer uma pergunta e receber uma resposta de um computador?",
+      "uniqueDiagnostic": true,
+      "boundedAnalogy": true,
+      "workedSteps": 3,
+      "firstGapRevisionFields": true,
+      "transferExercise": true
+    },
+    {
+      "id": "z02",
+      "question": "Como um número passa a representar alguma coisa do mundo?",
+      "uniqueDiagnostic": true,
+      "boundedAnalogy": true,
+      "workedSteps": 3,
+      "firstGapRevisionFields": true,
+      "transferExercise": true
+    },
+    {
+      "id": "z03",
+      "question": "Como explicar uma tarefa sem depender de adivinhação?",
+      "uniqueDiagnostic": true,
+      "boundedAnalogy": true,
+      "workedSteps": 3,
+      "firstGapRevisionFields": true,
+      "transferExercise": true
+    },
+    {
+      "id": "z04",
+      "question": "Como transformar uma pergunta num pequeno modelo de entrada e saída?",
+      "uniqueDiagnostic": true,
+      "boundedAnalogy": true,
+      "workedSteps": 3,
+      "firstGapRevisionFields": true,
+      "transferExercise": true
+    },
+    {
+      "id": "z05",
+      "question": "Como resolver uma conta de compras sem tentar pensar em tudo ao mesmo tempo?",
+      "uniqueDiagnostic": true,
+      "boundedAnalogy": true,
+      "workedSteps": 3,
+      "firstGapRevisionFields": true,
+      "transferExercise": true
+    },
+    {
+      "id": "z06",
+      "question": "Ver alguns exemplos permite descobrir uma regra única?",
+      "uniqueDiagnostic": true,
+      "boundedAnalogy": true,
+      "workedSteps": 3,
+      "firstGapRevisionFields": true,
+      "transferExercise": true
+    },
+    {
+      "id": "z07",
+      "question": "Que detalhes podemos deixar de fora de um modelo?",
+      "uniqueDiagnostic": true,
+      "boundedAnalogy": true,
+      "workedSteps": 3,
+      "firstGapRevisionFields": true,
+      "transferExercise": true
+    },
+    {
+      "id": "z08",
+      "question": "Como transformar uma regra em uma pergunta que possa ser conferida?",
+      "uniqueDiagnostic": true,
+      "boundedAnalogy": true,
+      "workedSteps": 3,
+      "firstGapRevisionFields": true,
+      "transferExercise": true
+    },
+    {
+      "id": "z09",
+      "question": "Como combinar duas perguntas sem mudar o significado da regra?",
+      "uniqueDiagnostic": true,
+      "boundedAnalogy": true,
+      "workedSteps": 3,
+      "firstGapRevisionFields": true,
+      "transferExercise": true
+    },
+    {
+      "id": "z10",
+      "question": "Como acompanhar uma quantidade que muda durante uma tarefa?",
+      "uniqueDiagnostic": true,
+      "boundedAnalogy": true,
+      "workedSteps": 3,
+      "firstGapRevisionFields": true,
+      "transferExercise": true
+    },
+    {
+      "id": "z11",
+      "question": "Como um resultado diferente da previsão ajuda a investigar um erro?",
+      "uniqueDiagnostic": true,
+      "boundedAnalogy": true,
+      "workedSteps": 3,
+      "firstGapRevisionFields": true,
+      "transferExercise": true
+    },
+    {
+      "id": "z12",
+      "question": "Onde escrevo um programa e como peço para ele executar?",
+      "uniqueDiagnostic": true,
+      "boundedAnalogy": true,
+      "workedSteps": 3,
+      "firstGapRevisionFields": true,
+      "transferExercise": true
+    },
     {
       "id": "01",
       "question": "Como faço o computador mostrar uma mensagem?",
@@ -75,8 +183,8 @@
       "transferExercise": true
     },
     {
-      "id": "09",
-      "question": "Por que a segunda leitura de um gerador pode estar vazia?",
+      "id": "10",
+      "question": "Como um programa com blocos cabe em uma linha física?",
       "uniqueDiagnostic": true,
       "boundedAnalogy": true,
       "workedSteps": 3,
@@ -84,8 +192,53 @@
       "transferExercise": true
     },
     {
-      "id": "10",
-      "question": "Como um programa com blocos cabe em uma linha física?",
+      "id": "b01",
+      "question": "Como aplicar a mesma ação a vários valores?",
+      "uniqueDiagnostic": true,
+      "boundedAnalogy": true,
+      "workedSteps": 3,
+      "firstGapRevisionFields": true,
+      "transferExercise": true
+    },
+    {
+      "id": "b02",
+      "question": "Como repetir sem esquecer a condição que encerra a tarefa?",
+      "uniqueDiagnostic": true,
+      "boundedAnalogy": true,
+      "workedSteps": 3,
+      "firstGapRevisionFields": true,
+      "transferExercise": true
+    },
+    {
+      "id": "b03",
+      "question": "Como dar nome a uma regra e reutilizá-la com dados diferentes?",
+      "uniqueDiagnostic": true,
+      "boundedAnalogy": true,
+      "workedSteps": 3,
+      "firstGapRevisionFields": true,
+      "transferExercise": true
+    },
+    {
+      "id": "b04",
+      "question": "Como escolher exemplos que desafiam uma regra?",
+      "uniqueDiagnostic": true,
+      "boundedAnalogy": true,
+      "workedSteps": 3,
+      "firstGapRevisionFields": true,
+      "transferExercise": true
+    },
+    {
+      "id": "b05",
+      "question": "Como usar uma regra já implementada e saber de onde ela veio?",
+      "uniqueDiagnostic": true,
+      "boundedAnalogy": true,
+      "workedSteps": 3,
+      "firstGapRevisionFields": true,
+      "transferExercise": true
+    },
+    {
+      "id": "09",
+      "question": "Por que a segunda leitura de um gerador pode estar vazia?",
       "uniqueDiagnostic": true,
       "boundedAnalogy": true,
       "workedSteps": 3,
@@ -230,6 +383,78 @@
     {
       "id": "26",
       "question": "Como testar uma regra sobre muitas entradas sem chamar isso de prova geral?",
+      "uniqueDiagnostic": true,
+      "boundedAnalogy": true,
+      "workedSteps": 3,
+      "firstGapRevisionFields": true,
+      "transferExercise": true
+    },
+    {
+      "id": "p01",
+      "question": "Por que dois programas diferentes podem resolver a mesma pergunta?",
+      "uniqueDiagnostic": true,
+      "boundedAnalogy": true,
+      "workedSteps": 3,
+      "firstGapRevisionFields": true,
+      "transferExercise": true
+    },
+    {
+      "id": "p02",
+      "question": "Como separar calcular uma resposta de interagir com o mundo?",
+      "uniqueDiagnostic": true,
+      "boundedAnalogy": true,
+      "workedSteps": 3,
+      "firstGapRevisionFields": true,
+      "transferExercise": true
+    },
+    {
+      "id": "p03",
+      "question": "Quando faz sentido juntar dados e operações no mesmo objeto?",
+      "uniqueDiagnostic": true,
+      "boundedAnalogy": true,
+      "workedSteps": 3,
+      "firstGapRevisionFields": true,
+      "transferExercise": true
+    },
+    {
+      "id": "p04",
+      "question": "Como mudar uma mensagem sem mexer na regra da conta?",
+      "uniqueDiagnostic": true,
+      "boundedAnalogy": true,
+      "workedSteps": 3,
+      "firstGapRevisionFields": true,
+      "transferExercise": true
+    },
+    {
+      "id": "p05",
+      "question": "Como trocar uma operação sem reescrever quem a utiliza?",
+      "uniqueDiagnostic": true,
+      "boundedAnalogy": true,
+      "workedSteps": 3,
+      "firstGapRevisionFields": true,
+      "transferExercise": true
+    },
+    {
+      "id": "p06",
+      "question": "Como organizar validação, cálculo e apresentação num pequeno sistema?",
+      "uniqueDiagnostic": true,
+      "boundedAnalogy": true,
+      "workedSteps": 3,
+      "firstGapRevisionFields": true,
+      "transferExercise": true
+    },
+    {
+      "id": "p07",
+      "question": "Como testar uma consulta sem exigir um banco de dados real?",
+      "uniqueDiagnostic": true,
+      "boundedAnalogy": true,
+      "workedSteps": 3,
+      "firstGapRevisionFields": true,
+      "transferExercise": true
+    },
+    {
+      "id": "p08",
+      "question": "Como decidir se uma reorganização preservou o comportamento prometido?",
       "uniqueDiagnostic": true,
       "boundedAnalogy": true,
       "workedSteps": 3,
@@ -462,6 +687,6 @@
       "transferExercise": true
     }
   ],
-  "total": 51,
+  "total": 76,
   "scope": "Cobertura editorial e presença do ciclo na página; não avalia a qualidade das explicações nem a aprendizagem. Ver browser-results.json para testes de interação."
 }

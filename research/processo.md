@@ -27,3 +27,7 @@ O curso contém introduções a tópicos avançados; uma formação de domínio 
 ## Continuação — refatoração pelo ciclo de Feynman
 
 A versão 2 substitui o caminho de ensino das 51 aulas e dos quatro projetos pelo protocolo-feynman.md. A solicitação, a referência institucional lida, as decisões e a validação estão em revisao-feynman.md. Os registros originais acima descrevem a primeira versão e foram preservados como histórico. A página metodo-feynman.html explica o ciclo diretamente ao estudante.
+
+## Continuação — percurso do absoluto zero
+
+A versão 3 segue a solicitação de usar Python como ferramenta principal para desenvolver lógica e pensamento computacional, com progressão até paradigmas, design e arquitetura. Foram acrescentadas 25 aulas, apoios de leitura nas 51 anteriores e quatro páginas de apoio. Fontes, decisões e limites constam de zero-absoluto.md. A navegação mantém as URLs anteriores e o diário local; o catálogo acompanha a nova sequência.

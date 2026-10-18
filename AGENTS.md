@@ -9,3 +9,7 @@ Leia e aplique [research/protocolo-feynman.md](research/protocolo-feynman.md) ao
 - Após editar, execute `node tools/build.mjs` e `node tools/verify.mjs`. Para alterações na prática interativa, execute `node tools/browser-check.mjs` quando Chromium e Node >=22 estiverem disponíveis.
 - Não envie anotações dos estudantes a serviços externos. Salvamento e exportação devem continuar locais e opcionais.
 - Atualize o registro de revisão e os testes pertinentes antes de publicar. A autorização do proprietário para atualizar esta wiki e seu repositório já consta na conversa.
+- Público: iniciante do absoluto zero. Dê significado aos termos antes de exigir seu uso; mostre entrada, regra, saída e o raciocínio que liga cada parte. Python é ferramenta de computação, não o objetivo único do currículo.
+- `tools/zero-curriculum.mjs` define as novas aulas e a sequência. `tools/beginner-scaffold.mjs` define pré-requisitos, habilidades e termos das aulas anteriores. IDs antigos devem permanecer estáveis para preservar links e diários.
+- Toda aula precisa de pré-requisitos já ensinados, vocabulário local e objetivo de pensamento computacional. Se usar matemática adicional, indique a preparação necessária. Catálogo e navegação devem concordar.
+- Não exija Node.js, Git ou pacotes científicos para começar. Confira também `tools/verify-curriculum.mjs` e as páginas de início, glossário e evidências ao alterar a progressão.

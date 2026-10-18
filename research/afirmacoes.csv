@@ -9,3 +9,6 @@ C5,dominio extremo de toda computacao foi adquirido,nenhuma,afirmacao nao feita
 F1,as 51 aulas implementam o ciclo editorial Feynman,feynman-results.json e browser-results.json,cobertura e funcionamento nao demonstram aprendizagem
 F2,o ciclo usa orientacao institucional para ensinar explicando,CTLO Caltech The Power of Teaching,adaptacao autoral e nao protocolo unico oficial
 F3,diarios nao sao enviados a servidores,app.js e testes no navegador,salvamento local depende das permissoes do navegador
+Z1,o percurso comeca sem conhecimentos de computacao,curriculum-results.json,ordem declarada e nao garantia de compreensao
+Z2,ha evidencia relacionada a preparar para ensinar,L1,nao valida este curso nem o ciclo Feynman inteiro
+Z3,pensamento computacional envolve modelagem e projeto alem da sintaxe,C1,ensaio conceitual e nao experimento

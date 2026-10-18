@@ -31,3 +31,7 @@ Consulta técnica dirigida às seções pertinentes; os manuais inteiros não fo
 ## Orientação pedagógica institucional — versão 2
 
 CALIFORNIA INSTITUTE OF TECHNOLOGY. Center for Teaching, Learning, & Outreach. *The Power of Teaching*. Sem data de publicação informada. https://ctlo.caltech.edu/aboutctlo/whoweserve/undergraduates/learning-resources/learning/power-of-teaching. Acesso em 18/10/2026. Página lida integralmente. Classificação: orientação institucional para estudo por explicação, não artigo experimental. Uso: desenho do ciclo editorial descrito em protocolo-feynman.md. Não foi usada para afirmar eficácia do curso ou superioridade do formato de uma linha.
+
+## Rodada 3 — referências conceituais e pedagógicas
+
+O registro [zero-absoluto.md](zero-absoluto.md) descreve versões, leitura integral e limites de L1 (Nestojko et al., 2014, experimento relacionado), C1 (Wing, manuscrito de 25/11/2005, ensaio conceitual) e P2 (Eberly Center/CMU, orientação institucional). A expressão “duas fontes” no início deste arquivo refere-se à primeira rodada técnica; não exclui estas inclusões posteriores. Cada categoria autoriza inferências diferentes.

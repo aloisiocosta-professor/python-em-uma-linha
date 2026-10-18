@@ -1,5 +1,7 @@
 # Protocolo editorial Feynman — versão 2.0
 
+Emenda vigente: versão 3, orientação para o absoluto zero descrita ao final. O texto abaixo registra a base da versão 2.
+
 Vigência: 18/10/2026. Aplica-se a todas as 51 aulas, à orientação inicial, aos projetos e às contribuições futuras. Atende à solicitação de refatorar a wiki para ensinar pelo ciclo de Feynman, preservando uma linha física por arquivo Python.
 
 ## Referência e natureza da adaptação
@@ -40,3 +42,11 @@ Verificação técnica: regenerar páginas, executar exemplos, verificar uma lin
 ## Armazenamento do estudo
 
 O diário é opcional, por aula, salvo apenas mediante ação explícita no navegador do estudante. Não há envio de respostas, coleta de dados pedagógicos ou avaliação por IA. Sem JavaScript, conteúdo e campos permanecem disponíveis e o ciclo pode ser feito no caderno. Exportar oferece uma cópia em texto.
+
+## Emenda versão 3 — público sem conhecimentos anteriores
+
+O percurso passa a ter 76 aulas em nove trilhas, iniciando com computação e raciocínio em situações cotidianas. Toda aula deve declarar o que usa de aulas anteriores, definir termos localmente e identificar a habilidade de raciocínio praticada. A matemática adicional deve ter preparação explícita. As regras anteriores de explicar, diagnosticar e revisar permanecem.
+
+Antes de exigir um comando, explicar arquivo, editor, terminal e interpretador. Antes de exigir um paradigma ou uma arquitetura, apresentar estados, funções, responsabilidades e contratos. A regra de uma linha física organiza o arquivo, sem obrigar o estudante a aprender pela memorização de código compactado.
+
+Evidência deve ser classificada: orientação institucional, fundamento conceitual, experimento externo ou teste local. Não somar essas categorias como se provassem a mesma coisa. Decisões e leitura integral das fontes desta emenda: zero-absoluto.md. A cobertura de pré-requisitos declarados é conferida em curriculum-results.json; não substitui avaliação com iniciantes reais.

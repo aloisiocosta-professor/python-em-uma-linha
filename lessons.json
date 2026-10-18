@@ -1,7 +1,652 @@
 [
   {
+    "id": "z01",
+    "group": "00 · Começar do absoluto zero",
+    "title": "O que é computar?",
+    "code": "print(2+3)",
+    "expected": "5",
+    "concept": "Computar é transformar informações seguindo regras. Um computador executa instruções sobre dados. Python é uma linguagem em que escrevemos essas instruções; ainda não precisamos saber escrevê-las para acompanhar uma conta.",
+    "exercise": "Invente uma pergunta em que 2 e 3 sejam dados, mas a resposta não seja 5.",
+    "answer": "“Quantos itens faltam para 2 chegar a 3?” pede a diferença: 1.",
+    "limit": "Uma máquina segue o programa e suas entradas; ela não garante que escolhemos a pergunta ou a regra correta.",
+    "feynman": {
+      "question": "O que acontece entre fazer uma pergunta e receber uma resposta de um computador?",
+      "plain": "Computar é transformar informações seguindo regras. Um computador executa instruções sobre dados. Python é uma linguagem em que escrevemos essas instruções; ainda não precisamos saber escrevê-las para acompanhar uma conta.",
+      "analogy": "Uma calculadora recebe uma conta e mostra seu resultado.",
+      "analogyLimit": "Uma máquina segue o programa e suas entradas; ela não garante que escolhemos a pergunta ou a regra correta.",
+      "steps": [
+        "Temos dois grupos: um com 2 itens e outro com 3.",
+        "A regra de juntar as quantidades é a soma: 2+3.",
+        "O exemplo pede a Python que mostre o resultado; print significa mostrar e a resposta é 5."
+      ],
+      "gapQuestion": "Se o resultado é 5, isso prova que juntar era a operação certa para qualquer problema?",
+      "gapAnswer": "Não. A conta está correta, mas o problema poderia pedir outra coisa, como a diferença entre os grupos.",
+      "repair": "Volte aos três passos desta aula, refaça o exemplo no papel e explique qual regra responde à dúvida."
+    },
+    "scaffold": {
+      "terms": [
+        [
+          "Dado",
+          "Informação escolhida para representar algo."
+        ],
+        [
+          "Instrução",
+          "Uma ordem que descreve uma ação."
+        ],
+        [
+          "Python",
+          "Linguagem usada para escrever programas."
+        ]
+      ],
+      "prerequisites": [],
+      "skill": "Separar a pergunta da regra que a resolve.",
+      "readiness": "O que acontece entre fazer uma pergunta e receber uma resposta de um computador?",
+      "math": "Somente contagem e contas apresentadas no exemplo.",
+      "links": []
+    },
+    "position": 1,
+    "total": 76
+  },
+  {
+    "id": "z02",
+    "group": "00 · Começar do absoluto zero",
+    "title": "Dados: representar coisas por valores",
+    "code": "print(3,'livros')",
+    "expected": "3 livros",
+    "concept": "Escolhemos um significado para um valor. O número 3 pode contar livros, mas sem uma descrição não sabemos o que ele está contando.",
+    "exercise": "Como representar três litros sem dizer que são três livros?",
+    "answer": "Use a quantidade 3 e a descrição litros; a unidade muda a interpretação.",
+    "limit": "A etiqueta é uma representação: ela pode estar desatualizada ou conter um erro.",
+    "feynman": {
+      "question": "Como um número passa a representar alguma coisa do mundo?",
+      "plain": "Escolhemos um significado para um valor. O número 3 pode contar livros, mas sem uma descrição não sabemos o que ele está contando.",
+      "analogy": "Uma etiqueta numa caixa liga uma descrição a uma quantidade.",
+      "analogyLimit": "A etiqueta é uma representação: ela pode estar desatualizada ou conter um erro.",
+      "steps": [
+        "Escolhemos livros como o que queremos contar.",
+        "Representamos a quantidade pelo número 3 e a descrição pelo texto livros.",
+        "print mostra as duas informações; as aspas delimitam o texto no código, sem aparecer na saída."
+      ],
+      "gapQuestion": "3 e “3 livros” dizem exatamente a mesma coisa?",
+      "gapAnswer": "Não. O primeiro valor não informa a unidade ou o objeto contado; a descrição acrescenta significado.",
+      "repair": "Volte aos três passos desta aula, refaça o exemplo no papel e explique qual regra responde à dúvida."
+    },
+    "scaffold": {
+      "terms": [
+        [
+          "Valor",
+          "Um conteúdo, como 3 ou um texto."
+        ],
+        [
+          "Representação",
+          "Modo escolhido para descrever alguma coisa."
+        ],
+        [
+          "Texto",
+          "Uma sequência de caracteres, delimitada por aspas neste código."
+        ]
+      ],
+      "prerequisites": [
+        "z01"
+      ],
+      "skill": "Escolher o significado dos dados.",
+      "readiness": "Como um número passa a representar alguma coisa do mundo?",
+      "math": "Somente contagem e contas apresentadas no exemplo.",
+      "links": [
+        {
+          "id": "z01",
+          "title": "O que é computar?"
+        }
+      ]
+    },
+    "position": 2,
+    "total": 76
+  },
+  {
+    "id": "z03",
+    "group": "00 · Começar do absoluto zero",
+    "title": "Algoritmos: instruções que outra pessoa consegue seguir",
+    "code": "print('pegar copo','colocar agua','entregar',sep=' -> ')",
+    "expected": "pegar copo -> colocar agua -> entregar",
+    "concept": "Um algoritmo é uma sequência de passos para resolver uma tarefa dentro de condições declaradas. Antes de escrever Python, podemos executar os passos no papel ou com objetos.",
+    "exercise": "Que condição inicial falta se não houver copo disponível?",
+    "answer": "Precisamos prever obter um copo ou recusar a tarefa; não podemos presumir um recurso ausente.",
+    "limit": "Uma receita cotidiana pode ser vaga; um programa exige regras mais precisas e uma condição de término.",
+    "feynman": {
+      "question": "Como explicar uma tarefa sem depender de adivinhação?",
+      "plain": "Um algoritmo é uma sequência de passos para resolver uma tarefa dentro de condições declaradas. Antes de escrever Python, podemos executar os passos no papel ou com objetos.",
+      "analogy": "Uma receita apresenta uma ordem de ações e os materiais necessários.",
+      "analogyLimit": "Uma receita cotidiana pode ser vaga; um programa exige regras mais precisas e uma condição de término.",
+      "steps": [
+        "Há um copo disponível e queremos entregar água; essa é a situação inicial.",
+        "Escrevemos pegar copo, colocar água e entregar, nessa ordem.",
+        "O programa apenas mostra esse roteiro usando -> como separador; ele não move objetos."
+      ],
+      "gapQuestion": "Mostrar os passos na tela faz o computador encher um copo?",
+      "gapAnswer": "Não. A saída é uma descrição; atuar no mundo exigiria equipamentos e instruções apropriados.",
+      "repair": "Volte aos três passos desta aula, refaça o exemplo no papel e explique qual regra responde à dúvida."
+    },
+    "scaffold": {
+      "terms": [
+        [
+          "Algoritmo",
+          "Passos definidos para realizar uma tarefa."
+        ],
+        [
+          "Condição inicial",
+          "O que precisa ser verdadeiro antes de começar."
+        ],
+        [
+          "Sequência",
+          "Uma ordem em que as ações acontecem."
+        ]
+      ],
+      "prerequisites": [
+        "z02"
+      ],
+      "skill": "Escrever instruções e declarar condições.",
+      "readiness": "Como explicar uma tarefa sem depender de adivinhação?",
+      "math": "Somente contagem e contas apresentadas no exemplo.",
+      "links": [
+        {
+          "id": "z02",
+          "title": "Dados: representar coisas por valores"
+        }
+      ]
+    },
+    "position": 3,
+    "total": 76
+  },
+  {
+    "id": "z04",
+    "group": "00 · Começar do absoluto zero",
+    "title": "Entrada, transformação e saída",
+    "code": "print(2*4)",
+    "expected": "8",
+    "concept": "Entrada é a informação que usamos. A transformação é a regra aplicada a ela. Saída é o que queremos obter. Nomear essas três partes evita começar a programar sem saber qual problema resolver.",
+    "exercise": "Preveja a saída com 3 caixas de 4 peças.",
+    "answer": "3*4 produz 12; diga também a unidade, peças.",
+    "limit": "Num programa a entrada pode ser informação; o exemplo não descreve conservação física de matéria.",
+    "feynman": {
+      "question": "Como transformar uma pergunta num pequeno modelo de entrada e saída?",
+      "plain": "Entrada é a informação que usamos. A transformação é a regra aplicada a ela. Saída é o que queremos obter. Nomear essas três partes evita começar a programar sem saber qual problema resolver.",
+      "analogy": "Uma máquina de suco recebe frutas, realiza um processo e entrega suco.",
+      "analogyLimit": "Num programa a entrada pode ser informação; o exemplo não descreve conservação física de matéria.",
+      "steps": [
+        "Cada caixa contém 4 peças e temos 2 caixas. As entradas são 2 e 4.",
+        "A transformação escolhida é multiplicar: dois grupos iguais de quatro.",
+        "A saída esperada é 8 peças; print mostra somente o número 8."
+      ],
+      "gapQuestion": "Qual entrada precisa mudar se cada caixa tiver 5 peças?",
+      "gapAnswer": "A quantidade por caixa muda de 4 para 5; o número de caixas continua 2.",
+      "repair": "Volte aos três passos desta aula, refaça o exemplo no papel e explique qual regra responde à dúvida."
+    },
+    "scaffold": {
+      "terms": [
+        [
+          "Entrada",
+          "Informação usada para começar a conta."
+        ],
+        [
+          "Transformação",
+          "Regra que muda ou combina os dados."
+        ],
+        [
+          "Saída",
+          "Resultado produzido."
+        ]
+      ],
+      "prerequisites": [
+        "z03"
+      ],
+      "skill": "Especificar entrada, regra e saída.",
+      "readiness": "Como transformar uma pergunta num pequeno modelo de entrada e saída?",
+      "math": "Somente contagem e contas apresentadas no exemplo.",
+      "links": [
+        {
+          "id": "z03",
+          "title": "Algoritmos: instruções que outra pessoa consegue seguir"
+        }
+      ]
+    },
+    "position": 4,
+    "total": 76
+  },
+  {
+    "id": "z05",
+    "group": "00 · Começar do absoluto zero",
+    "title": "Dividir um problema em partes",
+    "code": "print(2*3+4*1)",
+    "expected": "10",
+    "concept": "Dividimos a tarefa em partes menores, resolvemos cada parte e juntamos os resultados. Essa divisão é chamada decomposição.",
+    "exercise": "Inclua uma borracha de preço 2.",
+    "answer": "Acrescente o subtotal 1*2 ao total 10; a nova resposta é 12.",
+    "limit": "As partes podem depender umas das outras; dividir não significa que qualquer ordem serve.",
+    "feynman": {
+      "question": "Como resolver uma conta de compras sem tentar pensar em tudo ao mesmo tempo?",
+      "plain": "Dividimos a tarefa em partes menores, resolvemos cada parte e juntamos os resultados. Essa divisão é chamada decomposição.",
+      "analogy": "Organizar uma viagem inclui escolher o destino, o transporte e a hospedagem.",
+      "analogyLimit": "As partes podem depender umas das outras; dividir não significa que qualquer ordem serve.",
+      "steps": [
+        "Dois cadernos a 3 unidades de preço custam 2*3=6.",
+        "Quatro lápis a 1 custam 4*1=4.",
+        "Somar os subtotais dá 6+4=10."
+      ],
+      "gapQuestion": "Por que calcular só o custo dos cadernos ainda não resolve a compra inteira?",
+      "gapAnswer": "Ele resolve uma parte. A especificação da compra inclui também os lápis e a soma final.",
+      "repair": "Volte aos três passos desta aula, refaça o exemplo no papel e explique qual regra responde à dúvida."
+    },
+    "scaffold": {
+      "terms": [
+        [
+          "Decomposição",
+          "Dividir uma tarefa em partes com objetivos menores."
+        ],
+        [
+          "Subtotal",
+          "Resultado de uma parte da soma."
+        ]
+      ],
+      "prerequisites": [
+        "z04"
+      ],
+      "skill": "Decompor e recombinar soluções.",
+      "readiness": "Como resolver uma conta de compras sem tentar pensar em tudo ao mesmo tempo?",
+      "math": "Somente contagem e contas apresentadas no exemplo.",
+      "links": [
+        {
+          "id": "z04",
+          "title": "Entrada, transformação e saída"
+        }
+      ]
+    },
+    "position": 5,
+    "total": 76
+  },
+  {
+    "id": "z06",
+    "group": "00 · Começar do absoluto zero",
+    "title": "Reconhecer padrões e testar uma regra",
+    "code": "print(2,4,6,8)",
+    "expected": "2 4 6 8",
+    "concept": "Um padrão é uma regularidade que percebemos. Ele ajuda a propor uma regra, mas poucos exemplos podem combinar com várias regras diferentes.",
+    "exercise": "Dê duas regras que coincidam nos três primeiros valores e discordem no quarto.",
+    "answer": "Uma continua de dois em dois; outra usa 2,4,6 e depois repete 100. Ambas explicam o início observado.",
+    "limit": "Uma sugestão de padrão não é uma prova sobre casos que não observamos.",
+    "feynman": {
+      "question": "Ver alguns exemplos permite descobrir uma regra única?",
+      "plain": "Um padrão é uma regularidade que percebemos. Ele ajuda a propor uma regra, mas poucos exemplos podem combinar com várias regras diferentes.",
+      "analogy": "Pegadas parecidas sugerem uma direção, mas não mostram todos os passos que ainda serão dados.",
+      "analogyLimit": "Uma sugestão de padrão não é uma prova sobre casos que não observamos.",
+      "steps": [
+        "Observamos 2, 4 e 6. A diferença entre vizinhos é 2.",
+        "Propomos a regra continuar somando 2; ela prevê 8 como próximo.",
+        "O código mostra essa continuação escolhida, mas não demonstra que toda sequência com esse início deve segui-la."
+      ],
+      "gapQuestion": "Alguém pode escrever 2, 4, 6, 100 sem erro de Python?",
+      "gapAnswer": "Sim. Seria outra sequência; só viola a regra se essa regra tiver sido exigida pelo problema.",
+      "repair": "Volte aos três passos desta aula, refaça o exemplo no papel e explique qual regra responde à dúvida."
+    },
+    "scaffold": {
+      "terms": [
+        [
+          "Padrão",
+          "Regularidade percebida nos exemplos."
+        ],
+        [
+          "Hipótese",
+          "Uma explicação ou regra proposta para ser examinada."
+        ]
+      ],
+      "prerequisites": [
+        "z05"
+      ],
+      "skill": "Distinguir uma hipótese de uma garantia.",
+      "readiness": "Ver alguns exemplos permite descobrir uma regra única?",
+      "math": "Somente contagem e contas apresentadas no exemplo.",
+      "links": [
+        {
+          "id": "z05",
+          "title": "Dividir um problema em partes"
+        }
+      ]
+    },
+    "position": 6,
+    "total": 76
+  },
+  {
+    "id": "z07",
+    "group": "00 · Começar do absoluto zero",
+    "title": "Abstração: guardar o que importa para a pergunta",
+    "code": "print(5+7)",
+    "expected": "12",
+    "concept": "Escolhemos detalhes relevantes para uma pergunta. Para somar o tempo de duas etapas, podemos guardar suas durações sem representar a cor dos objetos usados. Essa escolha é uma abstração.",
+    "exercise": "Diga uma informação extra necessária para prever o fim de etapas sobrepostas.",
+    "answer": "Precisamos saber quando cada etapa começa e se depende da outra.",
+    "limit": "O detalhe omitido pode ser indispensável para outra pergunta; um mapa de trajetos não resolve toda necessidade.",
+    "feynman": {
+      "question": "Que detalhes podemos deixar de fora de um modelo?",
+      "plain": "Escolhemos detalhes relevantes para uma pergunta. Para somar o tempo de duas etapas, podemos guardar suas durações sem representar a cor dos objetos usados. Essa escolha é uma abstração.",
+      "analogy": "Um mapa de trajetos mostra conexões e pode omitir árvores e fachadas.",
+      "analogyLimit": "O detalhe omitido pode ser indispensável para outra pergunta; um mapa de trajetos não resolve toda necessidade.",
+      "steps": [
+        "Uma etapa dura 5 minutos e outra, 7 minutos.",
+        "O modelo considera apenas a duração de etapas realizadas uma depois da outra.",
+        "5+7=12 minutos; as cores dos objetos não entram nessa pergunta."
+      ],
+      "gapQuestion": "Podemos usar a mesma soma se as etapas acontecerem ao mesmo tempo?",
+      "gapAnswer": "Não automaticamente. A ordem temporal foi uma hipótese do modelo; tarefas simultâneas exigem outra regra.",
+      "repair": "Volte aos três passos desta aula, refaça o exemplo no papel e explique qual regra responde à dúvida."
+    },
+    "scaffold": {
+      "terms": [
+        [
+          "Abstração",
+          "Escolha dos detalhes que um modelo representa."
+        ],
+        [
+          "Modelo",
+          "Representação simplificada para responder a uma pergunta."
+        ]
+      ],
+      "prerequisites": [
+        "z06"
+      ],
+      "skill": "Escolher detalhes e explicitar o que foi omitido.",
+      "readiness": "Que detalhes podemos deixar de fora de um modelo?",
+      "math": "Somente contagem e contas apresentadas no exemplo.",
+      "links": [
+        {
+          "id": "z06",
+          "title": "Reconhecer padrões e testar uma regra"
+        }
+      ]
+    },
+    "position": 7,
+    "total": 76
+  },
+  {
+    "id": "z08",
+    "group": "00 · Começar do absoluto zero",
+    "title": "Lógica: condições e conclusões",
+    "code": "print(7>=5)",
+    "expected": "True",
+    "concept": "Uma condição é uma afirmação avaliada como verdadeira ou falsa dentro do modelo. Uma conclusão só é justificada quando suas condições e regras realmente se aplicam.",
+    "exercise": "Avalie se 5 moedas bastam para preço 5, sem entrega.",
+    "answer": "5>=5 é True; a igualdade é admitida pela regra.",
+    "limit": "Uma condição mal escolhida não captura todas as regras do mundo; ter um papel não prova que o ingresso seja válido.",
+    "feynman": {
+      "question": "Como transformar uma regra em uma pergunta que possa ser conferida?",
+      "plain": "Uma condição é uma afirmação avaliada como verdadeira ou falsa dentro do modelo. Uma conclusão só é justificada quando suas condições e regras realmente se aplicam.",
+      "analogy": "Um cartaz pode permitir a entrada quando um ingresso é válido.",
+      "analogyLimit": "Uma condição mal escolhida não captura todas as regras do mundo; ter um papel não prova que o ingresso seja válido.",
+      "steps": [
+        "Queremos saber se 7 moedas bastam para um item de preço 5.",
+        ">= significa maior ou igual; comparamos 7 com 5.",
+        "A comparação é verdadeira, e Python escreve True."
+      ],
+      "gapQuestion": "Se a compra também exigir entrega de preço 3, o teste inicial ainda decide se há dinheiro suficiente?",
+      "gapAnswer": "Não. O custo total passa a 8; a condição precisa representar todos os custos relevantes.",
+      "repair": "Volte aos três passos desta aula, refaça o exemplo no papel e explique qual regra responde à dúvida."
+    },
+    "scaffold": {
+      "terms": [
+        [
+          "Condição",
+          "Afirmação que testamos."
+        ],
+        [
+          "True",
+          "Valor de Python que representa verdadeiro."
+        ],
+        [
+          ">=",
+          "Operador que compara maior ou igual."
+        ]
+      ],
+      "prerequisites": [
+        "z07"
+      ],
+      "skill": "Justificar decisões por condições.",
+      "readiness": "Como transformar uma regra em uma pergunta que possa ser conferida?",
+      "math": "Somente contagem e contas apresentadas no exemplo.",
+      "links": [
+        {
+          "id": "z07",
+          "title": "Abstração: guardar o que importa para a pergunta"
+        }
+      ]
+    },
+    "position": 8,
+    "total": 76
+  },
+  {
+    "id": "z09",
+    "group": "00 · Começar do absoluto zero",
+    "title": "Combinar condições: e, ou, não",
+    "code": "print(True and False,True or False,not True)",
+    "expected": "False True False",
+    "concept": "“E” exige as duas condições. “Ou”, neste uso de lógica, aceita pelo menos uma. “Não” inverte verdadeiro e falso. Python escreve and, or e not.",
+    "exercise": "Compare True and True com False or False.",
+    "answer": "O primeiro resulta em True; o segundo, em False.",
+    "limit": "O ou da lógica aceita também duas condições verdadeiras; não é obrigatoriamente uma escolha exclusiva.",
+    "feynman": {
+      "question": "Como combinar duas perguntas sem mudar o significado da regra?",
+      "plain": "“E” exige as duas condições. “Ou”, neste uso de lógica, aceita pelo menos uma. “Não” inverte verdadeiro e falso. Python escreve and, or e not.",
+      "analogy": "Uma lista de acesso pode exigir documento e ingresso, ou aceitar cartão ou dinheiro para pagar.",
+      "analogyLimit": "O ou da lógica aceita também duas condições verdadeiras; não é obrigatoriamente uma escolha exclusiva.",
+      "steps": [
+        "True and False é False, porque uma das condições exigidas não foi atendida.",
+        "True or False é True, porque ao menos uma condição foi atendida.",
+        "not True é False, pois a afirmação foi negada."
+      ],
+      "gapQuestion": "Se as duas condições forem verdadeiras, or devolve falso?",
+      "gapAnswer": "Não. Na lógica apresentada, pelo menos uma inclui o caso em que ambas são verdadeiras.",
+      "repair": "Volte aos três passos desta aula, refaça o exemplo no papel e explique qual regra responde à dúvida."
+    },
+    "scaffold": {
+      "terms": [
+        [
+          "and",
+          "Combinação que exige as duas condições verdadeiras."
+        ],
+        [
+          "or",
+          "Combinação que aceita pelo menos uma condição verdadeira."
+        ],
+        [
+          "not",
+          "Negação de uma condição."
+        ]
+      ],
+      "prerequisites": [
+        "z08"
+      ],
+      "skill": "Combinar regras e procurar contraexemplos.",
+      "readiness": "Como combinar duas perguntas sem mudar o significado da regra?",
+      "math": "Somente contagem e contas apresentadas no exemplo.",
+      "links": [
+        {
+          "id": "z08",
+          "title": "Lógica: condições e conclusões"
+        }
+      ]
+    },
+    "position": 9,
+    "total": 76
+  },
+  {
+    "id": "z10",
+    "group": "00 · Começar do absoluto zero",
+    "title": "Estado: acompanhar o que mudou",
+    "code": "saldo=2;saldo=saldo+3;print(saldo)",
+    "expected": "5",
+    "concept": "Estado é a informação considerada num certo momento. Uma variável é um nome que permite consultar um valor; outra atribuição pode mudar qual valor esse nome referencia.",
+    "exercise": "Preveja o valor após repetir saldo=saldo+3 uma segunda vez.",
+    "answer": "Partindo do estado 5, a próxima atualização produz 8.",
+    "limit": "O nome não é uma caixa física de tamanho fixo; a comparação serve para acompanhar valores, não para explicar memória.",
+    "feynman": {
+      "question": "Como acompanhar uma quantidade que muda durante uma tarefa?",
+      "plain": "Estado é a informação considerada num certo momento. Uma variável é um nome que permite consultar um valor; outra atribuição pode mudar qual valor esse nome referencia.",
+      "analogy": "Um placar tem um valor antes de um ponto e outro depois.",
+      "analogyLimit": "O nome não é uma caixa física de tamanho fixo; a comparação serve para acompanhar valores, não para explicar memória.",
+      "steps": [
+        "saldo recebe 2; esse é o estado inicial da conta.",
+        "O lado direito saldo+3 usa o valor anterior: 2+3=5.",
+        "O novo valor associado a saldo é 5; print mostra o estado final."
+      ],
+      "gapQuestion": "saldo=saldo+3 é uma igualdade matemática impossível?",
+      "gapAnswer": "Não. Em Python, = é atribuição: primeiro calculamos o lado direito, depois associamos o nome ao resultado.",
+      "repair": "Volte aos três passos desta aula, refaça o exemplo no papel e explique qual regra responde à dúvida."
+    },
+    "scaffold": {
+      "terms": [
+        [
+          "Estado",
+          "Informações relevantes num momento."
+        ],
+        [
+          "Variável",
+          "Nome associado a um valor."
+        ],
+        [
+          "Atribuição",
+          "Operação escrita com = que associa um nome a um valor."
+        ]
+      ],
+      "prerequisites": [
+        "z09"
+      ],
+      "skill": "Rastrear mudanças em vez de adivinhar o resultado.",
+      "readiness": "Como acompanhar uma quantidade que muda durante uma tarefa?",
+      "math": "Somente contagem e contas apresentadas no exemplo.",
+      "links": [
+        {
+          "id": "z09",
+          "title": "Combinar condições: e, ou, não"
+        }
+      ]
+    },
+    "position": 10,
+    "total": 76
+  },
+  {
+    "id": "z11",
+    "group": "00 · Começar do absoluto zero",
+    "title": "Erros: comparar uma previsão com o que aconteceu",
+    "code": "print(2+3==6)",
+    "expected": "False",
+    "concept": "Antes de executar, escrevemos o resultado que a regra deveria produzir. Se há diferença, investigamos se o problema está na previsão, na regra, nos dados ou na escrita do programa.",
+    "exercise": "Crie uma comparação verdadeira usando a mesma soma.",
+    "answer": "2+3==5 é True. Explique a diferença entre =, atribuição, e ==, comparação.",
+    "limit": "A diferença indica algo a investigar; ela não revela sozinha qual parte está errada.",
+    "feynman": {
+      "question": "Como um resultado diferente da previsão ajuda a investigar um erro?",
+      "plain": "Antes de executar, escrevemos o resultado que a regra deveria produzir. Se há diferença, investigamos se o problema está na previsão, na regra, nos dados ou na escrita do programa.",
+      "analogy": "Conferir uma conta no recibo começa comparando o esperado com o cobrado.",
+      "analogyLimit": "A diferença indica algo a investigar; ela não revela sozinha qual parte está errada.",
+      "steps": [
+        "Alguém prevê que 2+3 seja 6.",
+        "A conta produz 5; == compara esse valor com 6.",
+        "False mostra que a comparação falhou; precisamos corrigir a previsão ou a regra declarada."
+      ],
+      "gapQuestion": "O programa funcionou mal só porque imprimiu False?",
+      "gapAnswer": "Não. Ele comparou corretamente 5 e 6. Talvez o erro esteja na expectativa de quem fez a pergunta.",
+      "repair": "Volte aos três passos desta aula, refaça o exemplo no papel e explique qual regra responde à dúvida."
+    },
+    "scaffold": {
+      "terms": [
+        [
+          "==",
+          "Comparação de igualdade."
+        ],
+        [
+          "Teste",
+          "Verificação de um resultado em condições declaradas."
+        ],
+        [
+          "Depurar",
+          "Investigar e corrigir a causa de um problema no programa."
+        ]
+      ],
+      "prerequisites": [
+        "z10"
+      ],
+      "skill": "Usar resultados para revisar uma hipótese.",
+      "readiness": "Como um resultado diferente da previsão ajuda a investigar um erro?",
+      "math": "Somente contagem e contas apresentadas no exemplo.",
+      "links": [
+        {
+          "id": "z10",
+          "title": "Estado: acompanhar o que mudou"
+        }
+      ]
+    },
+    "position": 11,
+    "total": 76
+  },
+  {
+    "id": "z12",
+    "group": "00 · Começar do absoluto zero",
+    "title": "Arquivo, editor, terminal e primeiro comando",
+    "code": "print('Estou aprendendo')",
+    "expected": "Estou aprendendo",
+    "concept": "Um arquivo guarda texto com um nome. Um editor permite escrever esse texto. O interpretador Python executa o código. O terminal é uma interface em que digitamos comandos para o sistema.",
+    "exercise": "O que verificar se aparecer que primeiro.py não foi encontrado?",
+    "answer": "Confira a pasta atual, o nome do arquivo e se ele não foi salvo como primeiro.py.txt.",
+    "limit": "O sistema precisa encontrar tanto o interpretador quanto o arquivo; escrever a partitura não inicia sua execução.",
+    "feynman": {
+      "question": "Onde escrevo um programa e como peço para ele executar?",
+      "plain": "Um arquivo guarda texto com um nome. Um editor permite escrever esse texto. O interpretador Python executa o código. O terminal é uma interface em que digitamos comandos para o sistema.",
+      "analogy": "É escrever uma partitura, guardá-la numa pasta e pedir a um músico que a toque.",
+      "analogyLimit": "O sistema precisa encontrar tanto o interpretador quanto o arquivo; escrever a partitura não inicia sua execução.",
+      "steps": [
+        "Crie uma pasta de estudo e salve um arquivo de texto simples chamado primeiro.py com o código mostrado.",
+        "Abra o terminal nessa pasta. Use python primeiro.py quando o comando python apontar para Python 3; em muitos sistemas usa-se python3 primeiro.py ou py primeiro.py no Windows.",
+        "O interpretador lê o arquivo e mostra Estou aprendendo. A página Comece aqui orienta a instalação e os erros mais comuns."
+      ],
+      "gapQuestion": "Qual é a diferença entre um editor com o arquivo aberto e um programa já executado?",
+      "gapAnswer": "O editor mostra o texto que será usado. Executar pede a um interpretador que siga esse texto; salvar ou abrir não garante execução.",
+      "repair": "Volte aos três passos desta aula, refaça o exemplo no papel e explique qual regra responde à dúvida."
+    },
+    "scaffold": {
+      "terms": [
+        [
+          "Arquivo",
+          "Conteúdo guardado com um nome."
+        ],
+        [
+          "Editor",
+          "Programa usado para escrever texto."
+        ],
+        [
+          "Terminal",
+          "Interface que recebe comandos digitados."
+        ],
+        [
+          "Interpretador",
+          "Programa que executa instruções Python."
+        ]
+      ],
+      "prerequisites": [
+        "z11"
+      ],
+      "skill": "Distinguir escrever, salvar e executar.",
+      "readiness": "Onde escrevo um programa e como peço para ele executar?",
+      "math": "Somente contagem e contas apresentadas no exemplo.",
+      "links": [
+        {
+          "id": "z11",
+          "title": "Erros: comparar uma previsão com o que aconteceu"
+        }
+      ]
+    },
+    "position": 12,
+    "total": 76
+  },
+  {
     "id": "01",
-    "group": "01 · Fundamentos",
+    "group": "01 · Python como ferramenta",
     "title": "Seu primeiro programa",
     "concept": "Um programa é uma sequência de instruções. print chama uma função e uma string representa texto. Salve o exemplo em um arquivo .py e execute com python examples/01.py.",
     "code": "print('Olá, computação!')",
@@ -9,6 +654,8 @@
     "exercise": "Troque a mensagem por Ciência.",
     "answer": "A saída passa a ser Ciência.",
     "limit": "A quebra visual automática do editor não cria uma nova linha física.",
+    "position": 13,
+    "total": 76,
     "feynman": {
       "question": "Como faço o computador mostrar uma mensagem?",
       "plain": "Escrevemos uma ordem para mostrar um texto. As aspas marcam onde o texto começa e termina; print é o nome da ação que o mostra.",
@@ -22,11 +669,35 @@
       "gapQuestion": "Se retiro as aspas, por que o computador não entende a mesma mensagem?",
       "gapAnswer": "Sem as aspas, o conteúdo deixa de ser um texto literal. Python tenta interpretá-lo como código, que neste caso é inválido.",
       "repair": "Releia a diferença entre o texto recebido e a ação print no primeiro passo."
+    },
+    "scaffold": {
+      "prerequisites": [
+        "z12"
+      ],
+      "skill": "Distinguir uma instrução da mensagem produzida.",
+      "terms": [
+        [
+          "print",
+          "Função de Python que mostra valores na saída."
+        ],
+        [
+          "String",
+          "Nome técnico de um valor de texto."
+        ]
+      ],
+      "math": "Contagem e operações explicadas no exemplo.",
+      "readiness": "Como faço o computador mostrar uma mensagem?",
+      "links": [
+        {
+          "id": "z12",
+          "title": "Arquivo, editor, terminal e primeiro comando"
+        }
+      ]
     }
   },
   {
     "id": "02",
-    "group": "01 · Fundamentos",
+    "group": "01 · Python como ferramenta",
     "title": "Valores, nomes e operações",
     "concept": "O sinal = associa um nome a um valor; não é uma igualdade matemática. O ponto e vírgula separa instruções simples. A expressão à direita é calculada antes da atribuição.",
     "code": "a=7;b=3;print(a+b,a//b,a%b,a**b)",
@@ -34,6 +705,8 @@
     "exercise": "Explique a identidade a=(a//b)*b+a%b para estes valores.",
     "answer": "7=2*3+1; // fornece o quociente inteiro e % o resto.",
     "limit": "Divisão por zero é indefinida e lança ZeroDivisionError.",
+    "position": 14,
+    "total": 76,
     "feynman": {
       "question": "Como repartir sete itens em grupos de três e descobrir a sobra?",
       "plain": "Damos nomes aos números e pedimos contas. A divisão inteira conta os grupos completos; o resto conta os itens que sobraram.",
@@ -47,11 +720,44 @@
       "gapQuestion": "Por que a=7 não afirma que a será 7 para sempre?",
       "gapAnswer": "= associa um nome a um valor naquele momento. Uma atribuição posterior pode associar a a outro valor.",
       "repair": "Separe mentalmente dar um nome de fazer uma comparação; igualdade é escrita com ==."
+    },
+    "scaffold": {
+      "prerequisites": [
+        "01",
+        "z10"
+      ],
+      "skill": "Acompanhar o valor de cada expressão.",
+      "terms": [
+        [
+          "Operador",
+          "Símbolo ou palavra que pede uma operação."
+        ],
+        [
+          "//",
+          "Divisão arredondada para baixo até um inteiro."
+        ],
+        [
+          "%",
+          "Resto da divisão conforme as regras de Python."
+        ]
+      ],
+      "math": "Contagem e operações explicadas no exemplo.",
+      "readiness": "Como repartir sete itens em grupos de três e descobrir a sobra?",
+      "links": [
+        {
+          "id": "01",
+          "title": "Seu primeiro programa"
+        },
+        {
+          "id": "z10",
+          "title": "Estado: acompanhar o que mudou"
+        }
+      ]
     }
   },
   {
     "id": "03",
-    "group": "01 · Fundamentos",
+    "group": "01 · Python como ferramenta",
     "title": "Tipos e conversões",
     "concept": "int representa inteiros e str representa texto. A conversão int interpreta uma representação textual de um inteiro. type revela o tipo do objeto, e não um tipo fixo do nome.",
     "code": "texto='42';n=int(texto);print(n+1,type(n).__name__)",
@@ -59,6 +765,8 @@
     "exercise": "Qual diferença entre 42 e \"42\"?",
     "answer": "O primeiro admite soma numérica; o segundo é texto e admite concatenação com outro texto.",
     "limit": "int(\"4.2\") não funciona; texto decimal requer outra interpretação.",
+    "position": 15,
+    "total": 76,
     "feynman": {
       "question": "Por que o texto 42 precisa virar número antes de uma soma?",
       "plain": "Um número escrito num bilhete ainda é texto para o programa. Converter significa interpretar esse texto como um valor sobre o qual podemos fazer contas.",
@@ -72,11 +780,39 @@
       "gapQuestion": "Por que int(\"4.2\") não resolve o problema do mesmo modo?",
       "gapAnswer": "Esse texto descreve uma escrita decimal, não a escrita aceita para um inteiro por int. Uma conversão precisa declarar qual representação admite.",
       "repair": "Volte ao segundo passo e distinga representação textual de valor numérico."
+    },
+    "scaffold": {
+      "prerequisites": [
+        "02"
+      ],
+      "skill": "Separar representação textual de valor numérico.",
+      "terms": [
+        [
+          "Tipo",
+          "Categoria que determina operações admitidas por um valor."
+        ],
+        [
+          "int",
+          "Tipo de números inteiros e função usada para certas conversões."
+        ],
+        [
+          "str",
+          "Tipo dos valores de texto."
+        ]
+      ],
+      "math": "Contagem e operações explicadas no exemplo.",
+      "readiness": "Por que o texto 42 precisa virar número antes de uma soma?",
+      "links": [
+        {
+          "id": "02",
+          "title": "Valores, nomes e operações"
+        }
+      ]
     }
   },
   {
     "id": "04",
-    "group": "01 · Fundamentos",
+    "group": "01 · Python como ferramenta",
     "title": "Booleanos e decisões",
     "concept": "Comparações produzem True ou False. Uma expressão condicional escolhe somente um dos dois resultados. A sintaxe resultado_se_verdadeiro if condição else resultado_se_falso cabe dentro de expressões maiores.",
     "code": "n=8;print('par' if n%2==0 else 'ímpar')",
@@ -84,6 +820,8 @@
     "exercise": "Prediga a saída para n=-3.",
     "answer": "ímpar, porque o resto da divisão por 2 não é zero.",
     "limit": "and e or devolvem operandos, não necessariamente booleanos.",
+    "position": 16,
+    "total": 76,
     "feynman": {
       "question": "Como escolher uma mensagem com base em uma condição?",
       "plain": "Primeiro fazemos uma pergunta com resposta sim ou não. Depois escolhemos a mensagem correspondente. O programa calcula apenas a alternativa escolhida.",
@@ -97,11 +835,40 @@
       "gapQuestion": "Se a condição mudar, as duas alternativas serão calculadas?",
       "gapAnswer": "Não. A expressão condicional avalia a condição e somente a alternativa selecionada.",
       "repair": "Refaça a escolha para 7 e descreva o ramo que não foi usado."
+    },
+    "scaffold": {
+      "prerequisites": [
+        "03",
+        "z09"
+      ],
+      "skill": "Justificar qual alternativa é escolhida.",
+      "terms": [
+        [
+          "Booleano",
+          "Valor lógico True ou False."
+        ],
+        [
+          "if … else",
+          "Expressão que escolhe um resultado conforme uma condição."
+        ]
+      ],
+      "math": "Contagem e operações explicadas no exemplo.",
+      "readiness": "Como escolher uma mensagem com base em uma condição?",
+      "links": [
+        {
+          "id": "03",
+          "title": "Tipos e conversões"
+        },
+        {
+          "id": "z09",
+          "title": "Combinar condições: e, ou, não"
+        }
+      ]
     }
   },
   {
     "id": "05",
-    "group": "01 · Fundamentos",
+    "group": "01 · Python como ferramenta",
     "title": "Strings e fatiamento",
     "concept": "Sequências usam índices começando em zero. O fatiamento [início:fim:passo] exclui o limite final. O passo negativo permite percorrer uma sequência ao contrário.",
     "code": "s='python';print(s[0],s[1:4],s[::-1])",
@@ -109,6 +876,8 @@
     "exercise": "Como obter as três primeiras letras?",
     "answer": "Use s[:3], que produz pyt.",
     "limit": "Índice fora do intervalo lança IndexError; uma fatia pode ser vazia.",
+    "position": 17,
+    "total": 76,
     "feynman": {
       "question": "Como escolher letras por posição sem reescrever a palavra?",
       "plain": "Uma palavra é uma sequência de caracteres. Podemos pedir um caractere, um trecho ou percorrer a sequência na direção contrária.",
@@ -122,11 +891,35 @@
       "gapQuestion": "Por que s[1:4] não inclui o caractere da posição 4?",
       "gapAnswer": "O limite final de uma fatia é exclusivo: indica onde parar antes de incluir outra posição.",
       "repair": "Enumere as posições antes de escolher o trecho; não conte letras começando em um."
+    },
+    "scaffold": {
+      "prerequisites": [
+        "03"
+      ],
+      "skill": "Selecionar posições e explicar os limites.",
+      "terms": [
+        [
+          "Índice",
+          "Número que identifica uma posição, começando em zero neste exemplo."
+        ],
+        [
+          "Fatia",
+          "Trecho de sequência selecionado por limites e passo."
+        ]
+      ],
+      "math": "Contagem e operações explicadas no exemplo.",
+      "readiness": "Como escolher letras por posição sem reescrever a palavra?",
+      "links": [
+        {
+          "id": "03",
+          "title": "Tipos e conversões"
+        }
+      ]
     }
   },
   {
     "id": "06",
-    "group": "01 · Fundamentos",
+    "group": "01 · Python como ferramenta",
     "title": "Listas e compreensão",
     "concept": "Uma lista guarda uma sequência mutável de referências. Uma compreensão constrói uma nova lista percorrendo uma fonte; o if filtra os itens antes de calcular a expressão de saída.",
     "code": "xs=range(6);print([x*x for x in xs if x%2==0])",
@@ -134,6 +927,8 @@
     "exercise": "Inclua todos os números, sem filtro.",
     "answer": "Remova if x%2==0; o resultado é [0, 1, 4, 9, 16, 25].",
     "limit": "range(6) termina em 5; não inclui 6.",
+    "position": 18,
+    "total": 76,
     "feynman": {
       "question": "Como selecionar os números pares e transformar cada um em seu quadrado?",
       "plain": "Percorremos os números, perguntamos se cada um é par e guardamos o quadrado apenas dos que passam no teste.",
@@ -147,11 +942,44 @@
       "gapQuestion": "Por que o número 6 não aparece nem antes do filtro?",
       "gapAnswer": "range(6) para antes de 6. O filtro só pode selecionar os valores que a fonte forneceu.",
       "repair": "Releia o primeiro passo, antes de investigar a condição."
+    },
+    "scaffold": {
+      "prerequisites": [
+        "04",
+        "05"
+      ],
+      "skill": "Separar seleção de transformação.",
+      "terms": [
+        [
+          "Lista",
+          "Sequência de valores escrita entre colchetes."
+        ],
+        [
+          "Compreensão",
+          "Expressão que constrói uma coleção percorrendo uma fonte."
+        ],
+        [
+          "for e in",
+          "Neste uso, indicam um nome corrente e a fonte que será percorrida."
+        ]
+      ],
+      "math": "Contagem e operações explicadas no exemplo.",
+      "readiness": "Como selecionar os números pares e transformar cada um em seu quadrado?",
+      "links": [
+        {
+          "id": "04",
+          "title": "Booleanos e decisões"
+        },
+        {
+          "id": "05",
+          "title": "Strings e fatiamento"
+        }
+      ]
     }
   },
   {
     "id": "07",
-    "group": "01 · Fundamentos",
+    "group": "01 · Python como ferramenta",
     "title": "Dicionários, conjuntos e tuplas",
     "concept": "Um dicionário associa chaves a valores; um conjunto representa pertinência sem repetições. Tuplas agrupam valores em uma sequência imutável. Escolher a estrutura começa pelo significado dos dados.",
     "code": "pares=[('a',1),('b',2)];d=dict(pares);print(d['b'],sorted(set([3,1,3])))",
@@ -159,6 +987,8 @@
     "exercise": "O que ocorre se a chave a aparecer novamente em dict(pares)?",
     "answer": "O último valor associado a a prevalece.",
     "limit": "Imutabilidade da tupla não torna imutáveis os objetos que ela contém.",
+    "position": 19,
+    "total": 76,
     "feynman": {
       "question": "Como escolher entre guardar uma ordem, uma associação e itens sem repetição?",
       "plain": "Uma sequência conserva posições. Um dicionário procura valores por chave. Um conjunto responde quais valores diferentes existem.",
@@ -172,11 +1002,43 @@
       "gapQuestion": "Por que o conjunto sozinho não é a saída ideal quando a ordem impressa importa?",
       "gapAnswer": "Um conjunto representa pertinência, sem contrato de ordenação crescente. sorted cria uma lista com a ordem desejada.",
       "repair": "Separe o objetivo eliminar repetições do objetivo apresentar uma ordem."
+    },
+    "scaffold": {
+      "prerequisites": [
+        "06"
+      ],
+      "skill": "Escolher uma estrutura conforme a pergunta.",
+      "terms": [
+        [
+          "Chave",
+          "Valor usado para procurar uma associação no dicionário."
+        ],
+        [
+          "Dicionário",
+          "Coleção de associações entre chaves e valores."
+        ],
+        [
+          "Tupla",
+          "Sequência cujo conjunto de referências não é alterado depois de criada."
+        ],
+        [
+          "Conjunto",
+          "Coleção de valores distintos, sem repetição."
+        ]
+      ],
+      "math": "Contagem e operações explicadas no exemplo.",
+      "readiness": "Como escolher entre guardar uma ordem, uma associação e itens sem repetição?",
+      "links": [
+        {
+          "id": "06",
+          "title": "Listas e compreensão"
+        }
+      ]
     }
   },
   {
     "id": "08",
-    "group": "01 · Fundamentos",
+    "group": "01 · Python como ferramenta",
     "title": "Funções e composição",
     "concept": "lambda cria uma função com uma expressão de retorno. Os parâmetros recebem os argumentos da chamada. Compor dobro depois de incrementar equivale a aplicar dobro(incrementar(x)).",
     "code": "dobro=lambda x:2*x;inc=lambda x:x+1;print(dobro(inc(4)))",
@@ -184,6 +1046,8 @@
     "exercise": "Inverta a ordem das funções.",
     "answer": "inc(dobro(4)) produz 9; a ordem da composição altera o resultado.",
     "limit": "lambda não aceita instruções como try ou while em seu corpo.",
+    "position": 20,
+    "total": 76,
     "feynman": {
       "question": "Por que trocar a ordem de duas funções muda a resposta?",
       "plain": "Uma função transforma uma entrada em uma saída. Quando a saída de uma alimenta outra, a ordem das transformações importa.",
@@ -197,36 +1061,39 @@
       "gapQuestion": "O computador chama dobro ou inc primeiro em dobro(inc(4))?",
       "gapAnswer": "Chama inc primeiro, pois dobro precisa receber o resultado dessa chamada como argumento.",
       "repair": "Desenhe duas setas: 4 → 5 → 10; identifique quem produz cada número."
-    }
-  },
-  {
-    "id": "09",
-    "group": "01 · Fundamentos",
-    "title": "Iteradores e geradores",
-    "concept": "Uma expressão geradora produz valores sob demanda. sum consome o iterador até o fim. Um iterador consumido não reinicia automaticamente: isso faz parte do seu estado.",
-    "code": "g=(x*x for x in range(4));print(sum(g),list(g))",
-    "expected": "14 []",
-    "exercise": "Como reutilizar os valores?",
-    "answer": "Materialize list(g) antes do primeiro consumo e guarde a lista, ou crie outro gerador.",
-    "limit": "Iteráveis infinitos precisam de um limite antes de materializar seus valores.",
-    "feynman": {
-      "question": "Por que a segunda leitura de um gerador pode estar vazia?",
-      "plain": "Um gerador entrega valores à medida que alguém os pede. Depois de entregar todos, ele fica esgotado; não volta sozinho ao começo.",
-      "analogy": "É uma fila de senhas descartáveis: retirar todas não cria novas senhas para a próxima pessoa.",
-      "analogyLimit": "O gerador calcula valores ao ser consumido; eles não precisam estar todos prontos numa fila real.",
-      "steps": [
-        "g prepara os quadrados de 0, 1, 2 e 3.",
-        "sum pede todos: 0+1+4+9=14 e esgota g.",
-        "list(g) pede o que restou; não há valores, então recebe []."
+    },
+    "scaffold": {
+      "prerequisites": [
+        "07"
       ],
-      "gapQuestion": "Por que guardar g numa variável não guarda também todos os valores produzidos?",
-      "gapAnswer": "A variável referencia o gerador com seu estado de consumo; não uma lista com a história dos valores entregues.",
-      "repair": "Contraste o gerador com uma lista materializada antes de sum."
+      "skill": "Compor duas regras e acompanhar a ordem.",
+      "terms": [
+        [
+          "lambda",
+          "Expressão que cria uma função com uma expressão de resultado."
+        ],
+        [
+          "Argumento",
+          "Valor fornecido numa chamada de função."
+        ],
+        [
+          "Chamada",
+          "Pedido para executar uma função com seus argumentos."
+        ]
+      ],
+      "math": "Contagem e operações explicadas no exemplo.",
+      "readiness": "Por que trocar a ordem de duas funções muda a resposta?",
+      "links": [
+        {
+          "id": "07",
+          "title": "Dicionários, conjuntos e tuplas"
+        }
+      ]
     }
   },
   {
     "id": "10",
-    "group": "01 · Fundamentos",
+    "group": "01 · Python como ferramenta",
     "title": "Blocos em uma linha física",
     "concept": "A gramática permite vários comandos simples separados por ;, mas não aninhamento arbitrário de comandos compostos. exec interpreta uma string como programa. Os caracteres barra invertida e n no arquivo tornam-se quebras lógicas na string.",
     "code": "exec(\"def dobro(x):\\n    return x*2\\nprint(dobro(5))\")",
@@ -234,6 +1101,8 @@
     "exercise": "Por que esse arquivo continua tendo uma linha física?",
     "answer": "Porque o arquivo contém a sequência escapada \\n, e não a quebra física dentro do literal.",
     "limit": "Use exec apenas com código autoral controlado; ele executa o conteúdo recebido.",
+    "position": 21,
+    "total": 76,
     "feynman": {
       "question": "Como um programa com blocos cabe em uma linha física?",
       "plain": "O arquivo guarda uma string com marcas de quebra escapadas. Ao executar essa string, Python recebe linhas lógicas e indentação, mesmo que o arquivo externo tenha uma linha.",
@@ -247,11 +1116,389 @@
       "gapQuestion": "Uma linha física significa que não há blocos dentro do programa executado?",
       "gapAnswer": "Não. O limite vale para a representação do arquivo; a string reconstruída ainda contém função, corpo e indentação.",
       "repair": "Distingua o arquivo externo, o valor da string e o programa interpretado."
+    },
+    "scaffold": {
+      "prerequisites": [
+        "08"
+      ],
+      "skill": "Distinguir representação e programa executado.",
+      "terms": [
+        [
+          "Linha física",
+          "Linha realmente separada no arquivo por uma quebra."
+        ],
+        [
+          "Escape",
+          "Escrita que representa um caractere especial dentro de um texto."
+        ],
+        [
+          "exec",
+          "Função que executa código Python recebido numa string."
+        ],
+        [
+          "Bloco e indentação",
+          "Grupo de instruções e os espaços iniciais que delimitam esse grupo em Python."
+        ],
+        [
+          "def e return",
+          "def declara uma função; return devolve seu resultado. A trilha seguinte pratica essas duas ações."
+        ]
+      ],
+      "math": "Contagem e operações explicadas no exemplo.",
+      "readiness": "Como um programa com blocos cabe em uma linha física?",
+      "links": [
+        {
+          "id": "08",
+          "title": "Funções e composição"
+        }
+      ]
+    }
+  },
+  {
+    "id": "b01",
+    "group": "02 · Repetir, organizar e testar",
+    "title": "Repetir ações com for",
+    "code": "exec(\"for numero in [1,2,3]:\\n print(numero*2)\")",
+    "expected": "2\n4\n6",
+    "concept": "for percorre uma fonte de valores. Em cada passagem, um nome recebe o próximo valor e o corpo executa a mesma regra com ele.",
+    "exercise": "O que muda com a lista [2,2]?",
+    "answer": "A regra é aplicada duas vezes e imprime 4 em cada passagem; repetição de valores não elimina passagens.",
+    "limit": "O exemplo percorre uma lista finita; outras fontes podem não terminar.",
+    "feynman": {
+      "question": "Como aplicar a mesma ação a vários valores?",
+      "plain": "for percorre uma fonte de valores. Em cada passagem, um nome recebe o próximo valor e o corpo executa a mesma regra com ele.",
+      "analogy": "Uma pessoa carimba cada ficha de uma pilha, seguindo a mesma instrução.",
+      "analogyLimit": "O exemplo percorre uma lista finita; outras fontes podem não terminar.",
+      "steps": [
+        "numero recebe 1; multiplicar por 2 produz e imprime 2.",
+        "Na passagem seguinte recebe 2 e imprime 4.",
+        "Na última recebe 3 e imprime 6; não há mais valores e o laço termina."
+      ],
+      "gapQuestion": "A variável numero guarda todos os valores de uma vez?",
+      "gapAnswer": "Não. A cada passagem ela referencia o valor corrente fornecido pela fonte.",
+      "repair": "Volte aos três passos desta aula, refaça o exemplo no papel e explique qual regra responde à dúvida."
+    },
+    "scaffold": {
+      "terms": [
+        [
+          "Laço",
+          "Repetição controlada de um corpo de instruções."
+        ],
+        [
+          "for",
+          "Instrução que percorre uma fonte de valores."
+        ],
+        [
+          "Corpo",
+          "Instruções executadas a cada passagem."
+        ]
+      ],
+      "prerequisites": [
+        "06",
+        "10"
+      ],
+      "skill": "Reconhecer uma ação repetida e rastrear suas passagens.",
+      "readiness": "Como aplicar a mesma ação a vários valores?",
+      "math": "Somente contagem e contas apresentadas no exemplo.",
+      "links": [
+        {
+          "id": "06",
+          "title": "Listas e compreensão"
+        },
+        {
+          "id": "10",
+          "title": "Blocos em uma linha física"
+        }
+      ]
+    },
+    "position": 22,
+    "total": 76
+  },
+  {
+    "id": "b02",
+    "group": "02 · Repetir, organizar e testar",
+    "title": "Repetir até uma condição mudar",
+    "code": "exec(\"restantes=3\\nwhile restantes>0:\\n restantes=restantes-1\\nprint(restantes)\")",
+    "expected": "0",
+    "concept": "while repete um corpo enquanto uma condição for verdadeira. Precisamos observar o que muda para a condição deixar de valer.",
+    "exercise": "Preveja a saída se o valor inicial for 0.",
+    "answer": "O corpo não executa nenhuma vez e a saída continua 0.",
+    "limit": "Um programa pode ficar preso se a condição continuar verdadeira; o nome while não assegura término.",
+    "feynman": {
+      "question": "Como repetir sem esquecer a condição que encerra a tarefa?",
+      "plain": "while repete um corpo enquanto uma condição for verdadeira. Precisamos observar o que muda para a condição deixar de valer.",
+      "analogy": "Retirar uma ficha por vez enquanto ainda há fichas na mesa.",
+      "analogyLimit": "Um programa pode ficar preso se a condição continuar verdadeira; o nome while não assegura término.",
+      "steps": [
+        "restantes começa em 3; 3>0 permite executar o corpo.",
+        "As atualizações levam o estado a 2, 1 e 0.",
+        "O teste 0>0 é falso; o corpo não repete e print mostra 0."
+      ],
+      "gapQuestion": "O que acontece se retirar a atualização restantes=restantes-1?",
+      "gapAnswer": "A condição continua verdadeira com restantes=3. O exemplo passaria a repetir sem chegar à parada.",
+      "repair": "Volte aos três passos desta aula, refaça o exemplo no papel e explique qual regra responde à dúvida."
+    },
+    "scaffold": {
+      "terms": [
+        [
+          "while",
+          "Repetição controlada por uma condição."
+        ],
+        [
+          "Término",
+          "Momento em que o algoritmo encerra."
+        ]
+      ],
+      "prerequisites": [
+        "b01",
+        "04"
+      ],
+      "skill": "Explicar por que uma repetição termina.",
+      "readiness": "Como repetir sem esquecer a condição que encerra a tarefa?",
+      "math": "Somente contagem e contas apresentadas no exemplo.",
+      "links": [
+        {
+          "id": "b01",
+          "title": "Repetir ações com for"
+        },
+        {
+          "id": "04",
+          "title": "Booleanos e decisões"
+        }
+      ]
+    },
+    "position": 23,
+    "total": 76
+  },
+  {
+    "id": "b03",
+    "group": "02 · Repetir, organizar e testar",
+    "title": "Definir funções: receber, calcular e devolver",
+    "code": "exec(\"def total(quantidade,preco):\\n return quantidade*preco\\nprint(total(2,4))\")",
+    "expected": "8",
+    "concept": "Uma função recebe argumentos, executa uma regra e pode devolver um resultado. def declara a função; return devolve o valor ao ponto de chamada.",
+    "exercise": "Qual é o resultado de total(3,4)?",
+    "answer": "12, pois os argumentos mudam e a regra continua multiplicar quantidade por preço.",
+    "limit": "Devolver um valor não o mostra automaticamente; print é outra ação.",
+    "feynman": {
+      "question": "Como dar nome a uma regra e reutilizá-la com dados diferentes?",
+      "plain": "Uma função recebe argumentos, executa uma regra e pode devolver um resultado. def declara a função; return devolve o valor ao ponto de chamada.",
+      "analogy": "Uma pequena calculadora tem uma tecla para uma regra já preparada.",
+      "analogyLimit": "Devolver um valor não o mostra automaticamente; print é outra ação.",
+      "steps": [
+        "def prepara a regra total, com os nomes quantidade e preco.",
+        "total(2,4) associa esses nomes a 2 e 4; return devolve 8.",
+        "print recebe o 8 devolvido e o mostra no terminal."
+      ],
+      "gapQuestion": "Se a função usar return 8 sem print, uma execução normal de arquivo mostra 8 sozinha?",
+      "gapAnswer": "Não. O valor volta para quem chamou; para exibi-lo, é preciso uma ação de saída como print.",
+      "repair": "Volte aos três passos desta aula, refaça o exemplo no papel e explique qual regra responde à dúvida."
+    },
+    "scaffold": {
+      "terms": [
+        [
+          "Função",
+          "Regra chamada por um nome para trabalhar com argumentos."
+        ],
+        [
+          "Parâmetro",
+          "Nome que recebe um argumento na função."
+        ],
+        [
+          "return",
+          "Instrução que devolve um resultado ao chamador."
+        ]
+      ],
+      "prerequisites": [
+        "08",
+        "10"
+      ],
+      "skill": "Separar regra, argumentos e resultado.",
+      "readiness": "Como dar nome a uma regra e reutilizá-la com dados diferentes?",
+      "math": "Somente contagem e contas apresentadas no exemplo.",
+      "links": [
+        {
+          "id": "08",
+          "title": "Funções e composição"
+        },
+        {
+          "id": "10",
+          "title": "Blocos em uma linha física"
+        }
+      ]
+    },
+    "position": 24,
+    "total": 76
+  },
+  {
+    "id": "b04",
+    "group": "02 · Repetir, organizar e testar",
+    "title": "Casos de teste e limites da regra",
+    "code": "permitido=lambda quantidade:quantidade>=0;print([permitido(x) for x in [-1,0,1]])",
+    "expected": "[False, True, True]",
+    "concept": "Além de um caso comum, testamos os pontos em que uma decisão muda. Para quantidades não negativas, a fronteira entre aceitar e rejeitar é zero.",
+    "exercise": "Uma quantidade textual, como \"dois\", já está coberta por esses testes?",
+    "answer": "Não. Precisamos definir quais tipos são admitidos e como tratar entradas fora do domínio.",
+    "limit": "Passar nesses exemplos não prova que qualquer implementação funciona para todas as entradas possíveis.",
+    "feynman": {
+      "question": "Como escolher exemplos que desafiam uma regra?",
+      "plain": "Além de um caso comum, testamos os pontos em que uma decisão muda. Para quantidades não negativas, a fronteira entre aceitar e rejeitar é zero.",
+      "analogy": "Ao conferir uma porta com altura mínima, testamos medidas abaixo, exatamente no limite e acima dele.",
+      "analogyLimit": "Passar nesses exemplos não prova que qualquer implementação funciona para todas as entradas possíveis.",
+      "steps": [
+        "A regra aceita quantidade>=0.",
+        "Para -1 ela devolve False; para 0 e 1 devolve True.",
+        "A lista reúne os três resultados, permitindo comparar com a especificação."
+      ],
+      "gapQuestion": "Trocar >= por > altera qual desses casos?",
+      "gapAnswer": "O caso 0 passaria a False. As entradas -1 e 1 não revelariam essa diferença sozinhas.",
+      "repair": "Volte aos três passos desta aula, refaça o exemplo no papel e explique qual regra responde à dúvida."
+    },
+    "scaffold": {
+      "terms": [
+        [
+          "Caso de teste",
+          "Entrada e resultado esperado usados numa verificação."
+        ],
+        [
+          "Fronteira",
+          "Ponto em que a regra de decisão muda."
+        ],
+        [
+          "Domínio",
+          "Conjunto de entradas para as quais a regra foi definida."
+        ]
+      ],
+      "prerequisites": [
+        "b03"
+      ],
+      "skill": "Procurar contraexemplos e declarar o domínio.",
+      "readiness": "Como escolher exemplos que desafiam uma regra?",
+      "math": "Somente contagem e contas apresentadas no exemplo.",
+      "links": [
+        {
+          "id": "b03",
+          "title": "Definir funções: receber, calcular e devolver"
+        }
+      ]
+    },
+    "position": 25,
+    "total": 76
+  },
+  {
+    "id": "b05",
+    "group": "02 · Repetir, organizar e testar",
+    "title": "Módulos: usar uma parte sem copiar sua construção",
+    "code": "import math;print(math.isqrt(9))",
+    "expected": "3",
+    "concept": "Um módulo reúne nomes e funcionalidades. import torna esse módulo acessível; o ponto liga o nome do módulo ao nome que queremos usar.",
+    "exercise": "Explique o significado do ponto em math.isqrt.",
+    "answer": "Ele acessa o nome isqrt dentro do módulo math; não é multiplicação nem separador decimal nessa expressão.",
+    "limit": "Encontrar uma ferramenta não ensina seu contrato; precisamos saber quais entradas ela aceita e o que devolve.",
+    "feynman": {
+      "question": "Como usar uma regra já implementada e saber de onde ela veio?",
+      "plain": "Um módulo reúne nomes e funcionalidades. import torna esse módulo acessível; o ponto liga o nome do módulo ao nome que queremos usar.",
+      "analogy": "Uma caixa de ferramentas identifica onde está cada ferramenta.",
+      "analogyLimit": "Encontrar uma ferramenta não ensina seu contrato; precisamos saber quais entradas ela aceita e o que devolve.",
+      "steps": [
+        "import math torna o módulo math disponível pelo nome math.",
+        "math.isqrt escolhe a função que devolve a raiz quadrada inteira de um inteiro não negativo.",
+        "Para 9, a resposta é 3; print mostra o resultado."
+      ],
+      "gapQuestion": "math.isqrt(10) deve devolver uma aproximação decimal de raiz de 10?",
+      "gapAnswer": "Não. Seu contrato devolve o piso da raiz quadrada inteira; nesse caso continua sendo 3.",
+      "repair": "Volte aos três passos desta aula, refaça o exemplo no papel e explique qual regra responde à dúvida."
+    },
+    "scaffold": {
+      "terms": [
+        [
+          "Módulo",
+          "Unidade de código com nomes e funcionalidades."
+        ],
+        [
+          "import",
+          "Instrução que disponibiliza um módulo."
+        ],
+        [
+          "Contrato",
+          "Entradas admitidas, resultado prometido e falhas previstas."
+        ]
+      ],
+      "prerequisites": [
+        "b04"
+      ],
+      "skill": "Usar uma interface e conferir seu contrato.",
+      "readiness": "Como usar uma regra já implementada e saber de onde ela veio?",
+      "math": "Somente contagem e contas apresentadas no exemplo.",
+      "links": [
+        {
+          "id": "b04",
+          "title": "Casos de teste e limites da regra"
+        }
+      ]
+    },
+    "position": 26,
+    "total": 76
+  },
+  {
+    "id": "09",
+    "group": "02 · Repetir, organizar e testar",
+    "title": "Iteradores e geradores",
+    "concept": "Uma expressão geradora produz valores sob demanda. sum consome o iterador até o fim. Um iterador consumido não reinicia automaticamente: isso faz parte do seu estado.",
+    "code": "g=(x*x for x in range(4));print(sum(g),list(g))",
+    "expected": "14 []",
+    "exercise": "Como reutilizar os valores?",
+    "answer": "Materialize list(g) antes do primeiro consumo e guarde a lista, ou crie outro gerador.",
+    "limit": "Iteráveis infinitos precisam de um limite antes de materializar seus valores.",
+    "position": 27,
+    "total": 76,
+    "feynman": {
+      "question": "Por que a segunda leitura de um gerador pode estar vazia?",
+      "plain": "Um gerador entrega valores à medida que alguém os pede. Depois de entregar todos, ele fica esgotado; não volta sozinho ao começo.",
+      "analogy": "É uma fila de senhas descartáveis: retirar todas não cria novas senhas para a próxima pessoa.",
+      "analogyLimit": "O gerador calcula valores ao ser consumido; eles não precisam estar todos prontos numa fila real.",
+      "steps": [
+        "g prepara os quadrados de 0, 1, 2 e 3.",
+        "sum pede todos: 0+1+4+9=14 e esgota g.",
+        "list(g) pede o que restou; não há valores, então recebe []."
+      ],
+      "gapQuestion": "Por que guardar g numa variável não guarda também todos os valores produzidos?",
+      "gapAnswer": "A variável referencia o gerador com seu estado de consumo; não uma lista com a história dos valores entregues.",
+      "repair": "Contraste o gerador com uma lista materializada antes de sum."
+    },
+    "scaffold": {
+      "prerequisites": [
+        "08",
+        "06"
+      ],
+      "skill": "Acompanhar consumo e estado de uma fonte.",
+      "terms": [
+        [
+          "Iterador",
+          "Objeto que entrega próximos valores e mantém seu estado de percurso."
+        ],
+        [
+          "Gerador",
+          "Tipo de iterador que pode produzir valores sob demanda."
+        ]
+      ],
+      "math": "Contagem e operações explicadas no exemplo.",
+      "readiness": "Por que a segunda leitura de um gerador pode estar vazia?",
+      "links": [
+        {
+          "id": "08",
+          "title": "Funções e composição"
+        },
+        {
+          "id": "06",
+          "title": "Listas e compreensão"
+        }
+      ]
     }
   },
   {
     "id": "11",
-    "group": "02 · Algoritmos e estruturas",
+    "group": "03 · Algoritmos e estruturas",
     "title": "Recursão e prova por indução",
     "concept": "O fatorial satisfaz f(0)=1 e f(n)=n*f(n-1) para n positivo. O caso base encerra a recursão. A correção segue por indução: se a chamada menor calcula (n-1)!, multiplicar por n calcula n!.",
     "code": "fat=lambda n:1 if n==0 else n*fat(n-1);print(fat(6))",
@@ -259,6 +1506,8 @@
     "exercise": "Calcule fat(0) e explique a base.",
     "answer": "Retorna 1 sem chamada recursiva; representa o produto vazio.",
     "limit": "Domínio: inteiros não negativos; entradas negativas não chegam ao caso base.",
+    "position": 28,
+    "total": 76,
     "feynman": {
       "question": "Como uma função resolve um problema pedindo ajuda a uma versão menor dele?",
       "plain": "Para calcular n!, multiplicamos n pelo fatorial anterior. Quando chegamos a zero, devolvemos 1 sem pedir outra ajuda.",
@@ -272,11 +1521,44 @@
       "gapQuestion": "Por que a definição não serve diretamente para n=-1?",
       "gapAnswer": "Subtrair 1 de um negativo o afasta de zero. O caso de parada nunca é alcançado por essa regra.",
       "repair": "Examine domínio e aproximação ao caso base, não apenas o resultado para 6."
+    },
+    "scaffold": {
+      "prerequisites": [
+        "b03",
+        "b02"
+      ],
+      "skill": "Decompor em chamadas menores e justificar a parada.",
+      "terms": [
+        [
+          "Recursão",
+          "Uma função chamar a si mesma para resolver uma parte do problema."
+        ],
+        [
+          "Caso base",
+          "Caso resolvido sem outra chamada recursiva."
+        ],
+        [
+          "Indução",
+          "Raciocínio que combina uma base com a passagem de um caso ao seguinte."
+        ]
+      ],
+      "math": "Produto de inteiros não negativos; n! significa o produto de 1 até n, com 0!=1.",
+      "readiness": "Como uma função resolve um problema pedindo ajuda a uma versão menor dele?",
+      "links": [
+        {
+          "id": "b03",
+          "title": "Definir funções: receber, calcular e devolver"
+        },
+        {
+          "id": "b02",
+          "title": "Repetir até uma condição mudar"
+        }
+      ]
     }
   },
   {
     "id": "12",
-    "group": "02 · Algoritmos e estruturas",
+    "group": "03 · Algoritmos e estruturas",
     "title": "Pilha, fila e disciplina de acesso",
     "concept": "Pilha retira o último inserido (LIFO); fila retira o primeiro (FIFO). deque oferece append e popleft para representar uma fila. O estado restante revela que elemento foi removido.",
     "code": "from collections import deque;q=deque([1,2]);q.append(3);print(q.popleft(),list(q))",
@@ -284,6 +1566,8 @@
     "exercise": "Como transformar a remoção em LIFO?",
     "answer": "Use q.pop(); a saída removida será 3.",
     "limit": "Retirar de uma estrutura vazia exige uma política explícita.",
+    "position": 29,
+    "total": 76,
     "feynman": {
       "question": "Quem sai primeiro de uma fila e de uma pilha?",
       "plain": "Na fila, o primeiro que entrou sai primeiro. Na pilha, o último colocado sai primeiro. A regra de retirada faz parte da estrutura.",
@@ -297,11 +1581,44 @@
       "gapQuestion": "Se trocar popleft por pop, por que muda o valor removido?",
       "gapAnswer": "pop retira da direita, onde está o último inserido, 3. Mudamos a disciplina de retirada.",
       "repair": "Desenhe as duas pontas e indique onde cada operação atua."
+    },
+    "scaffold": {
+      "prerequisites": [
+        "07",
+        "b01"
+      ],
+      "skill": "Escolher a ordem correta de entrada e retirada.",
+      "terms": [
+        [
+          "FIFO",
+          "Primeiro a entrar, primeiro a sair."
+        ],
+        [
+          "LIFO",
+          "Último a entrar, primeiro a sair."
+        ],
+        [
+          "deque",
+          "Estrutura da biblioteca padrão com operações nas duas pontas."
+        ]
+      ],
+      "math": "Contagem e operações explicadas no exemplo.",
+      "readiness": "Quem sai primeiro de uma fila e de uma pilha?",
+      "links": [
+        {
+          "id": "07",
+          "title": "Dicionários, conjuntos e tuplas"
+        },
+        {
+          "id": "b01",
+          "title": "Repetir ações com for"
+        }
+      ]
     }
   },
   {
     "id": "13",
-    "group": "02 · Algoritmos e estruturas",
+    "group": "03 · Algoritmos e estruturas",
     "title": "Busca binária",
     "concept": "A busca binária mantém um intervalo de candidatos em uma sequência ordenada. bisect_left devolve o ponto de inserção mais à esquerda. Encontrar uma posição não garante que o valor esteja presente.",
     "code": "from bisect import bisect_left;xs=[1,3,5,7];x=5;i=bisect_left(xs,x);print(i,i<len(xs) and xs[i]==x)",
@@ -309,6 +1626,8 @@
     "exercise": "Busque 4 e interprete a posição.",
     "answer": "A posição é 2, mas a comparação de igualdade é False.",
     "limit": "A ordem crescente da entrada é uma pré-condição.",
+    "position": 30,
+    "total": 76,
     "feynman": {
       "question": "Como saber se uma posição de inserção realmente contém o valor procurado?",
       "plain": "Em uma sequência ordenada, podemos localizar onde um valor deveria ficar. Depois precisamos conferir se ele já está naquela posição.",
@@ -322,11 +1641,45 @@
       "gapQuestion": "Se bisect_left retorna 2 para 4, ele encontrou 4?",
       "gapAnswer": "Não. O índice 2 contém 5; é o lugar de inserir 4 sem quebrar a ordem.",
       "repair": "Refaça a última comparação separadamente para x=4."
+    },
+    "scaffold": {
+      "prerequisites": [
+        "05",
+        "b02",
+        "b04"
+      ],
+      "skill": "Usar uma pré-condição e verificar a presença.",
+      "terms": [
+        [
+          "Busca binária",
+          "Busca que reduz candidatos usando a ordem dos valores."
+        ],
+        [
+          "Pré-condição",
+          "Regra que precisa valer antes de executar uma operação."
+        ]
+      ],
+      "math": "Contagem e operações explicadas no exemplo.",
+      "readiness": "Como saber se uma posição de inserção realmente contém o valor procurado?",
+      "links": [
+        {
+          "id": "05",
+          "title": "Strings e fatiamento"
+        },
+        {
+          "id": "b02",
+          "title": "Repetir até uma condição mudar"
+        },
+        {
+          "id": "b04",
+          "title": "Casos de teste e limites da regra"
+        }
+      ]
     }
   },
   {
     "id": "14",
-    "group": "02 · Algoritmos e estruturas",
+    "group": "03 · Algoritmos e estruturas",
     "title": "Ordenação por partição",
     "concept": "Escolha o primeiro elemento como pivô; separe os menores e os demais. Ordene recursivamente ambas as partes e concatene esquerda, pivô e direita. A entrada vazia é o caso base.",
     "code": "q=lambda xs:q([x for x in xs[1:] if x<xs[0]])+xs[:1]+q([x for x in xs[1:] if x>=xs[0]]) if xs else [];print(q([3,1,3,2]))",
@@ -334,6 +1687,8 @@
     "exercise": "O que acontece com os elementos iguais ao pivô?",
     "answer": "Entram na partição direita e continuam presentes, preservando a multiplicidade.",
     "limit": "Esta versão didática não deve ser usada para recursões muito profundas.",
+    "position": 31,
+    "total": 76,
     "feynman": {
       "question": "Como ordenar sem perder os valores repetidos?",
       "plain": "Escolhemos um valor de referência, separamos os menores dos demais e ordenamos cada parte antes de juntá-las.",
@@ -347,11 +1702,40 @@
       "gapQuestion": "Por que usar > no lugar de >= na segunda partição pode perder valores?",
       "gapAnswer": "Valores iguais ao pivô deixariam de entrar em ambas as partições; só o pivô reservado sobreviveria.",
       "repair": "Marque os dois cartões 3 como objetos separados e acompanhe cada um."
+    },
+    "scaffold": {
+      "prerequisites": [
+        "11",
+        "06"
+      ],
+      "skill": "Dividir, combinar e preservar ocorrências.",
+      "terms": [
+        [
+          "Pivô",
+          "Valor de referência usado para separar os demais."
+        ],
+        [
+          "Partição",
+          "Parte obtida por uma regra de separação."
+        ]
+      ],
+      "math": "Contagem e operações explicadas no exemplo.",
+      "readiness": "Como ordenar sem perder os valores repetidos?",
+      "links": [
+        {
+          "id": "11",
+          "title": "Recursão e prova por indução"
+        },
+        {
+          "id": "06",
+          "title": "Listas e compreensão"
+        }
+      ]
     }
   },
   {
     "id": "15",
-    "group": "02 · Algoritmos e estruturas",
+    "group": "03 · Algoritmos e estruturas",
     "title": "Contagem e representação esparsa",
     "concept": "Uma tabela de frequências guarda somente as categorias observadas. Counter interpreta cada item como uma ocorrência. Essa representação serve para histogramas discretos e contagem de eventos.",
     "code": "from collections import Counter;c=Counter('banana');print(sorted(c.items()))",
@@ -359,6 +1743,8 @@
     "exercise": "Qual é a soma de todas as frequências?",
     "answer": "6, que coincide com o comprimento de banana.",
     "limit": "A ordem de apresentação deve ser definida se fizer parte da saída esperada.",
+    "position": 32,
+    "total": 76,
     "feynman": {
       "question": "Como resumir uma sequência pela quantidade de cada item?",
       "plain": "Em vez de guardar só a sequência, contamos quantas vezes cada valor aparece. A soma das contagens deve recuperar o número de ocorrências.",
@@ -372,11 +1758,40 @@
       "gapQuestion": "As mesmas contagens permitem distinguir banana de ananab?",
       "gapAnswer": "Não. As duas sequências têm as mesmas frequências; o resumo descartou as posições.",
       "repair": "Separe informação de quantidade da informação de ordem."
+    },
+    "scaffold": {
+      "prerequisites": [
+        "07",
+        "b05"
+      ],
+      "skill": "Resumir ocorrências sem confundir quantidade com posição.",
+      "terms": [
+        [
+          "Frequência",
+          "Quantidade de ocorrências de um valor."
+        ],
+        [
+          "Counter",
+          "Dicionário especializado da biblioteca padrão para contagens."
+        ]
+      ],
+      "math": "Contagem e operações explicadas no exemplo.",
+      "readiness": "Como resumir uma sequência pela quantidade de cada item?",
+      "links": [
+        {
+          "id": "07",
+          "title": "Dicionários, conjuntos e tuplas"
+        },
+        {
+          "id": "b05",
+          "title": "Módulos: usar uma parte sem copiar sua construção"
+        }
+      ]
     }
   },
   {
     "id": "16",
-    "group": "02 · Algoritmos e estruturas",
+    "group": "03 · Algoritmos e estruturas",
     "title": "Grafo e busca em largura",
     "concept": "Um grafo por adjacências associa cada vértice aos seus vizinhos. BFS usa uma fila e descobre vértices por distância em número de arestas. A marcação no momento da inserção impede duplicações na fila.",
     "code": "exec(\"from collections import deque\\ng={0:[1,2],1:[3],2:[3],3:[]};q=deque([0]);d={0:0}\\nwhile q:\\n u=q.popleft()\\n for v in g[u]:\\n  if v not in d:d[v]=d[u]+1;q.append(v)\\nprint(d[3])\")",
@@ -384,6 +1799,8 @@
     "exercise": "Acrescente a aresta 0→3.",
     "answer": "A distância para 3 passa a ser 1.",
     "limit": "BFS resolve menor número de arestas; pesos diferentes exigem outro método.",
+    "position": 33,
+    "total": 76,
     "feynman": {
       "question": "Como descobrir o menor número de passos entre lugares conectados?",
       "plain": "Visitamos primeiro os lugares a um passo, depois os que estão a dois, e assim por diante. Uma fila mantém essa ordem de descoberta.",
@@ -397,11 +1814,49 @@
       "gapQuestion": "Por que marcar 3 ao colocá-lo na fila evita trabalho repetido?",
       "gapAnswer": "Quando outra ligação alcança 3, o registro já mostra que ele foi descoberto e não precisa ser inserido novamente.",
       "repair": "Simule as filas [1, 2], [2, 3] e [3], conservando o mapa de distâncias."
+    },
+    "scaffold": {
+      "prerequisites": [
+        "12",
+        "07",
+        "b02"
+      ],
+      "skill": "Explorar relações por camadas.",
+      "terms": [
+        [
+          "Grafo",
+          "Modelo com elementos chamados vértices e ligações chamadas arestas."
+        ],
+        [
+          "Adjacência",
+          "Registro de quais vértices estão ligados diretamente."
+        ],
+        [
+          "BFS",
+          "Busca em largura: explora os vizinhos em camadas de distância."
+        ]
+      ],
+      "math": "Contagem e operações explicadas no exemplo.",
+      "readiness": "Como descobrir o menor número de passos entre lugares conectados?",
+      "links": [
+        {
+          "id": "12",
+          "title": "Pilha, fila e disciplina de acesso"
+        },
+        {
+          "id": "07",
+          "title": "Dicionários, conjuntos e tuplas"
+        },
+        {
+          "id": "b02",
+          "title": "Repetir até uma condição mudar"
+        }
+      ]
     }
   },
   {
     "id": "17",
-    "group": "02 · Algoritmos e estruturas",
+    "group": "03 · Algoritmos e estruturas",
     "title": "Dijkstra e relaxamento",
     "concept": "Uma distância provisória é um limite superior para o caminho ótimo. Relaxar uma aresta tenta diminuir esse limite. A fila de prioridade escolhe o menor valor disponível; entradas antigas são ignoradas.",
     "code": "exec(\"import heapq\\ng={0:[(1,4),(2,1)],1:[],2:[(1,2)]};d={0:0};q=[(0,0)]\\nwhile q:\\n du,u=heapq.heappop(q)\\n if du!=d[u]:continue\\n for v,w in g[u]:\\n  nd=du+w\\n  if nd<d.get(v,float('inf')):d[v]=nd;heapq.heappush(q,(nd,v))\\nprint(d[1])\")",
@@ -409,6 +1864,8 @@
     "exercise": "Por que o caminho direto de custo 4 não é escolhido?",
     "answer": "O caminho 0→2→1 tem custo 1+2=3.",
     "limit": "A justificativa de Dijkstra exige pesos não negativos.",
+    "position": 34,
+    "total": 76,
     "feynman": {
       "question": "Como achar o caminho de menor custo quando cada ligação tem um preço?",
       "plain": "Guardamos o melhor custo conhecido e tentamos melhorá-lo ao estender caminhos. Sempre examinamos o menor custo disponível primeiro.",
@@ -422,11 +1879,44 @@
       "gapQuestion": "O que significa relaxar uma aresta neste exemplo?",
       "gapAnswer": "É testar se um caminho que passa por essa ligação reduz o custo conhecido do destino: aqui 1+2<4.",
       "repair": "Escreva custo até a origem + custo da ligação antes de comparar com o destino."
+    },
+    "scaffold": {
+      "prerequisites": [
+        "16",
+        "13"
+      ],
+      "skill": "Melhorar respostas provisórias sem perder as hipóteses.",
+      "terms": [
+        [
+          "Peso",
+          "Custo associado a uma ligação do grafo."
+        ],
+        [
+          "Relaxar",
+          "Testar se um caminho melhora o custo conhecido de um destino."
+        ],
+        [
+          "Fila de prioridade",
+          "Estrutura que escolhe o próximo elemento pela prioridade."
+        ]
+      ],
+      "math": "Contagem e operações explicadas no exemplo.",
+      "readiness": "Como achar o caminho de menor custo quando cada ligação tem um preço?",
+      "links": [
+        {
+          "id": "16",
+          "title": "Grafo e busca em largura"
+        },
+        {
+          "id": "13",
+          "title": "Busca binária"
+        }
+      ]
     }
   },
   {
     "id": "18",
-    "group": "02 · Algoritmos e estruturas",
+    "group": "03 · Algoritmos e estruturas",
     "title": "Programação dinâmica",
     "concept": "Subproblemas sobrepostos podem ter suas respostas guardadas. O cache memoriza chamadas por argumentos. Fibonacci tem f(0)=0, f(1)=1 e f(n)=f(n-1)+f(n-2).",
     "code": "exec(\"from functools import cache\\n@cache\\ndef fib(n):return n if n<2 else fib(n-1)+fib(n-2)\\nprint(fib(20))\")",
@@ -434,6 +1924,8 @@
     "exercise": "Qual o efeito de remover @cache?",
     "answer": "O resultado matemático permanece; subproblemas voltam a ser recalculados.",
     "limit": "O domínio adotado é inteiro não negativo e ainda existe limite de profundidade recursiva.",
+    "position": 35,
+    "total": 76,
     "feynman": {
       "question": "Como evitar resolver a mesma pergunta várias vezes?",
       "plain": "Guardamos a resposta de uma chamada e a reutilizamos quando os mesmos argumentos aparecem. Esse registro é o cache.",
@@ -447,11 +1939,45 @@
       "gapQuestion": "Guardar respostas muda a regra matemática de Fibonacci?",
       "gapAnswer": "Não. Muda como reutilizamos resultados, mantendo f(n)=f(n-1)+f(n-2).",
       "repair": "Compare a regra do return com o trabalho do decorador @cache."
+    },
+    "scaffold": {
+      "prerequisites": [
+        "11",
+        "08",
+        "b05"
+      ],
+      "skill": "Reconhecer subproblemas repetidos.",
+      "terms": [
+        [
+          "Cache",
+          "Registro de respostas reutilizáveis de operações já feitas."
+        ],
+        [
+          "Programação dinâmica",
+          "Organização da solução por subproblemas cujas respostas são reaproveitadas."
+        ]
+      ],
+      "math": "Contagem e operações explicadas no exemplo.",
+      "readiness": "Como evitar resolver a mesma pergunta várias vezes?",
+      "links": [
+        {
+          "id": "11",
+          "title": "Recursão e prova por indução"
+        },
+        {
+          "id": "08",
+          "title": "Funções e composição"
+        },
+        {
+          "id": "b05",
+          "title": "Módulos: usar uma parte sem copiar sua construção"
+        }
+      ]
     }
   },
   {
     "id": "19",
-    "group": "02 · Algoritmos e estruturas",
+    "group": "03 · Algoritmos e estruturas",
     "title": "Union-find e componentes",
     "concept": "Cada conjunto possui um representante. find segue os pais até uma raiz; unir dois conjuntos altera o pai de uma raiz. A igualdade de representantes responde conectividade.",
     "code": "exec(\"p=list(range(4))\\ndef find(x):\\n while p[x]!=x:x=p[x]\\n return x\\np[find(1)]=find(0)\\np[find(2)]=find(1)\\nprint(find(0)==find(2),find(0)==find(3))\")",
@@ -459,6 +1985,8 @@
     "exercise": "Una o vértice 3 ao conjunto de 2.",
     "answer": "Execute p[find(3)]=find(2); todos os quatro ficam conectados.",
     "limit": "A versão mostra a semântica básica; compressão de caminhos é uma extensão.",
+    "position": 36,
+    "total": 76,
     "feynman": {
       "question": "Como saber se dois elementos pertencem ao mesmo grupo?",
       "plain": "Cada grupo aponta para um representante. Seguimos os ponteiros até a raiz e comparamos as raízes dos elementos.",
@@ -472,11 +2000,44 @@
       "gapQuestion": "Basta comparar p[2] com p[0] para qualquer floresta de pais?",
       "gapAnswer": "Não. Pais imediatos podem ser diferentes e ainda levar à mesma raiz; find deve seguir toda a cadeia.",
       "repair": "Desenhe uma cadeia 2→1→0 e separe pai imediato de representante final."
+    },
+    "scaffold": {
+      "prerequisites": [
+        "07",
+        "b02"
+      ],
+      "skill": "Representar grupos por raízes e seguir relações.",
+      "terms": [
+        [
+          "Raiz",
+          "Elemento que representa o conjunto nesta estrutura."
+        ],
+        [
+          "Pai",
+          "Elemento apontado por outro no caminho até a raiz."
+        ],
+        [
+          "Union-find",
+          "Estrutura com operações para unir conjuntos e encontrar representantes."
+        ]
+      ],
+      "math": "Contagem e operações explicadas no exemplo.",
+      "readiness": "Como saber se dois elementos pertencem ao mesmo grupo?",
+      "links": [
+        {
+          "id": "07",
+          "title": "Dicionários, conjuntos e tuplas"
+        },
+        {
+          "id": "b02",
+          "title": "Repetir até uma condição mudar"
+        }
+      ]
     }
   },
   {
     "id": "20",
-    "group": "02 · Algoritmos e estruturas",
+    "group": "03 · Algoritmos e estruturas",
     "title": "SAT por enumeração",
     "concept": "Uma fórmula booleana está em SAT quando existe uma atribuição que a torna verdadeira. Enumerar todas as atribuições fornece uma solução exata para um número pequeno de variáveis. Uma compreensão filtra as atribuições satisfatórias.",
     "code": "from itertools import product;print([(a,b) for a,b in product([False,True],repeat=2) if (a or b) and not a])",
@@ -484,6 +2045,8 @@
     "exercise": "Acrescente a condição not b.",
     "answer": "A lista fica vazia: a fórmula é insatisfatível.",
     "limit": "A enumeração é uma ilustração finita; não representa um solver industrial.",
+    "position": 37,
+    "total": 76,
     "feynman": {
       "question": "Como descobrir se existe uma escolha de valores que satisfaz todas as regras?",
       "plain": "Testamos cada combinação de verdadeiro e falso e guardamos apenas as que tornam a frase inteira verdadeira.",
@@ -497,11 +2060,45 @@
       "gapQuestion": "Por que testar cada condição isoladamente não basta?",
       "gapAnswer": "A mesma combinação precisa satisfazer as duas condições ao mesmo tempo. Soluções de condições separadas podem ser incompatíveis.",
       "repair": "Faça uma tabela com uma coluna para cada condição e outra para o and."
+    },
+    "scaffold": {
+      "prerequisites": [
+        "z09",
+        "06",
+        "b05"
+      ],
+      "skill": "Procurar uma escolha que satisfaça todas as regras.",
+      "terms": [
+        [
+          "SAT",
+          "Problema de saber se existe uma atribuição que torna uma fórmula booleana verdadeira."
+        ],
+        [
+          "Atribuição lógica",
+          "Escolha de verdadeiro ou falso para cada variável da fórmula."
+        ]
+      ],
+      "math": "Contagem e operações explicadas no exemplo.",
+      "readiness": "Como descobrir se existe uma escolha de valores que satisfaz todas as regras?",
+      "links": [
+        {
+          "id": "z09",
+          "title": "Combinar condições: e, ou, não"
+        },
+        {
+          "id": "06",
+          "title": "Listas e compreensão"
+        },
+        {
+          "id": "b05",
+          "title": "Módulos: usar uma parte sem copiar sua construção"
+        }
+      ]
     }
   },
   {
     "id": "21",
-    "group": "03 · Engenharia de software e sistemas",
+    "group": "04 · Software e sistemas",
     "title": "Objetos e invariantes",
     "concept": "Uma classe reúne estado e comportamento. O construtor estabelece o estado inicial; um método deve preservar suas regras. Aqui depositar altera apenas o saldo da instância receptora.",
     "code": "exec(\"class Conta:\\n def __init__(self,saldo):self.saldo=saldo\\n def depositar(self,v):self.saldo+=v\\nc=Conta(10);c.depositar(5);print(c.saldo)\")",
@@ -509,6 +2106,8 @@
     "exercise": "Qual regra acrescentaria para uma conta sem depósitos negativos?",
     "answer": "Exigir v>=0 antes da atualização e lançar ValueError caso contrário.",
     "limit": "O exemplo não é um sistema bancário e não usa representação monetária adequada.",
+    "position": 38,
+    "total": 76,
     "feynman": {
       "question": "Como juntar dados de uma conta com as ações que os modificam?",
       "plain": "Um objeto guarda um estado, como saldo, e oferece ações, como depositar. A classe descreve como criar esses objetos e quais ações possuem.",
@@ -522,11 +2121,44 @@
       "gapQuestion": "Por que duas contas não precisam compartilhar o mesmo saldo?",
       "gapAnswer": "self.saldo é um atributo da instância recebida. Cada objeto criado pelo construtor pode guardar seu próprio valor.",
       "repair": "Desenhe dois objetos e aponte self para aquele cujo método está sendo chamado."
+    },
+    "scaffold": {
+      "prerequisites": [
+        "b03",
+        "07"
+      ],
+      "skill": "Relacionar uma ação com o estado que ela altera.",
+      "terms": [
+        [
+          "Objeto",
+          "Valor com identidade, estado e comportamento."
+        ],
+        [
+          "self",
+          "Nome convencional do parâmetro que recebe a instância nos métodos mostrados."
+        ],
+        [
+          "Invariante",
+          "Regra que deve continuar verdadeira ao longo das operações."
+        ]
+      ],
+      "math": "Contagem e operações explicadas no exemplo.",
+      "readiness": "Como juntar dados de uma conta com as ações que os modificam?",
+      "links": [
+        {
+          "id": "b03",
+          "title": "Definir funções: receber, calcular e devolver"
+        },
+        {
+          "id": "07",
+          "title": "Dicionários, conjuntos e tuplas"
+        }
+      ]
     }
   },
   {
     "id": "22",
-    "group": "03 · Engenharia de software e sistemas",
+    "group": "04 · Software e sistemas",
     "title": "Exceções e contratos",
     "concept": "Uma exceção distingue falha de um resultado normal. try delimita a operação e except trata uma classe específica de falha. Capturar apenas o que se sabe tratar preserva informação sobre erros inesperados.",
     "code": "exec(\"try:\\n int('x')\\nexcept ValueError:\\n print('entrada inválida')\")",
@@ -534,6 +2166,8 @@
     "exercise": "Troque x por 12.",
     "answer": "A conversão funciona e nada é impresso: não há print no caminho de sucesso.",
     "limit": "Um contrato precisa especificar também o comportamento esperado em caso de sucesso.",
+    "position": 39,
+    "total": 76,
     "feynman": {
       "question": "Como tratar uma entrada inválida sem confundi-la com um resultado?",
       "plain": "Tentamos uma operação. Se ela falha de um modo conhecido, desviamos para um tratamento específico.",
@@ -547,11 +2181,40 @@
       "gapQuestion": "Se a conversão funcionar, o except também será executado?",
       "gapAnswer": "Não. O tratamento só é usado quando uma exceção correspondente interrompe a tentativa.",
       "repair": "Acompanhe separadamente o caminho de sucesso e o caminho de falha."
+    },
+    "scaffold": {
+      "prerequisites": [
+        "b03",
+        "03"
+      ],
+      "skill": "Separar caminho de sucesso e caminho de falha.",
+      "terms": [
+        [
+          "Exceção",
+          "Sinal de interrupção do fluxo normal que pode ser tratado."
+        ],
+        [
+          "try e except",
+          "Instruções que delimitam uma tentativa e o tratamento de certas falhas."
+        ]
+      ],
+      "math": "Contagem e operações explicadas no exemplo.",
+      "readiness": "Como tratar uma entrada inválida sem confundi-la com um resultado?",
+      "links": [
+        {
+          "id": "b03",
+          "title": "Definir funções: receber, calcular e devolver"
+        },
+        {
+          "id": "03",
+          "title": "Tipos e conversões"
+        }
+      ]
     }
   },
   {
     "id": "23",
-    "group": "03 · Engenharia de software e sistemas",
+    "group": "04 · Software e sistemas",
     "title": "Recursos e arquivos",
     "concept": "with encerra um recurso mesmo se ocorrer uma exceção dentro do bloco. TemporaryDirectory cria uma pasta descartável. Definir encoding explicita a interpretação do texto.",
     "code": "exec(\"from tempfile import TemporaryDirectory\\nfrom pathlib import Path\\nwith TemporaryDirectory() as d:\\n p=Path(d)/'dados.txt';p.write_text('ciência',encoding='utf-8');print(p.read_text(encoding='utf-8'))\")",
@@ -559,6 +2222,8 @@
     "exercise": "Por que explicitar utf-8?",
     "answer": "Para que leitura e escrita não dependam da codificação padrão da máquina.",
     "limit": "O exemplo apaga somente a pasta temporária criada por ele próprio.",
+    "position": 40,
+    "total": 76,
     "feynman": {
       "question": "Como garantir que um recurso temporário seja encerrado depois do uso?",
       "plain": "Entramos num contexto de uso e deixamos sua regra de saída cuidar da limpeza. O arquivo do exemplo vive numa pasta temporária.",
@@ -572,11 +2237,44 @@
       "gapQuestion": "Por que fechar o contexto é diferente de apenas terminar a última instrução feliz?",
       "gapAnswer": "O protocolo de saída também é chamado se uma exceção interromper o bloco; a limpeza não depende só do caminho de sucesso.",
       "repair": "Localize a entrada e a saída do with e imagine uma falha antes do print."
+    },
+    "scaffold": {
+      "prerequisites": [
+        "b05",
+        "22"
+      ],
+      "skill": "Planejar abertura, uso e encerramento de recursos.",
+      "terms": [
+        [
+          "with",
+          "Instrução que usa o protocolo de entrada e saída de um contexto."
+        ],
+        [
+          "Codificação",
+          "Regra que relaciona texto a bytes."
+        ],
+        [
+          "UTF-8",
+          "Uma codificação amplamente usada para texto."
+        ]
+      ],
+      "math": "Contagem e operações explicadas no exemplo.",
+      "readiness": "Como garantir que um recurso temporário seja encerrado depois do uso?",
+      "links": [
+        {
+          "id": "b05",
+          "title": "Módulos: usar uma parte sem copiar sua construção"
+        },
+        {
+          "id": "22",
+          "title": "Exceções e contratos"
+        }
+      ]
     }
   },
   {
     "id": "24",
-    "group": "03 · Engenharia de software e sistemas",
+    "group": "04 · Software e sistemas",
     "title": "JSON e intercâmbio",
     "concept": "Serialização transforma uma estrutura em uma representação transportável. JSON cobre objetos, listas, números, strings, booleanos e null. A desserialização reconstrói valores compatíveis, não classes arbitrárias.",
     "code": "import json;s=json.dumps({'x':[1,2]});print(json.loads(s)['x'])",
@@ -584,6 +2282,8 @@
     "exercise": "Uma tupla mantém seu tipo ao passar por JSON?",
     "answer": "Não; é serializada como array e normalmente volta como list.",
     "limit": "JSON não define um esquema de validação dos dados da aplicação.",
+    "position": 41,
+    "total": 76,
     "feynman": {
       "question": "Como enviar dados em texto e reconstruí-los depois?",
       "plain": "JSON descreve alguns tipos de dados num texto padronizado. Gravar e ler essa representação permite trocar dados sem compartilhar objetos vivos.",
@@ -597,11 +2297,40 @@
       "gapQuestion": "Por que JSON válido não garante dados corretos para a aplicação?",
       "gapAnswer": "O texto pode obedecer à sintaxe e ainda faltar uma chave, conter tipos inesperados ou valores fora do domínio.",
       "repair": "Separe conseguir ler o texto de verificar o significado de cada campo."
+    },
+    "scaffold": {
+      "prerequisites": [
+        "07",
+        "b05"
+      ],
+      "skill": "Separar dados do modo de transportá-los.",
+      "terms": [
+        [
+          "JSON",
+          "Formato textual para representar certos tipos de dados."
+        ],
+        [
+          "Serializar",
+          "Transformar dados numa representação armazenável ou transmissível."
+        ]
+      ],
+      "math": "Contagem e operações explicadas no exemplo.",
+      "readiness": "Como enviar dados em texto e reconstruí-los depois?",
+      "links": [
+        {
+          "id": "07",
+          "title": "Dicionários, conjuntos e tuplas"
+        },
+        {
+          "id": "b05",
+          "title": "Módulos: usar uma parte sem copiar sua construção"
+        }
+      ]
     }
   },
   {
     "id": "25",
-    "group": "03 · Engenharia de software e sistemas",
+    "group": "04 · Software e sistemas",
     "title": "SQL parametrizado",
     "concept": "Uma consulta parametrizada separa o texto SQL dos valores dos dados. SQLite em memória permite experimentar sem servidor. Use placeholders para valores e um contexto para encerrar a conexão.",
     "code": "exec(\"import sqlite3\\nfrom contextlib import closing\\nwith closing(sqlite3.connect(':memory:')) as c:\\n c.execute('create table t(x integer)');c.execute('insert into t values (?)',(7,));print(c.execute('select sum(x) from t').fetchone()[0])\")",
@@ -609,6 +2338,8 @@
     "exercise": "Insira também o valor 5.",
     "answer": "Repita a inserção com (5,); a soma passa a 12.",
     "limit": "Placeholders não substituem identificadores de tabelas ou colunas.",
+    "position": 42,
+    "total": 76,
     "feynman": {
       "question": "Como fornecer um valor a uma consulta sem misturá-lo ao comando SQL?",
       "plain": "Escrevemos a estrutura da consulta com um espaço reservado. Depois entregamos o valor separadamente ao banco.",
@@ -622,11 +2353,49 @@
       "gapQuestion": "Por que o 7 precisa ser passado como (7,), com uma vírgula?",
       "gapAnswer": "O segundo argumento representa uma sequência de parâmetros. (7,) é uma tupla de um item; (7) é só o inteiro entre parênteses.",
       "repair": "Conte os espaços ? e os elementos da sequência de parâmetros."
+    },
+    "scaffold": {
+      "prerequisites": [
+        "07",
+        "b03",
+        "22"
+      ],
+      "skill": "Separar comando de valores e definir consultas.",
+      "terms": [
+        [
+          "SQL",
+          "Linguagem usada para consultar e modificar bancos relacionais."
+        ],
+        [
+          "Tabela",
+          "Organização de dados por linhas e colunas."
+        ],
+        [
+          "Parâmetro de consulta",
+          "Valor fornecido separadamente do texto do comando."
+        ]
+      ],
+      "math": "Contagem e operações explicadas no exemplo.",
+      "readiness": "Como fornecer um valor a uma consulta sem misturá-lo ao comando SQL?",
+      "links": [
+        {
+          "id": "07",
+          "title": "Dicionários, conjuntos e tuplas"
+        },
+        {
+          "id": "b03",
+          "title": "Definir funções: receber, calcular e devolver"
+        },
+        {
+          "id": "22",
+          "title": "Exceções e contratos"
+        }
+      ]
     }
   },
   {
     "id": "26",
-    "group": "03 · Engenharia de software e sistemas",
+    "group": "04 · Software e sistemas",
     "title": "Testes de propriedades",
     "concept": "Um teste de exemplo compara uma entrada particular com uma resposta conhecida. Uma propriedade verifica uma relação sobre muitas entradas. Para ordenar, a sequência deve ser crescente e preservar as ocorrências.",
     "code": "from itertools import product;from collections import Counter;casos=list(product(range(3),repeat=4));print(all(Counter(sorted(x))==Counter(x) and all(a<=b for a,b in zip(sorted(x),sorted(x)[1:])) for x in casos))",
@@ -634,6 +2403,8 @@
     "exercise": "Quantas entradas são verificadas?",
     "answer": "3**4=81 sequências; isso é exaustivo somente nesse domínio finito.",
     "limit": "Uma bateria finita não prova a correção para todos os tamanhos possíveis.",
+    "position": 43,
+    "total": 76,
     "feynman": {
       "question": "Como testar uma regra sobre muitas entradas sem chamar isso de prova geral?",
       "plain": "Uma propriedade descreve algo que todas as saídas corretas devem respeitar. Podemos testar essa regra num conjunto declarado de entradas.",
@@ -647,11 +2418,484 @@
       "gapQuestion": "Uma saída crescente que perde um valor ainda seria uma ordenação correta?",
       "gapAnswer": "Não. Ordenar precisa preservar as ocorrências da entrada, além de colocá-las em ordem.",
       "repair": "Compare [1, 1, 2] com [1, 2]: ambas crescem, mas as contagens são diferentes."
+    },
+    "scaffold": {
+      "prerequisites": [
+        "b04",
+        "07"
+      ],
+      "skill": "Transformar uma regra em verificações.",
+      "terms": [
+        [
+          "Propriedade",
+          "Relação que esperamos que as saídas corretas respeitem."
+        ],
+        [
+          "Oráculo de teste",
+          "Resultado ou critério usado para julgar uma execução."
+        ]
+      ],
+      "math": "Contagem e operações explicadas no exemplo.",
+      "readiness": "Como testar uma regra sobre muitas entradas sem chamar isso de prova geral?",
+      "links": [
+        {
+          "id": "b04",
+          "title": "Casos de teste e limites da regra"
+        },
+        {
+          "id": "07",
+          "title": "Dicionários, conjuntos e tuplas"
+        }
+      ]
     }
   },
   {
+    "id": "p01",
+    "group": "05 · Paradigmas, design e arquitetura",
+    "title": "Paradigmas: diferentes maneiras de organizar a solução",
+    "code": "exec(\"total=0\\nfor x in [2,3]:total=total+x\\nprint(total,sum([2,3]))\")",
+    "expected": "5 5",
+    "concept": "Paradigma é uma maneira de organizar o raciocínio e o código. Podemos descrever atualizações passo a passo ou compor operações que devolvem o resultado. Python permite combinar maneiras diferentes.",
+    "exercise": "Que informação você acompanharia para explicar o primeiro cálculo?",
+    "answer": "Os estados sucessivos de total: 0, 2 e 5; no segundo caso, explique o contrato de sum.",
+    "limit": "Usar uma função pronta não transforma automaticamente um programa inteiro num paradigma; precisamos examinar suas regras e efeitos.",
+    "feynman": {
+      "question": "Por que dois programas diferentes podem resolver a mesma pergunta?",
+      "plain": "Paradigma é uma maneira de organizar o raciocínio e o código. Podemos descrever atualizações passo a passo ou compor operações que devolvem o resultado. Python permite combinar maneiras diferentes.",
+      "analogy": "Podemos descrever cada passo de uma viagem ou informar o destino a um serviço que organiza o percurso.",
+      "analogyLimit": "Usar uma função pronta não transforma automaticamente um programa inteiro num paradigma; precisamos examinar suas regras e efeitos.",
+      "steps": [
+        "O primeiro cálculo começa em total=0 e soma 2; o estado vira 2.",
+        "Soma 3 e o estado vira 5. Esse estilo mostra atualizações imperativas.",
+        "sum([2,3]) expressa a soma como uma operação; os dois resultados impressos são 5."
+      ],
+      "gapQuestion": "Resultados iguais significam que os programas têm a mesma estrutura?",
+      "gapAnswer": "Não. Eles podem produzir o mesmo valor usando estados, funções e responsabilidades organizados de modos diferentes.",
+      "repair": "Volte aos três passos desta aula, refaça o exemplo no papel e explique qual regra responde à dúvida."
+    },
+    "scaffold": {
+      "terms": [
+        [
+          "Paradigma",
+          "Maneira de organizar uma solução em código."
+        ],
+        [
+          "Imperativo",
+          "Estilo que explicita ações e mudanças de estado."
+        ],
+        [
+          "Composição",
+          "Usar resultados de operações como entrada de outras."
+        ]
+      ],
+      "prerequisites": [
+        "b05",
+        "26"
+      ],
+      "skill": "Comparar soluções pelo mecanismo e pelo contrato.",
+      "readiness": "Por que dois programas diferentes podem resolver a mesma pergunta?",
+      "math": "Somente contagem e contas apresentadas no exemplo.",
+      "links": [
+        {
+          "id": "b05",
+          "title": "Módulos: usar uma parte sem copiar sua construção"
+        },
+        {
+          "id": "26",
+          "title": "Testes de propriedades"
+        }
+      ]
+    },
+    "position": 44,
+    "total": 76
+  },
+  {
+    "id": "p02",
+    "group": "05 · Paradigmas, design e arquitetura",
+    "title": "Funções puras e efeitos",
+    "code": "dobro=lambda x:2*x;print(dobro(4),dobro(4))",
+    "expected": "8 8",
+    "concept": "Uma função pura calcula a partir dos argumentos, sem alterar estado externo nem depender de informação externa variável. Mostrar na tela é um efeito: muda algo observável fora do cálculo.",
+    "exercise": "Onde colocaria a leitura de um arquivo para facilitar testar a conta?",
+    "answer": "Numa parte externa, passando os dados lidos como argumentos à função que calcula.",
+    "limit": "Uma função que parece simples ainda pode depender de arquivos, relógio ou estado externo; o nome não garante pureza.",
+    "feynman": {
+      "question": "Como separar calcular uma resposta de interagir com o mundo?",
+      "plain": "Uma função pura calcula a partir dos argumentos, sem alterar estado externo nem depender de informação externa variável. Mostrar na tela é um efeito: muda algo observável fora do cálculo.",
+      "analogy": "Separar a conta escrita no papel do ato de anunciar sua resposta.",
+      "analogyLimit": "Uma função que parece simples ainda pode depender de arquivos, relógio ou estado externo; o nome não garante pureza.",
+      "steps": [
+        "dobro recebe 4 e devolve 8 sem alterar outra informação.",
+        "A segunda chamada com 4 repete o cálculo e devolve 8.",
+        "print é a parte que mostra os valores; esse efeito está fora da regra dobro."
+      ],
+      "gapQuestion": "Uma função que lê o horário atual é pura só porque não grava arquivos?",
+      "gapAnswer": "Não. O resultado pode mudar sem mudança dos argumentos, porque depende de informação externa.",
+      "repair": "Volte aos três passos desta aula, refaça o exemplo no papel e explique qual regra responde à dúvida."
+    },
+    "scaffold": {
+      "terms": [
+        [
+          "Função pura",
+          "Cálculo determinado pelos argumentos, sem efeitos externos."
+        ],
+        [
+          "Efeito",
+          "Interação observável fora do valor devolvido, como escrita."
+        ]
+      ],
+      "prerequisites": [
+        "p01"
+      ],
+      "skill": "Isolar decisões de efeitos externos.",
+      "readiness": "Como separar calcular uma resposta de interagir com o mundo?",
+      "math": "Somente contagem e contas apresentadas no exemplo.",
+      "links": [
+        {
+          "id": "p01",
+          "title": "Paradigmas: diferentes maneiras de organizar a solução"
+        }
+      ]
+    },
+    "position": 45,
+    "total": 76
+  },
+  {
+    "id": "p03",
+    "group": "05 · Paradigmas, design e arquitetura",
+    "title": "Objetos: juntar estado e regras de atualização",
+    "code": "exec(\"class Contador:\\n def __init__(self):self.valor=0\\n def incrementar(self):self.valor+=1\\nc=Contador();c.incrementar();print(c.valor)\")",
+    "expected": "1",
+    "concept": "Um objeto pode representar uma entidade cujo estado muda por ações definidas. A classe descreve essas entidades; cada instância tem sua própria identidade.",
+    "exercise": "Como testar um contador recém-criado antes de incrementar?",
+    "answer": "Verifique que seu valor é 0; depois uma ação deve levá-lo a 1.",
+    "limit": "Juntar atributos e métodos não garante boas regras; é preciso definir quais estados e mudanças são permitidos.",
+    "feynman": {
+      "question": "Quando faz sentido juntar dados e operações no mesmo objeto?",
+      "plain": "Um objeto pode representar uma entidade cujo estado muda por ações definidas. A classe descreve essas entidades; cada instância tem sua própria identidade.",
+      "analogy": "Um aparelho tem um mostrador e botões que mudam seu valor.",
+      "analogyLimit": "Juntar atributos e métodos não garante boas regras; é preciso definir quais estados e mudanças são permitidos.",
+      "steps": [
+        "Contador() cria um objeto cujo valor inicial é 0.",
+        "incrementar recebe esse objeto em self e acrescenta 1 ao seu valor.",
+        "c.valor agora é 1; print observa o estado depois da ação."
+      ],
+      "gapQuestion": "Criar outro Contador deve começar com valor 1 só porque c já foi incrementado?",
+      "gapAnswer": "Não. O construtor define valor=0 para a nova instância; as duas têm estados próprios.",
+      "repair": "Volte aos três passos desta aula, refaça o exemplo no papel e explique qual regra responde à dúvida."
+    },
+    "scaffold": {
+      "terms": [
+        [
+          "Classe",
+          "Descrição usada para criar objetos."
+        ],
+        [
+          "Instância",
+          "Objeto particular criado a partir da classe."
+        ],
+        [
+          "Método",
+          "Função acessada por um objeto e ligada ao seu comportamento."
+        ]
+      ],
+      "prerequisites": [
+        "21",
+        "p02"
+      ],
+      "skill": "Relacionar estado, identidade e responsabilidade.",
+      "readiness": "Quando faz sentido juntar dados e operações no mesmo objeto?",
+      "math": "Somente contagem e contas apresentadas no exemplo.",
+      "links": [
+        {
+          "id": "21",
+          "title": "Objetos e invariantes"
+        },
+        {
+          "id": "p02",
+          "title": "Funções puras e efeitos"
+        }
+      ]
+    },
+    "position": 46,
+    "total": 76
+  },
+  {
+    "id": "p04",
+    "group": "05 · Paradigmas, design e arquitetura",
+    "title": "Design: uma responsabilidade por parte",
+    "code": "calcular=lambda quantidade,preco:quantidade*preco;formatar=lambda valor:f'Total: {valor}';print(formatar(calcular(2,4)))",
+    "expected": "Total: 8",
+    "concept": "Design de código é decidir como organizar responsabilidades. Separar calcular de apresentar permite mudar a mensagem sem alterar a regra de preço.",
+    "exercise": "Mude apenas a apresentação para Pagar: 8.",
+    "answer": "Altere a string de formatar; mantenha a regra de calcular e seus testes numéricos.",
+    "limit": "Separar por nomes não basta se cada parte ainda depender dos detalhes internos das demais.",
+    "feynman": {
+      "question": "Como mudar uma mensagem sem mexer na regra da conta?",
+      "plain": "Design de código é decidir como organizar responsabilidades. Separar calcular de apresentar permite mudar a mensagem sem alterar a regra de preço.",
+      "analogy": "Numa loja, calcular o valor e desenhar o recibo são tarefas diferentes.",
+      "analogyLimit": "Separar por nomes não basta se cada parte ainda depender dos detalhes internos das demais.",
+      "steps": [
+        "calcular(2,4) devolve o número 8.",
+        "formatar recebe esse número e produz o texto Total: 8.",
+        "print exibe o texto. Alterar o texto de formatar não exige mudar a multiplicação."
+      ],
+      "gapQuestion": "Por que devolver sempre o texto pronto da função calcular pode dificultar reutilizar a conta?",
+      "gapAnswer": "Outra parte pode precisar do número para continuar calculando; misturar apresentação limita esse uso.",
+      "repair": "Volte aos três passos desta aula, refaça o exemplo no papel e explique qual regra responde à dúvida."
+    },
+    "scaffold": {
+      "terms": [
+        [
+          "Design",
+          "Escolha de como organizar responsabilidades e relações no código."
+        ],
+        [
+          "Responsabilidade",
+          "Tarefa que uma parte se compromete a realizar."
+        ]
+      ],
+      "prerequisites": [
+        "p03"
+      ],
+      "skill": "Separar motivos diferentes para uma mudança.",
+      "readiness": "Como mudar uma mensagem sem mexer na regra da conta?",
+      "math": "Somente contagem e contas apresentadas no exemplo.",
+      "links": [
+        {
+          "id": "p03",
+          "title": "Objetos: juntar estado e regras de atualização"
+        }
+      ]
+    },
+    "position": 47,
+    "total": 76
+  },
+  {
+    "id": "p05",
+    "group": "05 · Paradigmas, design e arquitetura",
+    "title": "Interfaces: combinar partes por um acordo",
+    "code": "aplicar=lambda operacao,x:operacao(x);print(aplicar(lambda n:n+1,4))",
+    "expected": "5",
+    "concept": "Uma interface define o modo de usar uma parte: quais informações ela recebe e o que promete devolver. Partes compatíveis com esse acordo podem ser substituídas.",
+    "exercise": "Troque a operação por dobrar o valor.",
+    "answer": "Use lambda n:2*n; aplicar continua igual e o resultado passa a 8.",
+    "limit": "Encaixar não garante fazer o trabalho certo; também precisamos verificar o significado e o contrato da operação.",
+    "feynman": {
+      "question": "Como trocar uma operação sem reescrever quem a utiliza?",
+      "plain": "Uma interface define o modo de usar uma parte: quais informações ela recebe e o que promete devolver. Partes compatíveis com esse acordo podem ser substituídas.",
+      "analogy": "Ferramentas com um encaixe compatível podem usar o mesmo suporte.",
+      "analogyLimit": "Encaixar não garante fazer o trabalho certo; também precisamos verificar o significado e o contrato da operação.",
+      "steps": [
+        "aplicar recebe uma operação e um valor.",
+        "A operação fornecida recebe um número e devolve esse número mais 1.",
+        "Com x=4, aplicar devolve 5 sem precisar conhecer como a operação foi construída."
+      ],
+      "gapQuestion": "Uma função que espera dois argumentos é substituta direta aqui?",
+      "gapAnswer": "Não. aplicar fornece somente um argumento; o acordo de chamada não foi cumprido.",
+      "repair": "Volte aos três passos desta aula, refaça o exemplo no papel e explique qual regra responde à dúvida."
+    },
+    "scaffold": {
+      "terms": [
+        [
+          "Interface",
+          "Acordo sobre como uma parte pode ser usada."
+        ],
+        [
+          "Dependência",
+          "Parte ou informação necessária para outra funcionar."
+        ]
+      ],
+      "prerequisites": [
+        "p04"
+      ],
+      "skill": "Declarar contratos entre componentes.",
+      "readiness": "Como trocar uma operação sem reescrever quem a utiliza?",
+      "math": "Somente contagem e contas apresentadas no exemplo.",
+      "links": [
+        {
+          "id": "p04",
+          "title": "Design: uma responsabilidade por parte"
+        }
+      ]
+    },
+    "position": 48,
+    "total": 76
+  },
+  {
+    "id": "p06",
+    "group": "05 · Paradigmas, design e arquitetura",
+    "title": "Arquitetura: organizar o caminho entre as partes",
+    "code": "validar=lambda n:n>=0;calcular=lambda n:n*4;apresentar=lambda n:f'Total: {n}';pedido=lambda n:apresentar(calcular(n)) if validar(n) else 'Quantidade invalida';print(pedido(2))",
+    "expected": "Total: 8",
+    "concept": "Arquitetura de software decide quais partes existem, suas responsabilidades e como se comunicam. Aqui uma parte coordena o pedido, outra valida, outra calcula e outra apresenta.",
+    "exercise": "Descreva o caminho de uma quantidade negativa.",
+    "answer": "A validação falha e pedido devolve Quantidade invalida sem chamar a conta ou a apresentação.",
+    "limit": "O exemplo é um desenho pequeno em funções; não prova que toda aplicação precise das mesmas camadas.",
+    "feynman": {
+      "question": "Como organizar validação, cálculo e apresentação num pequeno sistema?",
+      "plain": "Arquitetura de software decide quais partes existem, suas responsabilidades e como se comunicam. Aqui uma parte coordena o pedido, outra valida, outra calcula e outra apresenta.",
+      "analogy": "Uma oficina recebe um pedido, confere suas condições, executa o serviço e comunica o resultado.",
+      "analogyLimit": "O exemplo é um desenho pequeno em funções; não prova que toda aplicação precise das mesmas camadas.",
+      "steps": [
+        "pedido recebe 2 e chama validar; 2>=0 permite continuar.",
+        "calcular recebe 2 e devolve 8.",
+        "apresentar transforma 8 em Total: 8; pedido devolve esse texto e print o exibe."
+      ],
+      "gapQuestion": "Qual parte mudaria se o preço por item passasse de 4 para 5?",
+      "gapAnswer": "A regra de cálculo; a validação de quantidade e o texto da apresentação podem manter seus contratos.",
+      "repair": "Volte aos três passos desta aula, refaça o exemplo no papel e explique qual regra responde à dúvida."
+    },
+    "scaffold": {
+      "terms": [
+        [
+          "Arquitetura",
+          "Organização das partes maiores, responsabilidades e comunicação de um sistema."
+        ],
+        [
+          "Validação",
+          "Conferência de que uma entrada atende a regras."
+        ],
+        [
+          "Camada",
+          "Grupo de responsabilidades com uma fronteira definida."
+        ]
+      ],
+      "prerequisites": [
+        "p05"
+      ],
+      "skill": "Desenhar o fluxo e localizar o impacto de uma mudança.",
+      "readiness": "Como organizar validação, cálculo e apresentação num pequeno sistema?",
+      "math": "Somente contagem e contas apresentadas no exemplo.",
+      "links": [
+        {
+          "id": "p05",
+          "title": "Interfaces: combinar partes por um acordo"
+        }
+      ]
+    },
+    "position": 49,
+    "total": 76
+  },
+  {
+    "id": "p07",
+    "group": "05 · Paradigmas, design e arquitetura",
+    "title": "Dependências explícitas para testar sem serviços reais",
+    "code": "pedido=lambda consultar:consultar('caderno');catalogo={'caderno':4};print(pedido(catalogo.get))",
+    "expected": "4",
+    "concept": "Recebemos a operação de consulta como argumento. Assim a lógica pode trabalhar com uma implementação simples num teste e outra implementação fora dele.",
+    "exercise": "Como simular um item que não existe nesse catálogo?",
+    "answer": "Consulte outra chave; get devolve None por padrão e o projeto precisa decidir como tratar a ausência.",
+    "limit": "Um substituto pode estar errado ou não representar falhas reais; testes com substitutos não cobrem toda a integração.",
+    "feynman": {
+      "question": "Como testar uma consulta sem exigir um banco de dados real?",
+      "plain": "Recebemos a operação de consulta como argumento. Assim a lógica pode trabalhar com uma implementação simples num teste e outra implementação fora dele.",
+      "analogy": "Em um ensaio, um colega faz o papel de fornecedor para verificar o diálogo antes da operação real.",
+      "analogyLimit": "Um substituto pode estar errado ou não representar falhas reais; testes com substitutos não cobrem toda a integração.",
+      "steps": [
+        "O catálogo local associa caderno ao preço 4.",
+        "catalogo.get é uma operação que recebe uma chave e consulta esse dicionário.",
+        "pedido recebe essa operação, consulta caderno e devolve 4, sem criar conexão externa."
+      ],
+      "gapQuestion": "O teste comprova que um banco de dados distante estará disponível?",
+      "gapAnswer": "Não. Ele examina a lógica e o acordo da chamada; disponibilidade e integração exigem verificações próprias.",
+      "repair": "Volte aos três passos desta aula, refaça o exemplo no papel e explique qual regra responde à dúvida."
+    },
+    "scaffold": {
+      "terms": [
+        [
+          "Injeção de dependência",
+          "Fornecer de fora uma parte necessária, em vez de criá-la escondida dentro."
+        ],
+        [
+          "Substituto de teste",
+          "Implementação usada para controlar uma interação num teste."
+        ]
+      ],
+      "prerequisites": [
+        "p06",
+        "25"
+      ],
+      "skill": "Controlar dependências e declarar limites do teste.",
+      "readiness": "Como testar uma consulta sem exigir um banco de dados real?",
+      "math": "Somente contagem e contas apresentadas no exemplo.",
+      "links": [
+        {
+          "id": "p06",
+          "title": "Arquitetura: organizar o caminho entre as partes"
+        },
+        {
+          "id": "25",
+          "title": "SQL parametrizado"
+        }
+      ]
+    },
+    "position": 50,
+    "total": 76
+  },
+  {
+    "id": "p08",
+    "group": "05 · Paradigmas, design e arquitetura",
+    "title": "Projetar, testar e refatorar um pequeno pedido",
+    "code": "total=lambda itens:sum(q*p for q,p in itens);print(total([(2,4),(1,3)]))",
+    "expected": "11",
+    "concept": "Começamos com uma pergunta e exemplos de resposta. Depois podemos reorganizar o código e conferir o mesmo contrato. Refatorar procura mudar a estrutura preservando o comportamento especificado.",
+    "exercise": "Defina uma regra para quantidades negativas e diga onde testá-la.",
+    "answer": "Por exemplo, rejeitar negativos antes do cálculo; testar casos abaixo, no limite zero e acima, documentando essa escolha.",
+    "limit": "Um punhado de testes pode deixar diferenças importantes passar; declare o contrato e o domínio que foi verificado.",
+    "feynman": {
+      "question": "Como decidir se uma reorganização preservou o comportamento prometido?",
+      "plain": "Começamos com uma pergunta e exemplos de resposta. Depois podemos reorganizar o código e conferir o mesmo contrato. Refatorar procura mudar a estrutura preservando o comportamento especificado.",
+      "analogy": "Reorganizar uma bancada pode facilitar o trabalho sem alterar o produto entregue.",
+      "analogyLimit": "Um punhado de testes pode deixar diferenças importantes passar; declare o contrato e o domínio que foi verificado.",
+      "steps": [
+        "O pedido contém duas unidades de preço 4 e uma de preço 3.",
+        "A regra calcula os subtotais 8 e 3.",
+        "sum reúne os subtotais em 11; pedido vazio teria soma 0."
+      ],
+      "gapQuestion": "Por que testar apenas o pedido não vazio pode deixar uma falha passar?",
+      "gapAnswer": "Uma implementação pode assumir que sempre existe um primeiro item e falhar para a lista vazia.",
+      "repair": "Volte aos três passos desta aula, refaça o exemplo no papel e explique qual regra responde à dúvida."
+    },
+    "scaffold": {
+      "terms": [
+        [
+          "Refatoração",
+          "Reorganização que preserva o comportamento especificado."
+        ],
+        [
+          "Requisito",
+          "Necessidade ou regra que o sistema deve atender."
+        ],
+        [
+          "Integração",
+          "Interação entre partes que precisam funcionar juntas."
+        ]
+      ],
+      "prerequisites": [
+        "p07",
+        "26"
+      ],
+      "skill": "Usar contratos e testes para orientar o projeto.",
+      "readiness": "Como decidir se uma reorganização preservou o comportamento prometido?",
+      "math": "Somente contagem e contas apresentadas no exemplo.",
+      "links": [
+        {
+          "id": "p07",
+          "title": "Dependências explícitas para testar sem serviços reais"
+        },
+        {
+          "id": "26",
+          "title": "Testes de propriedades"
+        }
+      ]
+    },
+    "position": 51,
+    "total": 76
+  },
+  {
     "id": "27",
-    "group": "03 · Engenharia de software e sistemas",
+    "group": "06 · Concorrência e modelos de sistemas",
     "title": "Concorrência com futures",
     "concept": "Executor agenda chamadas e devolve os resultados de map na ordem da entrada. O contexto aguarda o encerramento dos trabalhos. O exemplo ensina a API sem depender de acesso externo.",
     "code": "exec(\"from concurrent.futures import ThreadPoolExecutor\\nwith ThreadPoolExecutor(max_workers=2) as pool:print(list(pool.map(abs,[-2,-1,0])))\")",
@@ -659,6 +2903,8 @@
     "exercise": "A ordem da saída revela a ordem real de conclusão?",
     "answer": "Não; map preserva a ordem dos argumentos.",
     "limit": "Concorrência não garante paralelismo de execução em todos os runtimes.",
+    "position": 52,
+    "total": 76,
     "feynman": {
       "question": "Como distribuir tarefas e receber respostas na ordem das entradas?",
       "plain": "Um executor organiza chamadas para trabalhadores disponíveis. map reúne as respostas na ordem em que os argumentos foram entregues, mesmo se terminarem em outra ordem.",
@@ -672,11 +2918,49 @@
       "gapQuestion": "Posso descobrir quem terminou primeiro olhando a lista devolvida por map?",
       "gapAnswer": "Não. A ordem da lista obedece à entrada, não à conclusão. São dois acontecimentos diferentes.",
       "repair": "Imagine a tarefa do segundo argumento terminando antes da primeira e mantenha os números das fichas."
+    },
+    "scaffold": {
+      "prerequisites": [
+        "p05",
+        "22",
+        "12"
+      ],
+      "skill": "Separar ordem de entrada e ordem de conclusão.",
+      "terms": [
+        [
+          "Concorrência",
+          "Organização de tarefas com períodos de progresso sobrepostos."
+        ],
+        [
+          "Executor",
+          "Componente que agenda e acompanha chamadas."
+        ],
+        [
+          "Thread",
+          "Fluxo de execução dentro de um processo."
+        ]
+      ],
+      "math": "Contagem e operações explicadas no exemplo.",
+      "readiness": "Como distribuir tarefas e receber respostas na ordem das entradas?",
+      "links": [
+        {
+          "id": "p05",
+          "title": "Interfaces: combinar partes por um acordo"
+        },
+        {
+          "id": "22",
+          "title": "Exceções e contratos"
+        },
+        {
+          "id": "12",
+          "title": "Pilha, fila e disciplina de acesso"
+        }
+      ]
     }
   },
   {
     "id": "28",
-    "group": "03 · Engenharia de software e sistemas",
+    "group": "06 · Concorrência e modelos de sistemas",
     "title": "Corrotinas e asyncio",
     "concept": "async def define uma função que produz uma corrotina. await permite aguardar outra operação cooperativamente. gather reúne resultados das corrotinas na ordem em que foram fornecidas.",
     "code": "exec(\"import asyncio\\nasync def tarefa(x):\\n await asyncio.sleep(0)\\n return x*x\\nasync def main():print(await asyncio.gather(tarefa(2),tarefa(3)))\\nasyncio.run(main())\")",
@@ -684,6 +2968,8 @@
     "exercise": "Por que await não pode ficar livre no topo deste arquivo?",
     "answer": "Um arquivo Python normal exige await dentro de uma função assíncrona; asyncio.run inicia o ciclo de eventos.",
     "limit": "Operações bloqueantes dentro de uma corrotina podem bloquear o ciclo de eventos.",
+    "position": 53,
+    "total": 76,
     "feynman": {
       "question": "Como alternar tarefas enquanto elas aguardam alguma coisa?",
       "plain": "Uma corrotina pode ceder o controle durante uma espera. O ciclo de eventos continua outras tarefas prontas e depois retoma a que esperava.",
@@ -697,11 +2983,49 @@
       "gapQuestion": "Por que escrever async numa função não torna qualquer chamada interna não bloqueante?",
       "gapAnswer": "Uma operação bloqueante continua bloqueando o ciclo de eventos se não oferecer espera cooperativa ou delegação adequada.",
       "repair": "Identifique o await; separe declarar uma corrotina de permitir que ela ceda o controle."
+    },
+    "scaffold": {
+      "prerequisites": [
+        "b03",
+        "b02",
+        "27"
+      ],
+      "skill": "Identificar onde uma tarefa pode ceder o controle.",
+      "terms": [
+        [
+          "Corrotina",
+          "Rotina que pode suspender e retomar sua execução cooperativamente."
+        ],
+        [
+          "await",
+          "Espera cooperativa dentro do contexto assíncrono apropriado."
+        ],
+        [
+          "Ciclo de eventos",
+          "Coordenador que retoma tarefas prontas."
+        ]
+      ],
+      "math": "Contagem e operações explicadas no exemplo.",
+      "readiness": "Como alternar tarefas enquanto elas aguardam alguma coisa?",
+      "links": [
+        {
+          "id": "b03",
+          "title": "Definir funções: receber, calcular e devolver"
+        },
+        {
+          "id": "b02",
+          "title": "Repetir até uma condição mudar"
+        },
+        {
+          "id": "27",
+          "title": "Concorrência com futures"
+        }
+      ]
     }
   },
   {
     "id": "29",
-    "group": "03 · Engenharia de software e sistemas",
+    "group": "06 · Concorrência e modelos de sistemas",
     "title": "Máquina de estados",
     "concept": "Um autômato finito atualiza seu estado conforme um símbolo de entrada. Aqui cada 1 alterna a paridade; 0 a mantém. O estado 0 aceita strings com número par de uns.",
     "code": "from functools import reduce;trans={(0,'0'):0,(0,'1'):1,(1,'0'):1,(1,'1'):0};print(reduce(lambda q,c:trans[q,c],'1011',0)==0)",
@@ -709,6 +3033,8 @@
     "exercise": "A palavra vazia é aceita?",
     "answer": "Sim; nenhuma transição ocorre e o estado inicial é 0.",
     "limit": "O alfabeto admitido é apenas {0,1}; outros símbolos precisam de tratamento.",
+    "position": 54,
+    "total": 76,
     "feynman": {
       "question": "Como lembrar apenas o necessário para decidir se há uma quantidade par de uns?",
       "plain": "Não precisamos guardar a palavra inteira: basta lembrar se a quantidade de uns vista até agora é par ou ímpar.",
@@ -722,11 +3048,45 @@
       "gapQuestion": "Por que a palavra vazia pode ser aceita sem realizar nenhuma transição?",
       "gapAnswer": "Zero uns é uma quantidade par. Sem símbolos, o estado inicial 0 continua sendo o estado final.",
       "repair": "Descreva o significado do estado antes de decorar a tabela de transições."
+    },
+    "scaffold": {
+      "prerequisites": [
+        "z09",
+        "b02",
+        "07"
+      ],
+      "skill": "Guardar só o estado necessário para uma decisão.",
+      "terms": [
+        [
+          "Autômato finito",
+          "Modelo com quantidade finita de estados e regras de transição."
+        ],
+        [
+          "Transição",
+          "Mudança de estado causada por uma entrada."
+        ]
+      ],
+      "math": "Contagem e operações explicadas no exemplo.",
+      "readiness": "Como lembrar apenas o necessário para decidir se há uma quantidade par de uns?",
+      "links": [
+        {
+          "id": "z09",
+          "title": "Combinar condições: e, ou, não"
+        },
+        {
+          "id": "b02",
+          "title": "Repetir até uma condição mudar"
+        },
+        {
+          "id": "07",
+          "title": "Dicionários, conjuntos e tuplas"
+        }
+      ]
     }
   },
   {
     "id": "30",
-    "group": "03 · Engenharia de software e sistemas",
+    "group": "06 · Concorrência e modelos de sistemas",
     "title": "Relógios vetoriais",
     "concept": "Um vetor resume o conhecimento causal de eventos em processos. A precede B se todas as coordenadas de A são menores ou iguais e pelo menos uma é estritamente menor. Vetores incomparáveis representam eventos concorrentes no modelo.",
     "code": "antes=lambda a,b:all(x<=y for x,y in zip(a,b)) and any(x<y for x,y in zip(a,b));a=(1,0);b=(0,1);print(antes(a,b),antes(b,a))",
@@ -734,6 +3094,8 @@
     "exercise": "Compare (1,0) com (2,1).",
     "answer": "O primeiro precede o segundo: ambas as coordenadas não diminuem e uma aumenta.",
     "limit": "Pressupõe vetores de mesma dimensão e índices consistentes entre processos.",
+    "position": 55,
+    "total": 76,
     "feynman": {
       "question": "Como distinguir uma sequência causal de eventos que não sabem um do outro?",
       "plain": "Cada evento carrega um vetor de contagens conhecidas por processo. Comparamos todas as posições para ver se um registro está inteiramente contido no outro.",
@@ -747,11 +3109,44 @@
       "gapQuestion": "Se dois vetores são iguais, antes deve devolver True?",
       "gapAnswer": "Não. A relação escrita exige pelo menos uma coordenada estritamente menor, além de nenhuma maior.",
       "repair": "Separe o all de menores ou iguais do any de estritamente menor."
+    },
+    "scaffold": {
+      "prerequisites": [
+        "07",
+        "20"
+      ],
+      "skill": "Comparar conhecimentos parciais sem impor uma ordem falsa.",
+      "terms": [
+        [
+          "Vetor",
+          "Sequência de componentes comparadas por posição neste modelo."
+        ],
+        [
+          "Causalidade",
+          "Relação de dependência entre eventos."
+        ],
+        [
+          "Eventos concorrentes",
+          "Eventos sem precedência causal entre si no modelo."
+        ]
+      ],
+      "math": "Contagem e operações explicadas no exemplo.",
+      "readiness": "Como distinguir uma sequência causal de eventos que não sabem um do outro?",
+      "links": [
+        {
+          "id": "07",
+          "title": "Dicionários, conjuntos e tuplas"
+        },
+        {
+          "id": "20",
+          "title": "SAT por enumeração"
+        }
+      ]
     }
   },
   {
     "id": "31",
-    "group": "04 · Computação científica",
+    "group": "07 · Computação científica",
     "title": "Precisão e números racionais",
     "concept": "Números de ponto flutuante representam aproximações binárias. Fraction representa um racional exatamente como razão de inteiros. O tipo escolhido deve respeitar o significado da hipótese numérica.",
     "code": "from fractions import Fraction;print(0.1+0.2==0.3,Fraction(1,10)+Fraction(2,10)==Fraction(3,10))",
@@ -759,6 +3154,8 @@
     "exercise": "Como comparar resultados aproximados sem exigir igualdade exata?",
     "answer": "Use math.isclose com tolerâncias justificadas pelo problema.",
     "limit": "Precisão numérica não corrige erro de modelagem nem dados inadequados.",
+    "position": 56,
+    "total": 76,
     "feynman": {
       "question": "Por que duas contas que parecem iguais podem falhar numa comparação exata?",
       "plain": "Algumas frações decimais não têm representação binária finita. O computador guarda uma aproximação; somar aproximações pode não coincidir com outra aproximação.",
@@ -772,11 +3169,49 @@
       "gapQuestion": "Por que converter um float já aproximado em fração não recupera necessariamente a intenção decimal?",
       "gapAnswer": "A conversão pode preservar o valor aproximado recebido, não a fração decimal que o autor tinha em mente.",
       "repair": "Repare que o exemplo fornece numerador e denominador inteiros, sem passar por um float."
+    },
+    "scaffold": {
+      "prerequisites": [
+        "02",
+        "b04",
+        "b05"
+      ],
+      "skill": "Distinguir aproximação, igualdade e significado.",
+      "terms": [
+        [
+          "Ponto flutuante",
+          "Representação finita de números, sujeita a arredondamento."
+        ],
+        [
+          "Racional",
+          "Número representável como razão de inteiros."
+        ],
+        [
+          "Tolerância",
+          "Diferença admitida por um critério de comparação."
+        ]
+      ],
+      "math": "Frações, casas decimais e igualdade; consulte a ponte matemática.",
+      "readiness": "Por que duas contas que parecem iguais podem falhar numa comparação exata?",
+      "links": [
+        {
+          "id": "02",
+          "title": "Valores, nomes e operações"
+        },
+        {
+          "id": "b04",
+          "title": "Casos de teste e limites da regra"
+        },
+        {
+          "id": "b05",
+          "title": "Módulos: usar uma parte sem copiar sua construção"
+        }
+      ]
     }
   },
   {
     "id": "32",
-    "group": "04 · Computação científica",
+    "group": "07 · Computação científica",
     "title": "Álgebra linear com NumPy",
     "concept": "Um sistema linear A*x=b relaciona coeficientes, incógnitas e observações. np.linalg.solve calcula uma solução para uma matriz quadrada não singular. O residual A*x-b verifica a equação na precisão usada.",
     "code": "import numpy as np;A=np.array([[2.,1.],[1.,3.]]);b=np.array([5.,5.]);x=np.linalg.solve(A,b);print(np.round(x,6).tolist(),bool(np.allclose(A@x,b)))",
@@ -784,6 +3219,8 @@
     "exercise": "Verifique a solução à mão.",
     "answer": "2*2+1=5 e 2+3*1=5.",
     "limit": "Residual pequeno não assegura erro pequeno em sistemas mal condicionados; fonte científica N1.",
+    "position": 57,
+    "total": 76,
     "feynman": {
       "question": "Como encontrar dois valores que satisfaçam duas contas ao mesmo tempo?",
       "plain": "Uma matriz organiza os coeficientes das equações. Resolver o sistema procura valores que façam todas as equações produzirem os resultados pedidos.",
@@ -797,11 +3234,44 @@
       "gapQuestion": "Residual pequeno garante sempre que os valores encontrados estejam próximos da solução desejada?",
       "gapAnswer": "Não. Em sistemas mal condicionados, pequenas alterações nos dados podem mudar muito as incógnitas.",
       "repair": "Distinga a diferença nas equações, A@x-b, da diferença nos valores das incógnitas."
+    },
+    "scaffold": {
+      "prerequisites": [
+        "31",
+        "07"
+      ],
+      "skill": "Verificar uma solução substituindo-a nas equações.",
+      "terms": [
+        [
+          "Matriz",
+          "Tabela retangular de valores."
+        ],
+        [
+          "Sistema linear",
+          "Conjunto de equações lineares a satisfazer ao mesmo tempo."
+        ],
+        [
+          "Residual",
+          "Diferença entre o lado calculado e o resultado exigido pelas equações."
+        ]
+      ],
+      "math": "Equações com duas incógnitas e multiplicação de matriz por vetor; ponte matemática.",
+      "readiness": "Como encontrar dois valores que satisfaçam duas contas ao mesmo tempo?",
+      "links": [
+        {
+          "id": "31",
+          "title": "Precisão e números racionais"
+        },
+        {
+          "id": "07",
+          "title": "Dicionários, conjuntos e tuplas"
+        }
+      ]
     }
   },
   {
     "id": "33",
-    "group": "04 · Computação científica",
+    "group": "07 · Computação científica",
     "title": "Broadcasting e eixos",
     "concept": "Arrays representam dados por forma e eixos. Broadcasting combina dimensões compatíveis. A média por eixo produz uma referência para centralizar as colunas de uma tabela.",
     "code": "import numpy as np;X=np.array([[1.,2.],[3.,4.]]);print((X-X.mean(axis=0)).tolist())",
@@ -809,6 +3279,8 @@
     "exercise": "O que muda com axis=1 e keepdims=True?",
     "answer": "Subtrai a média de cada linha; ambas as linhas passam a [-0.5,0.5].",
     "limit": "Dimensões incompatíveis são erro; fonte científica N1.",
+    "position": 58,
+    "total": 76,
     "feynman": {
       "question": "Como retirar de cada coluna a média daquela coluna?",
       "plain": "Calculamos uma média por coluna e a subtraímos de cada valor da respectiva coluna. Broadcasting é a regra que alinha formas compatíveis nessa conta.",
@@ -822,11 +3294,44 @@
       "gapQuestion": "Por que uma média por linha requer cuidado diferente com a forma?",
       "gapAnswer": "Ela deve alinhar cada média à sua linha. keepdims=True conserva uma dimensão de tamanho 1, permitindo esse alinhamento.",
       "repair": "Escreva as formas (2,2), (2,) e (2,1) e indique qual eixo cada dimensão acompanha."
+    },
+    "scaffold": {
+      "prerequisites": [
+        "32",
+        "06"
+      ],
+      "skill": "Acompanhar formas e eixos de uma tabela.",
+      "terms": [
+        [
+          "Array",
+          "Estrutura de dados organizada por forma e eixos."
+        ],
+        [
+          "Eixo",
+          "Uma direção de indexação de um array."
+        ],
+        [
+          "Broadcasting",
+          "Regra de combinação de formas compatíveis em operações de arrays."
+        ]
+      ],
+      "math": "Média aritmética e organização por linhas e colunas; ponte matemática.",
+      "readiness": "Como retirar de cada coluna a média daquela coluna?",
+      "links": [
+        {
+          "id": "32",
+          "title": "Álgebra linear com NumPy"
+        },
+        {
+          "id": "06",
+          "title": "Listas e compreensão"
+        }
+      ]
     }
   },
   {
     "id": "34",
-    "group": "04 · Computação científica",
+    "group": "07 · Computação científica",
     "title": "Monte Carlo e incerteza",
     "concept": "Monte Carlo aproxima uma esperança por média de amostras. Para U uniforme em [0,1), E[U]=1/2. Uma semente registra uma escolha do gerador, enquanto o erro amostral permanece parte do experimento.",
     "code": "import numpy as np;rng=np.random.default_rng(42);x=rng.random(10000);print(bool(abs(x.mean()-0.5)<0.02))",
@@ -834,6 +3339,8 @@
     "exercise": "Um único True prova qualidade do gerador?",
     "answer": "Não; é apenas uma checagem desta amostra e desta tolerância.",
     "limit": "Não há garantia universal de amostras idênticas entre todas as versões; registre o ambiente.",
+    "position": 59,
+    "total": 76,
     "feynman": {
       "question": "Como usar sorteios para aproximar um valor esperado?",
       "plain": "Fazemos muitas amostras de uma distribuição e calculamos a média. O resultado continua sujeito à variação da amostra.",
@@ -847,11 +3354,44 @@
       "gapQuestion": "Uma semente fixa elimina a incerteza da estimativa?",
       "gapAnswer": "Não. Ela permite repetir uma escolha de amostra no ambiente considerado; não transforma a amostra na população inteira.",
       "repair": "Separe repetir o experimento de obter um resultado sem erro amostral."
+    },
+    "scaffold": {
+      "prerequisites": [
+        "31",
+        "33"
+      ],
+      "skill": "Separar repetibilidade e incerteza amostral.",
+      "terms": [
+        [
+          "Amostra",
+          "Conjunto de observações produzidas ou selecionadas num procedimento."
+        ],
+        [
+          "Esperança",
+          "Média teórica definida por uma distribuição."
+        ],
+        [
+          "Semente",
+          "Valor usado para iniciar um gerador pseudoaleatório."
+        ]
+      ],
+      "math": "Média, intervalo e probabilidade; ponte matemática.",
+      "readiness": "Como usar sorteios para aproximar um valor esperado?",
+      "links": [
+        {
+          "id": "31",
+          "title": "Precisão e números racionais"
+        },
+        {
+          "id": "33",
+          "title": "Broadcasting e eixos"
+        }
+      ]
     }
   },
   {
     "id": "35",
-    "group": "04 · Computação científica",
+    "group": "07 · Computação científica",
     "title": "Raízes por bisseção",
     "concept": "Para uma função contínua que muda de sinal em [a,b], bisseção preserva um intervalo contendo uma raiz. Cada passo escolhe metade do intervalo. A tolerância do algoritmo é parte da especificação.",
     "code": "from scipy.optimize import bisect;import math;x=bisect(lambda t:t*t-2,0,2,xtol=1e-12);print(math.isclose(x*x,2,abs_tol=1e-10))",
@@ -859,6 +3399,8 @@
     "exercise": "Por que [2,3] não é um intervalo válido aqui?",
     "answer": "t²-2 é positivo em ambas as pontas; não há a mudança de sinal requerida.",
     "limit": "A referência desta API é documentação técnica, não artigo científico selecionado.",
+    "position": 60,
+    "total": 76,
     "feynman": {
       "question": "Como cercar uma raiz e diminuir o intervalo até uma precisão escolhida?",
       "plain": "Se uma função contínua tem sinais opostos nas pontas, alguma raiz fica entre elas. Testamos o meio e conservamos a metade que mantém essa garantia.",
@@ -872,11 +3414,44 @@
       "gapQuestion": "Valores de sinais opostos bastam se a função tiver um salto?",
       "gapAnswer": "Não. Uma função descontínua pode saltar do negativo ao positivo sem assumir zero.",
       "repair": "Revise a palavra contínua na hipótese e imagine um salto de -1 para 1."
+    },
+    "scaffold": {
+      "prerequisites": [
+        "31",
+        "b02"
+      ],
+      "skill": "Manter uma garantia durante o refinamento.",
+      "terms": [
+        [
+          "Raiz",
+          "Valor em que uma função é zero."
+        ],
+        [
+          "Contínua",
+          "Função sem saltos no intervalo considerado, nesta apresentação introdutória."
+        ],
+        [
+          "Bisseção",
+          "Redução repetida de um intervalo em duas metades."
+        ]
+      ],
+      "math": "Funções, quadrados e mudança de sinal; ponte matemática.",
+      "readiness": "Como cercar uma raiz e diminuir o intervalo até uma precisão escolhida?",
+      "links": [
+        {
+          "id": "31",
+          "title": "Precisão e números racionais"
+        },
+        {
+          "id": "b02",
+          "title": "Repetir até uma condição mudar"
+        }
+      ]
     }
   },
   {
     "id": "36",
-    "group": "04 · Computação científica",
+    "group": "07 · Computação científica",
     "title": "Equações diferenciais",
     "concept": "Uma EDO descreve uma taxa de variação. Para y'=−y e y(0)=1, a solução analítica é exp(−t). Comparar a integração numérica com essa solução fornece um oráculo independente.",
     "code": "from scipy.integrate import solve_ivp;import math;r=solve_ivp(lambda t,y:-y,(0,1),[1.],rtol=1e-9,atol=1e-12);print(r.success,math.isclose(r.y[0,-1],math.exp(-1),rel_tol=1e-7))",
@@ -884,6 +3459,8 @@
     "exercise": "Qual é a solução com y(0)=2?",
     "answer": "2*exp(-t), pois a equação é linear e homogênea.",
     "limit": "Um caso com solução conhecida não valida todos os regimes de uma EDO.",
+    "position": 61,
+    "total": 76,
     "feynman": {
       "question": "Como descrever uma mudança por sua taxa em vez de listar todos os valores?",
       "plain": "Uma equação diferencial diz como o estado muda a cada instante. Precisamos também de um estado inicial para escolher a trajetória.",
@@ -897,11 +3474,39 @@
       "gapQuestion": "O indicador success=True prova sozinho que o modelo representa corretamente um fenômeno real?",
       "gapAnswer": "Não. Ele informa sucesso do procedimento numérico; a validade do modelo precisa de justificativa e confronto com dados.",
       "repair": "Separe três perguntas: modelo adequado, integração concluída e erro numérico aceitável."
+    },
+    "scaffold": {
+      "prerequisites": [
+        "35"
+      ],
+      "skill": "Separar modelo, condição inicial e método numérico.",
+      "terms": [
+        [
+          "Taxa",
+          "Mudança de uma quantidade em relação a outra."
+        ],
+        [
+          "EDO",
+          "Equação diferencial ordinária: relaciona uma função de uma variável e suas derivadas."
+        ],
+        [
+          "Condição inicial",
+          "Valor conhecido do estado no instante inicial."
+        ]
+      ],
+      "math": "Funções, taxa de variação e exponencial; ponte matemática antes da aula.",
+      "readiness": "Como descrever uma mudança por sua taxa em vez de listar todos os valores?",
+      "links": [
+        {
+          "id": "35",
+          "title": "Raízes por bisseção"
+        }
+      ]
     }
   },
   {
     "id": "37",
-    "group": "04 · Computação científica",
+    "group": "07 · Computação científica",
     "title": "Cálculo simbólico",
     "concept": "Uma expressão simbólica conserva relações algébricas antes da aproximação numérica. diff deriva uma expressão em relação a um símbolo. Isso permite comparar uma derivada formal com uma implementação numérica.",
     "code": "import sympy as s;x=s.symbols('x');print(s.diff(x**3+2*x,x))",
@@ -909,6 +3514,8 @@
     "exercise": "Derive novamente.",
     "answer": "A segunda derivada é 6*x.",
     "limit": "Símbolos podem precisar de hipóteses de domínio; documentação técnica SymPy.",
+    "position": 62,
+    "total": 76,
     "feynman": {
       "question": "Como calcular uma regra de derivação antes de escolher um valor de x?",
       "plain": "Um símbolo representa uma variável ainda não substituída por um número. O cálculo simbólico transforma a expressão em outra expressão válida sob suas regras.",
@@ -922,11 +3529,35 @@
       "gapQuestion": "O resultado 3*x**2+2 já é um número?",
       "gapAnswer": "Não. Continua sendo uma expressão dependente de x; é preciso escolher um valor para avaliá-la numericamente.",
       "repair": "Diferencie a regra geral de derivação de sua avaliação em um ponto."
+    },
+    "scaffold": {
+      "prerequisites": [
+        "36"
+      ],
+      "skill": "Distinguir transformar uma regra de avaliar um número.",
+      "terms": [
+        [
+          "Símbolo",
+          "Objeto que representa uma variável sem valor numérico fixado."
+        ],
+        [
+          "Derivada",
+          "Regra que descreve a taxa local de variação de uma função."
+        ]
+      ],
+      "math": "Potências e regra da derivada de polinômios; ponte matemática.",
+      "readiness": "Como calcular uma regra de derivação antes de escolher um valor de x?",
+      "links": [
+        {
+          "id": "36",
+          "title": "Equações diferenciais"
+        }
+      ]
     }
   },
   {
     "id": "38",
-    "group": "04 · Computação científica",
+    "group": "07 · Computação científica",
     "title": "Transformada de Fourier discreta",
     "concept": "A DFT decompõe uma sequência finita em componentes complexas. A transformada inversa reconstrói a sequência na precisão numérica disponível. Uma verificação de ida e volta testa a consistência da operação.",
     "code": "import numpy as np;x=np.array([1.,0.,-1.,0.]);print(bool(np.allclose(np.fft.ifft(np.fft.fft(x)).real,x)))",
@@ -934,6 +3565,8 @@
     "exercise": "Qual informação se perde se ignorar indiscriminadamente a parte imaginária da DFT?",
     "answer": "Perde-se informação de fase; a parte imaginária da DFT não é em geral descartável.",
     "limit": "Interpretar frequências físicas exige a taxa de amostragem.",
+    "position": 63,
+    "total": 76,
     "feynman": {
       "question": "Como transformar uma sequência em componentes e reconstruí-la depois?",
       "plain": "A transformada de Fourier discreta representa uma sequência finita por componentes de frequência. A transformação inversa combina essas componentes para recuperar os dados.",
@@ -947,11 +3580,44 @@
       "gapQuestion": "Descartar a parte imaginária da transformada é o mesmo que usar a parte real após a inversa neste exemplo?",
       "gapAnswer": "Não. As componentes imaginárias da transformada podem carregar informação necessária; aqui a parte real é extraída depois da reconstrução.",
       "repair": "Marque as posições de fft, ifft e .real na expressão, sem trocar sua ordem."
+    },
+    "scaffold": {
+      "prerequisites": [
+        "33",
+        "31"
+      ],
+      "skill": "Representar dados de outra forma e conferir a reconstrução.",
+      "terms": [
+        [
+          "DFT",
+          "Transformada discreta de Fourier: representação de uma sequência por componentes complexas."
+        ],
+        [
+          "Inversa",
+          "Operação que reconstrói os dados a partir dessa representação."
+        ],
+        [
+          "Fase",
+          "Posição relativa de uma oscilação no ciclo."
+        ]
+      ],
+      "math": "Oscilações, frequências e números complexos; ponte matemática e aprofundamento necessário.",
+      "readiness": "Como transformar uma sequência em componentes e reconstruí-la depois?",
+      "links": [
+        {
+          "id": "33",
+          "title": "Broadcasting e eixos"
+        },
+        {
+          "id": "31",
+          "title": "Precisão e números racionais"
+        }
+      ]
     }
   },
   {
     "id": "39",
-    "group": "04 · Computação científica",
+    "group": "07 · Computação científica",
     "title": "Aprendizado de máquina sem vazamento",
     "concept": "Separe observações de treino e teste antes de ajustar transformações. Pipeline combina padronização e classificador; fit recebe só o treino. A avaliação abaixo usa dados sintéticos finitos, não uma população real.",
     "code": "from sklearn.pipeline import make_pipeline;from sklearn.preprocessing import StandardScaler;from sklearn.linear_model import LogisticRegression;X=[[0],[1],[2],[8],[9],[10]];y=[0,0,0,1,1,1];m=make_pipeline(StandardScaler(),LogisticRegression()).fit(X,y);print(m.predict([[1.5],[8.5]]).tolist())",
@@ -959,6 +3625,8 @@
     "exercise": "Por que não ajustar StandardScaler com os dados de teste?",
     "answer": "Isso usa informação de observações reservadas à avaliação e contamina o protocolo.",
     "limit": "É uma demonstração de API, sem estimativa de generalização; fonte científica S1 e documentação de pitfalls.",
+    "position": 64,
+    "total": 76,
     "feynman": {
       "question": "Como avaliar um modelo sem deixá-lo consultar os exemplos reservados à avaliação?",
       "plain": "O modelo aprende com o treino. Transformações que aprendem estatísticas dos dados também devem ser ajustadas só no treino.",
@@ -972,11 +3640,48 @@
       "gapQuestion": "Por que calcular a média de padronização com treino e teste juntos já usa informação de teste?",
       "gapAnswer": "A média passa a depender dos pontos reservados. Mesmo sem usar seus rótulos, o procedimento de treino conhece algo que deveria estar separado.",
       "repair": "Localize o momento do fit e liste exatamente quais observações ele pode receber."
+    },
+    "scaffold": {
+      "prerequisites": [
+        "34",
+        "p06"
+      ],
+      "skill": "Separar informação usada para aprender da reservada à avaliação.",
+      "terms": [
+        [
+          "Treino",
+          "Dados usados para ajustar o modelo e suas transformações."
+        ],
+        [
+          "Teste",
+          "Dados reservados à avaliação."
+        ],
+        [
+          "Vazamento",
+          "Uso indevido de informação reservada durante o ajuste."
+        ],
+        [
+          "Pipeline",
+          "Composição de transformações e estimador numa sequência."
+        ]
+      ],
+      "math": "Média e noções de avaliação com dados; ponte matemática.",
+      "readiness": "Como avaliar um modelo sem deixá-lo consultar os exemplos reservados à avaliação?",
+      "links": [
+        {
+          "id": "34",
+          "title": "Monte Carlo e incerteza"
+        },
+        {
+          "id": "p06",
+          "title": "Arquitetura: organizar o caminho entre as partes"
+        }
+      ]
     }
   },
   {
     "id": "40",
-    "group": "05 · Tópicos avançados e fronteiras",
+    "group": "08 · Tópicos de fronteira",
     "title": "Closures e estado capturado",
     "concept": "Uma closure preserva acesso a nomes do ambiente em que a função foi criada. Uma fábrica de funções especializa um comportamento. O fator é capturado em uma chamada e usado em outra.",
     "code": "escala=lambda fator:lambda x:fator*x;triplo=escala(3);print(triplo(7))",
@@ -984,6 +3689,8 @@
     "exercise": "Crie duas funções com fatores 2 e 5.",
     "answer": "escala(2)(7)=14 e escala(5)(7)=35; cada chamada estabelece seu ambiente.",
     "limit": "Closures em laços exigem atenção à vinculação tardia dos nomes.",
+    "position": 65,
+    "total": 76,
     "feynman": {
       "question": "Como uma função continua usando um valor recebido numa chamada anterior?",
       "plain": "Uma função interna pode conservar acesso ao ambiente em que foi criada. Essa ligação com nomes externos é chamada closure.",
@@ -997,11 +3704,40 @@
       "gapQuestion": "Quem fornece 3 e quem fornece 7 neste cálculo?",
       "gapAnswer": "A chamada escala(3) fornece a configuração externa; a chamada triplo(7) fornece a entrada da função interna.",
       "repair": "Desenhe duas chamadas separadas e mantenha os nomes fator e x distintos."
+    },
+    "scaffold": {
+      "prerequisites": [
+        "08",
+        "b03"
+      ],
+      "skill": "Acompanhar de onde vêm os nomes usados por uma função.",
+      "terms": [
+        [
+          "Closure",
+          "Função ligada ao ambiente externo em que foi criada."
+        ],
+        [
+          "Escopo",
+          "Regra que determina em qual ambiente um nome é procurado."
+        ]
+      ],
+      "math": "Contagem e operações explicadas no exemplo.",
+      "readiness": "Como uma função continua usando um valor recebido numa chamada anterior?",
+      "links": [
+        {
+          "id": "08",
+          "title": "Funções e composição"
+        },
+        {
+          "id": "b03",
+          "title": "Definir funções: receber, calcular e devolver"
+        }
+      ]
     }
   },
   {
     "id": "41",
-    "group": "05 · Tópicos avançados e fronteiras",
+    "group": "08 · Tópicos de fronteira",
     "title": "Decoradores como transformação",
     "concept": "Um decorador recebe uma função e devolve outra. O wrapper pode modificar argumentos, resultado ou observação da chamada. Aqui arredondar é separado da função que calcula o valor.",
     "code": "arredondar=lambda f:lambda x:round(f(x),2);inverso=arredondar(lambda x:1/x);print(inverso(3))",
@@ -1009,6 +3745,8 @@
     "exercise": "O arredondamento altera a precisão do cálculo interno?",
     "answer": "Não; ele altera o resultado devolvido pelo wrapper após o cálculo.",
     "limit": "Um decorador real deve considerar metadados, assinatura e exceções.",
+    "position": 66,
+    "total": 76,
     "feynman": {
       "question": "Como acrescentar um comportamento a uma função sem reescrever sua conta?",
       "plain": "Um decorador recebe uma função e devolve outra que a envolve. A função envoltória pode trabalhar antes ou depois da chamada original.",
@@ -1022,11 +3760,40 @@
       "gapQuestion": "O wrapper muda como a divisão interna foi feita?",
       "gapAnswer": "Neste exemplo, não. Ele recebe o resultado da divisão e só então o arredonda.",
       "repair": "Leia de dentro para fora: f(x), depois round, depois retorno ao chamador."
+    },
+    "scaffold": {
+      "prerequisites": [
+        "40",
+        "18"
+      ],
+      "skill": "Separar a operação original da operação que a envolve.",
+      "terms": [
+        [
+          "Decorador",
+          "Transformação que recebe uma função e devolve outra."
+        ],
+        [
+          "Wrapper",
+          "Função envoltória que acrescenta comportamento à chamada original."
+        ]
+      ],
+      "math": "Contagem e operações explicadas no exemplo.",
+      "readiness": "Como acrescentar um comportamento a uma função sem reescrever sua conta?",
+      "links": [
+        {
+          "id": "40",
+          "title": "Closures e estado capturado"
+        },
+        {
+          "id": "18",
+          "title": "Programação dinâmica"
+        }
+      ]
     }
   },
   {
     "id": "42",
-    "group": "05 · Tópicos avançados e fronteiras",
+    "group": "08 · Tópicos de fronteira",
     "title": "Protocolos e operadores",
     "concept": "Métodos especiais permitem que objetos participem de operações da linguagem. __add__ recebe o outro operando. O exemplo define soma em um espaço vetorial de duas coordenadas.",
     "code": "exec(\"class Vetor:\\n def __init__(self,x,y):self.x=x;self.y=y\\n def __add__(self,o):return Vetor(self.x+o.x,self.y+o.y)\\nv=Vetor(1,2)+Vetor(3,4);print(v.x,v.y)\")",
@@ -1034,6 +3801,8 @@
     "exercise": "Qual é o elemento neutro dessa operação?",
     "answer": "Vetor(0,0), pois somá-lo preserva ambas as coordenadas.",
     "limit": "Compatibilidade de tipos e NotImplemented precisam ser tratados em uma biblioteca.",
+    "position": 67,
+    "total": 76,
     "feynman": {
       "question": "Como ensinar o operador + a somar um objeto criado por nós?",
       "plain": "Python procura métodos especiais que dão significado às operações. Para esses vetores, somar significa somar as coordenadas correspondentes.",
@@ -1047,11 +3816,40 @@
       "gapQuestion": "A soma deste exemplo altera o primeiro vetor?",
       "gapAnswer": "Não. __add__ constrói outro Vetor; não atribui novos valores aos atributos dos operandos.",
       "repair": "Distinga criar um objeto de modificar self.x ou self.y."
+    },
+    "scaffold": {
+      "prerequisites": [
+        "21",
+        "p03"
+      ],
+      "skill": "Definir o significado de uma operação para um tipo.",
+      "terms": [
+        [
+          "Método especial",
+          "Método reconhecido pelo protocolo da linguagem, como __add__."
+        ],
+        [
+          "Operando",
+          "Valor sobre o qual um operador atua."
+        ]
+      ],
+      "math": "Contagem e operações explicadas no exemplo.",
+      "readiness": "Como ensinar o operador + a somar um objeto criado por nós?",
+      "links": [
+        {
+          "id": "21",
+          "title": "Objetos e invariantes"
+        },
+        {
+          "id": "p03",
+          "title": "Objetos: juntar estado e regras de atualização"
+        }
+      ]
     }
   },
   {
     "id": "43",
-    "group": "05 · Tópicos avançados e fronteiras",
+    "group": "08 · Tópicos de fronteira",
     "title": "Metaclasses e criação dinâmica",
     "concept": "Classes também são objetos. type(nome,bases,atributos) constrói uma classe a partir de dados. Isso evidencia a fase de construção, antes da instanciação e da chamada dos métodos.",
     "code": "Quadrado=type('Quadrado',(),{'area':lambda self,l:l*l});print(Quadrado().area(5))",
@@ -1059,6 +3857,8 @@
     "exercise": "Qual o tipo de Quadrado?",
     "answer": "É type, a metaclasse padrão.",
     "limit": "Uma classe criada dinamicamente não valida automaticamente os atributos fornecidos.",
+    "position": 68,
+    "total": 76,
     "feynman": {
       "question": "Como construir uma classe usando dados em vez da declaração class?",
       "plain": "Uma classe também é um objeto. Podemos fornecer nome, classes de base e atributos à função type para construir esse objeto.",
@@ -1072,11 +3872,35 @@
       "gapQuestion": "Quadrado e Quadrado() são o mesmo objeto?",
       "gapAnswer": "Não. Quadrado é a classe; Quadrado() cria uma instância dessa classe.",
       "repair": "Separe a criação da classe, a criação da instância e a chamada de método."
+    },
+    "scaffold": {
+      "prerequisites": [
+        "42"
+      ],
+      "skill": "Separar a criação de classes da criação de instâncias.",
+      "terms": [
+        [
+          "Metaclasse",
+          "Classe cujas instâncias são classes."
+        ],
+        [
+          "type",
+          "Metaclasse padrão; com três argumentos pode construir classes."
+        ]
+      ],
+      "math": "Contagem e operações explicadas no exemplo.",
+      "readiness": "Como construir uma classe usando dados em vez da declaração class?",
+      "links": [
+        {
+          "id": "42",
+          "title": "Protocolos e operadores"
+        }
+      ]
     }
   },
   {
     "id": "44",
-    "group": "05 · Tópicos avançados e fronteiras",
+    "group": "08 · Tópicos de fronteira",
     "title": "Árvore sintática abstrata",
     "concept": "O parser transforma texto em uma AST. Em modo eval, uma expressão binária possui um operador e dois operandos. Inspecionar a árvore permite analisar programas sem executá-los.",
     "code": "import ast;t=ast.parse('2+3*4',mode='eval');print(type(t.body.op).__name__,type(t.body.right.op).__name__)",
@@ -1084,6 +3908,8 @@
     "exercise": "Por que a multiplicação está na subárvore direita?",
     "answer": "Porque * possui precedência maior que +; a estrutura representa 2+(3*4).",
     "limit": "Aceitar uma AST não significa autorizar sua execução.",
+    "position": 69,
+    "total": 76,
     "feynman": {
       "question": "Como o computador representa a estrutura de uma expressão antes de executá-la?",
       "plain": "O parser transforma texto em uma árvore de operações. A árvore registra o que se combina primeiro, mesmo quando não há parênteses escritos.",
@@ -1097,11 +3923,44 @@
       "gapQuestion": "Por que a árvore não representa (2+3)*4?",
       "gapAnswer": "A gramática dá precedência à multiplicação. Para alterar a estrutura, precisaríamos escrever os parênteses.",
       "repair": "Desenhe a raiz Add com a subárvore Mult à direita."
+    },
+    "scaffold": {
+      "prerequisites": [
+        "p05",
+        "07"
+      ],
+      "skill": "Representar a estrutura de uma expressão.",
+      "terms": [
+        [
+          "Parser",
+          "Componente que analisa a estrutura sintática de um texto."
+        ],
+        [
+          "AST",
+          "Árvore sintática abstrata: representação estrutural de um programa."
+        ],
+        [
+          "Precedência",
+          "Regra que determina o agrupamento de operadores."
+        ]
+      ],
+      "math": "Contagem e operações explicadas no exemplo.",
+      "readiness": "Como o computador representa a estrutura de uma expressão antes de executá-la?",
+      "links": [
+        {
+          "id": "p05",
+          "title": "Interfaces: combinar partes por um acordo"
+        },
+        {
+          "id": "07",
+          "title": "Dicionários, conjuntos e tuplas"
+        }
+      ]
     }
   },
   {
     "id": "45",
-    "group": "05 · Tópicos avançados e fronteiras",
+    "group": "08 · Tópicos de fronteira",
     "title": "Interpretador de expressões restritas",
     "concept": "Um interpretador atribui significado aos nós de uma árvore. Aqui o domínio aceito contém apenas constantes inteiras e soma. Recusar outros nós faz parte do contrato da linguagem pequena.",
     "code": "exec(\"import ast\\ndef valor(n):\\n if isinstance(n,ast.Constant) and type(n.value) is int:return n.value\\n if isinstance(n,ast.BinOp) and isinstance(n.op,ast.Add):return valor(n.left)+valor(n.right)\\n raise ValueError('expressão fora da linguagem')\\nprint(valor(ast.parse('2+3+4',mode='eval').body))\")",
@@ -1109,6 +3968,8 @@
     "exercise": "O que acontece com 2*3?",
     "answer": "O interpretador lança ValueError, pois multiplicação está fora da linguagem definida.",
     "limit": "Este exemplo não promete isolamento de recursos ou uma sandbox para entradas hostis.",
+    "position": 70,
+    "total": 76,
     "feynman": {
       "question": "Como executar apenas uma linguagem pequena que nós definimos?",
       "plain": "Visitamos os nós da árvore e aceitamos somente os casos previstos. Cada caso recebe uma regra de significado; qualquer outro é recusado.",
@@ -1122,11 +3983,49 @@
       "gapQuestion": "Se ast.parse entende uma chamada de função, valor também deve executá-la?",
       "gapAnswer": "Não. O parser reconhece mais Python do que a linguagem pequena permite; o interpretador recusa esse nó.",
       "repair": "Liste os dois únicos casos aceitos antes de considerar novas operações."
+    },
+    "scaffold": {
+      "prerequisites": [
+        "44",
+        "11",
+        "22"
+      ],
+      "skill": "Separar reconhecer uma escrita de autorizar seu significado.",
+      "terms": [
+        [
+          "Interpretador",
+          "Programa que atribui significado e executa uma linguagem."
+        ],
+        [
+          "Nó",
+          "Elemento de uma árvore, como uma constante ou operação."
+        ],
+        [
+          "Gramática",
+          "Regras que descrevem escritas admitidas por uma linguagem."
+        ]
+      ],
+      "math": "Contagem e operações explicadas no exemplo.",
+      "readiness": "Como executar apenas uma linguagem pequena que nós definimos?",
+      "links": [
+        {
+          "id": "44",
+          "title": "Árvore sintática abstrata"
+        },
+        {
+          "id": "11",
+          "title": "Recursão e prova por indução"
+        },
+        {
+          "id": "22",
+          "title": "Exceções e contratos"
+        }
+      ]
     }
   },
   {
     "id": "46",
-    "group": "05 · Tópicos avançados e fronteiras",
+    "group": "08 · Tópicos de fronteira",
     "title": "Máquina virtual de pilha",
     "concept": "Uma máquina virtual possui instruções, estado e regras de transição. PUSH empilha um operando e ADD combina os dois valores do topo. O significado de um programa é a execução dessas regras.",
     "code": "exec(\"pilha=[];programa=[('PUSH',2),('PUSH',3),('ADD',None)]\\nfor op,arg in programa:\\n if op=='PUSH':pilha.append(arg)\\n elif op=='ADD':b=pilha.pop();a=pilha.pop();pilha.append(a+b)\\n else:raise ValueError(op)\\nprint(pilha)\")",
@@ -1134,6 +4033,8 @@
     "exercise": "Que instruções calculam (2+3)+4?",
     "answer": "Depois do primeiro ADD, acrescente PUSH 4 e ADD.",
     "limit": "Um programa malformado pode causar underflow; um verificador estático é uma extensão.",
+    "position": 71,
+    "total": 76,
     "feynman": {
       "question": "Como uma máquina calcula usando só instruções e uma pilha?",
       "plain": "A máquina guarda uma pilha e percorre instruções. Cada instrução transforma esse estado por uma regra pequena e explícita.",
@@ -1147,11 +4048,44 @@
       "gapQuestion": "Por que a ordem das retiradas deve ser especificada mesmo que a soma seja comutativa?",
       "gapAnswer": "Outras operações, como subtração, dependem da ordem. Fixar b como o topo e a como o anterior evita ambiguidade.",
       "repair": "Troque mentalmente ADD por a-b e compare 2-3 com 3-2."
+    },
+    "scaffold": {
+      "prerequisites": [
+        "45",
+        "12"
+      ],
+      "skill": "Definir operações por suas mudanças de estado.",
+      "terms": [
+        [
+          "Máquina virtual",
+          "Modelo de máquina executado por software."
+        ],
+        [
+          "Pilha",
+          "Estrutura que retira primeiro o último inserido."
+        ],
+        [
+          "Underflow",
+          "Tentativa de retirar mais operandos do que os disponíveis."
+        ]
+      ],
+      "math": "Contagem e operações explicadas no exemplo.",
+      "readiness": "Como uma máquina calcula usando só instruções e uma pilha?",
+      "links": [
+        {
+          "id": "45",
+          "title": "Interpretador de expressões restritas"
+        },
+        {
+          "id": "12",
+          "title": "Pilha, fila e disciplina de acesso"
+        }
+      ]
     }
   },
   {
     "id": "47",
-    "group": "05 · Tópicos avançados e fronteiras",
+    "group": "08 · Tópicos de fronteira",
     "title": "Diferenciação automática por números duais",
     "concept": "Represente um valor por (v,d), onde d é sua derivada em relação à entrada. A regra do produto é (ab)'=a'b+ab'. Propagar os pares calcula valor e derivada em uma mesma avaliação.",
     "code": "mul=lambda a,b:(a[0]*b[0],a[1]*b[0]+a[0]*b[1]);x=(3.,1.);print(mul(mul(x,x),x))",
@@ -1159,6 +4093,8 @@
     "exercise": "Qual resultado para x=(2.,1.)?",
     "answer": "(8.0,12.0), pois x³=8 e 3x²=12.",
     "limit": "Só a multiplicação foi implementada; não é um framework completo de autodiff.",
+    "position": 72,
+    "total": 76,
     "feynman": {
       "question": "Como calcular um valor e sua derivada enquanto fazemos as mesmas multiplicações?",
       "plain": "Carregamos um par: o valor e sua taxa de mudança em relação à entrada. Ao multiplicar pares, usamos a regra do produto para propagar a taxa.",
@@ -1172,11 +4108,40 @@
       "gapQuestion": "Por que iniciar a derivada da entrada em zero daria outra interpretação?",
       "gapAnswer": "Zero a trataria como constante em relação à variável de diferenciação; a propagação não calcularia a derivada desejada de x³.",
       "repair": "Releia o significado dos dois componentes antes de usar a fórmula do produto."
+    },
+    "scaffold": {
+      "prerequisites": [
+        "37",
+        "42"
+      ],
+      "skill": "Propagar valor e derivada com uma regra local.",
+      "terms": [
+        [
+          "Número dual",
+          "Representação usada aqui como par de valor e derivada."
+        ],
+        [
+          "Regra do produto",
+          "Regra (ab)′=a′b+ab′ para derivadas."
+        ]
+      ],
+      "math": "Derivada e regra do produto; reveja cálculo simbólico e a ponte matemática.",
+      "readiness": "Como calcular um valor e sua derivada enquanto fazemos as mesmas multiplicações?",
+      "links": [
+        {
+          "id": "37",
+          "title": "Cálculo simbólico"
+        },
+        {
+          "id": "42",
+          "title": "Protocolos e operadores"
+        }
+      ]
     }
   },
   {
     "id": "48",
-    "group": "05 · Tópicos avançados e fronteiras",
+    "group": "08 · Tópicos de fronteira",
     "title": "Composição de funções e ponto fixo",
     "concept": "Uma equação de ponto fixo procura x tal que g(x)=x. Iterar g constrói uma sequência de aproximações. Para raiz de 2, a iteração de Newton é g(x)=(x+2/x)/2.",
     "code": "from functools import reduce;import math;x=reduce(lambda x,_:(x+2/x)/2,range(8),1.);print(math.isclose(x*x,2,abs_tol=1e-12))",
@@ -1184,6 +4149,8 @@
     "exercise": "Qual condição torna esta iteração indefinida?",
     "answer": "x=0 provoca divisão por zero.",
     "limit": "Convergência depende da função e do estado inicial; não vale para toda iteração.",
+    "position": 73,
+    "total": 76,
     "feynman": {
       "question": "Como melhorar uma aproximação repetindo uma regra?",
       "plain": "Escolhemos um valor inicial e aplicamos repetidamente uma transformação. Um ponto fixo é um valor que essa transformação deixa igual.",
@@ -1197,11 +4164,40 @@
       "gapQuestion": "Por que a regra tem relação com raiz de 2?",
       "gapAnswer": "Num ponto fixo não nulo, x=(x+2/x)/2 implica 2x=x+2/x e então x²=2.",
       "repair": "Resolva a equação de ponto fixo; isso identifica candidatos, mas ainda não prova convergência."
+    },
+    "scaffold": {
+      "prerequisites": [
+        "35",
+        "08"
+      ],
+      "skill": "Identificar candidatos a solução e separar convergência.",
+      "terms": [
+        [
+          "Ponto fixo",
+          "Valor que uma transformação deixa inalterado."
+        ],
+        [
+          "Convergência",
+          "Aproximação dos termos de uma sequência a um limite."
+        ]
+      ],
+      "math": "Funções, divisões e equação x²=2; ponte matemática.",
+      "readiness": "Como melhorar uma aproximação repetindo uma regra?",
+      "links": [
+        {
+          "id": "35",
+          "title": "Raízes por bisseção"
+        },
+        {
+          "id": "08",
+          "title": "Funções e composição"
+        }
+      ]
     }
   },
   {
     "id": "49",
-    "group": "05 · Tópicos avançados e fronteiras",
+    "group": "08 · Tópicos de fronteira",
     "title": "Modelo de consistência por semirreticulado",
     "concept": "Um contador crescente replicado pode guardar um componente por réplica. A junção é o máximo por componente. Essa operação é comutativa, associativa e idempotente, permitindo mesclar estados repetidos no modelo.",
     "code": "merge=lambda a,b:tuple(map(max,zip(a,b)));a=(2,0);b=(0,3);print(merge(a,b),merge(a,b)==merge(b,a),merge(a,a)==a)",
@@ -1209,6 +4205,8 @@
     "exercise": "Qual o total após a junção?",
     "answer": "5, a soma dos componentes (2,3).",
     "limit": "Pressupõe incrementos locais monotônicos e dimensões fixas; não implementa transporte nem tolerância a falhas.",
+    "position": 74,
+    "total": 76,
     "feynman": {
       "question": "Como juntar contagens de réplicas sem contar a mesma atualização duas vezes?",
       "plain": "Cada réplica mantém seu próprio componente crescente. Ao juntar estados, conservamos o maior valor conhecido em cada posição.",
@@ -1222,11 +4220,48 @@
       "gapQuestion": "Por que merge(a,a) não deve produzir (4,0)?",
       "gapAnswer": "Receber o mesmo estado outra vez não representa novos incrementos. Máximo por componente preserva (2,0).",
       "repair": "Separe receber uma mensagem de realizar um novo incremento local."
+    },
+    "scaffold": {
+      "prerequisites": [
+        "30",
+        "p05"
+      ],
+      "skill": "Projetar uma combinação que resiste a repetições.",
+      "terms": [
+        [
+          "Réplica",
+          "Cópia do estado mantida por um participante."
+        ],
+        [
+          "Junção",
+          "Operação que combina estados no modelo."
+        ],
+        [
+          "Idempotência",
+          "Aplicar a combinação de um estado com ele mesmo não altera esse estado."
+        ],
+        [
+          "Semirreticulado de junção",
+          "Estrutura ordenada em que dois elementos têm um menor limite superior, usado como junção."
+        ]
+      ],
+      "math": "Contagem e operações explicadas no exemplo.",
+      "readiness": "Como juntar contagens de réplicas sem contar a mesma atualização duas vezes?",
+      "links": [
+        {
+          "id": "30",
+          "title": "Relógios vetoriais"
+        },
+        {
+          "id": "p05",
+          "title": "Interfaces: combinar partes por um acordo"
+        }
+      ]
     }
   },
   {
     "id": "50",
-    "group": "05 · Tópicos avançados e fronteiras",
+    "group": "08 · Tópicos de fronteira",
     "title": "Modelo mínimo de verificação formal",
     "concept": "Uma propriedade de segurança exclui estados ruins alcançáveis. Enumerar todas as execuções de comprimento fixo é uma exploração limitada do espaço de estados. Uma violação fornece um contraexemplo.",
     "code": "from itertools import product;trilhas=list(product([-1,1],repeat=3));ruins=[t for t in trilhas if any(sum(t[:k])<0 for k in range(1,4))];print(len(trilhas),bool(ruins))",
@@ -1234,6 +4269,8 @@
     "exercise": "Qual contraexemplo já viola a propriedade no primeiro passo?",
     "answer": "Qualquer trilha que comece com -1 leva o contador inicial zero a um estado negativo.",
     "limit": "Limite de três passos; ausência de falha nesse limite não provaria segurança ilimitada.",
+    "position": 75,
+    "total": 76,
     "feynman": {
       "question": "Como encontrar uma execução que quebra uma regra de segurança?",
       "plain": "Enumeramos sequências de ações e acompanhamos cada estado intermediário. Basta uma execução alcançar um estado proibido para refutar a regra nesse modelo.",
@@ -1247,11 +4284,44 @@
       "gapQuestion": "Por que examinar só o saldo final perderia algumas violações?",
       "gapAnswer": "Uma trilha como (-1,1,1) termina positiva, mas já esteve negativa no primeiro passo.",
       "repair": "Calcule todos os prefixos e separe segurança durante a execução de condição no estado final."
+    },
+    "scaffold": {
+      "prerequisites": [
+        "20",
+        "29"
+      ],
+      "skill": "Procurar uma violação acompanhando estados intermediários.",
+      "terms": [
+        [
+          "Segurança",
+          "Propriedade que exclui estados considerados ruins."
+        ],
+        [
+          "Contraexemplo",
+          "Caso que mostra uma afirmação falhando."
+        ],
+        [
+          "Prefixo",
+          "Trecho inicial de uma sequência."
+        ]
+      ],
+      "math": "Contagem e operações explicadas no exemplo.",
+      "readiness": "Como encontrar uma execução que quebra uma regra de segurança?",
+      "links": [
+        {
+          "id": "20",
+          "title": "SAT por enumeração"
+        },
+        {
+          "id": "29",
+          "title": "Máquina de estados"
+        }
+      ]
     }
   },
   {
     "id": "51",
-    "group": "05 · Tópicos avançados e fronteiras",
+    "group": "08 · Tópicos de fronteira",
     "title": "Experimento reprodutível e afirmação calibrada",
     "concept": "Um experimento associa hipótese, dados, algoritmo, critério e ambiente. Uma semente permite registrar uma execução; um relatório deve conservar também resultados negativos. O código abaixo identifica os bytes de um artefato; não valida sozinho uma hipótese científica.",
     "code": "import hashlib,json;dados=[1,2,3];artefato=json.dumps(dados,separators=(',',':'));print(hashlib.sha256(artefato.encode()).hexdigest()[:12])",
@@ -1259,6 +4329,8 @@
     "exercise": "Um hash prova que o algoritmo está correto?",
     "answer": "Não; identifica bytes do artefato. Correção requer evidência adicional, como prova ou testes adequados.",
     "limit": "A conclusão deve mencionar o domínio testado e as ameaças à validade.",
+    "position": 76,
+    "total": 76,
     "feynman": {
       "question": "O que precisamos registrar para outra pessoa conferir um resultado?",
       "plain": "Registramos os dados, a regra aplicada, o critério de avaliação e o ambiente. Um hash ajuda a identificar os bytes usados, mas não explica por que a conclusão é verdadeira.",
@@ -1272,6 +4344,44 @@
       "gapQuestion": "Por que a mesma lista pode gerar outro hash se mudarmos a escrita JSON?",
       "gapAnswer": "O hash identifica bytes. Acrescentar espaços pode mudar os bytes sem mudar o valor que json.loads reconstrói.",
       "repair": "Distingua equivalência dos dados, igualdade dos bytes e validade de uma conclusão científica."
+    },
+    "scaffold": {
+      "prerequisites": [
+        "24",
+        "26",
+        "p08"
+      ],
+      "skill": "Distinguir identidade de artefatos e validade de afirmações.",
+      "terms": [
+        [
+          "Artefato",
+          "Arquivo ou outro resultado concreto de um processo."
+        ],
+        [
+          "Hash",
+          "Valor calculado a partir de bytes para identificá-los ou conferir integridade, com limites."
+        ],
+        [
+          "Reprodução",
+          "Reexecução de um procedimento com condições registradas."
+        ]
+      ],
+      "math": "Contagem e operações explicadas no exemplo.",
+      "readiness": "O que precisamos registrar para outra pessoa conferir um resultado?",
+      "links": [
+        {
+          "id": "24",
+          "title": "JSON e intercâmbio"
+        },
+        {
+          "id": "26",
+          "title": "Testes de propriedades"
+        },
+        {
+          "id": "p08",
+          "title": "Projetar, testar e refatorar um pequeno pedido"
+        }
+      ]
     }
   }
 ]
